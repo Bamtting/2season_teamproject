@@ -1,18 +1,177 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- SEO -->
+      <meta name="author" content="폴인럽" />
+      <meta name="title" content="폴인럽 :: " />
+      <meta name="keywords" content="폴인럽, 결혼, 웨딩, 스드메, 식장예약" />
+      <meta
+        name="description"
+        content="더 쉽고 간편하게 더 저렴하게 결혼하자"
+      />
+
+      <!-- Open Graph -->
+      <meta property="og:title" content="폴인럽 :: " />
+      <meta
+        property="og:description"
+        content="폴인럽은 가장 최선의 방법으로 고객님에게 결과를 가져다 드립니다."
+      />
+      <meta property="og:site_name" content="폴인럽" />
+      <meta property="og:type" content="website" />
+      <!-- url로 바꿔야함 -->
+      <meta property="og:url" content="http://127.0.0.1:5500/index.html" />
+
+      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:title"
+        content="폴인럽 :: 지구를 지키는 확실한 행동"
+      />
+      <meta
+        name="twitter:description"
+        content="폴인럽은 가장 최선의 방법으로 고객님에게 결과를 가져다 드립니다."
+      />
+
+      <!-- favicon -->
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href=""
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href=""
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href=""
+      />
+      <link rel="manifest" href="images/favicon_io/site.webmanifest" />
+      <!-- <link rel="mask-icon"  href="images/icon/safari-pinned-tab.svg"  color="#5bbad5"/> 없음-->
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
+
+      <!-- Google Tag Manager -->
+      <!-- 내 사이트에 로봇이 들어오는것을 허용(검색엔진최적화 seo 적용) -->
+      <meta name="robots" content="ALL" />
+      <!-- 네이버 모든문서 허용 -->
+      <meta name="Yeti" content="index, follow" />
+      <meta name="Yeti" content="ALL" />
+      <!-- 구글봇 모든문서 허용 -->
+      <meta name="googlebot" content="index, follow" />
+      <meta name="googlebot" content="ALL" />
+      <!-- 다음봇 모든문서 허용 -->
+      <meta name="daumoa" content="index, follow" />
+      <meta name="daumoa" content="ALL" />
+      <!-- 아이폰에서 숫자누르면 자동으로 전화로 연결되는것을 방지 -->
+      <meta name="content-language" content="kr" />
+      <meta
+        name="format-detection"
+        content="telephone=no, address=no, email=no"
+      />
+
+      <!-- title -->
+      <title>Fall in Love</title>
+
+      <!-- Google Tag Manager -->
+
+      <!-- End Google Tag Manager -->
+      <!-- 폰트어썸 -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+
+      <!-- css 초기화 -->
+      <link rel="stylesheet" href="css/reset.css" />
+
+      <!-- Swiper Js -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
+      <!-- Link Swiper's css -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      />
+
+      <!-- xeicon -->
+      <link
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+      />
+
+      <!-- IE 6~8 버전에서 미디어쿼리를 해석할 수 있도록 만들어줌 -->
+      <!-- <script src="js/respond.min.js"></script> -->
+
+      <!--[if lt IE 9]> -->
+      <!-- <script src="js/html5shiv.js"></script> -->
+      <!-- <![endif] -->
+
+      <!-- CSS3 적용 -->
+      <script src="js/prefixfree.min.js"></script>
+
+      <!-- jquery 적용 -->
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+      <!-- text 타이핑 효과 -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+      <!-- script 불러오기 -->
+      <script src="js/index.js"></script>
+
+      <!-- css 불러오기 -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link rel="stylesheet" href="css/style.css" />
+    </head>
   </head>
   <body>
     <div class="wrap">
       <!-- header -->
-      <header class="header"></header>
+      <header class="header clearfix">
+        <div class="inner"></div>
+      </header>
       <!-- visual -->
-      <div class="visual"></div>
+      <div class="visual clearfix">
+        <div class="inner"></div>
+      </div>
+      <!-- Package -->
+      <div class="package clearfix">
+        <div class="inner"></div>
+      </div>
+      <!-- studio -->
+      <div class="studio clearfix">
+        <div class="inner"></div>
+      </div>
+      <!-- Dress -->
+      <div class="dress clearfix">
+        <div class="inner"></div>
+      </div>
+      <!-- Make up -->
+      <div class="makeup clearfix">
+        <div class="inner"></div>
+      </div>
+      <!-- review -->
+      <div class="review clearfix">
+        <div class="inner"></div>
+      </div>
       <!-- footer -->
-      <footer class="footer"></footer>
+      <footer class="footer clearfix">
+        <div class="inner"></div>
+      </footer>
     </div>
   </body>
 </html>
