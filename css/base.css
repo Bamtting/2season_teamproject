@@ -34,6 +34,7 @@ body {
   word-break: keep-all;
   overflow-x: hidden;
   min-width: 320px;
+  height: 2000px;
 }
 .clearfix::after {
   position: relative;
@@ -51,8 +52,14 @@ body {
 
 
 /* header */
+.header{
+  position: fixed;
+  left: 50%;
+  transform: translateX( -50% );
+}
 .header .inner{
   display: flex;
+  width: 79.4270833vw;
   flex-direction: column;
   position: relative;
 }
@@ -90,12 +97,43 @@ body {
   /* background-color: palegoldenrod; */
   font-size: 14px;
   text-transform: uppercase;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.5s;
+}
+.header-2.active{
+  opacity: 0;
+  transform: translateY(-40%);
+  transition: opacity 0.3s, transform 0.5s;
 }
 .header-2 ul{
   display: flex;
   justify-content: center;
 }
 .header-2 ul li{
+  position: relative;
   margin: 0 30px;
-  line-height: 60px;
+  margin-top: 20px;
+  line-height: 25px;
+}
+.header-2 ul li:hover a{
+  color: #baa693;
+  transition: color .3s;
+  position: relative;
+}
+.header-2 ul li::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 0;
+  opacity: 0;
+  height: 2px;
+  background-color: #baa693;
+  transition: width .5s, opacity .5s;
+}
+.header-2 ul li:hover::after{
+  opacity: 1;
+  width: 120%;
 }
