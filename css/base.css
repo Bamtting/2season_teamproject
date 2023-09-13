@@ -48,3 +48,54 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+
+
+/* header */
+.header .inner{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header-1{
+  height: 100px;
+  /* background-color: powderblue; */
+  position: relative;
+}
+.header-1 .logo{
+  width: 240px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* background-color: pink; */
+}
+.header-1 .logo img{
+  width: 240px;
+  height: 80px;
+}
+.s-menu{
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.s-menu ul{
+  display: flex;
+  justify-content: center;
+}
+.s-menu ul li{
+  margin: 10px 10px;
+}
+.header-2{
+  height: 60px;
+  /* background-color: palegoldenrod; */
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.header-2 ul{
+  display: flex;
+  justify-content: center;
+}
+.header-2 ul li{
+  margin: 0 30px;
+  line-height: 60px;
+}
