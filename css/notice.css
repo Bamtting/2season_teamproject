@@ -4,8 +4,14 @@
     width: 80vw;
     margin: 0 auto;
     margin-top: 160px;
+    padding: 20px;
 }
-  .faq button{
+.question h2{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.faq button{
     width: 100%;
     text-align: left;
     padding: 7px;
@@ -13,14 +19,14 @@
     border: none;
     border-bottom: 1px solid #333;
     cursor: pointer;
-  }
-  .cont{
+}
+.cont{
     padding: 10px;
     background-color: #efefef;
-  }
-  .faq  li > div{
+}
+.faq  li > div{
     display: none;
-  }
+}
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
