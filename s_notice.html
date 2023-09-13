@@ -188,7 +188,61 @@
           </nav>
         </div>
       </header>
+      <div class="question">
+        <h2>자주묻는 질문</h2>
+        <div class="faq">
+          <ul>
+            <li>
+              <p><button>Q1. 자주 묻는 질문 내용?</button></p>
+              <div>
+                <div class="cont">답변 내용1</div>
+              </div>
+            </li>
+            <li>
+              <p><button>Q2. 자주 묻는 질문 내용?</button></p>
+              <div>
+                <div class="cont">답변 내용2</div>
+              </div>
+            </li>
+            <li>
+              <p><button>Q3. 자주 묻는 질문 내용?</button></p>
+              <div>
+                <div class="cont">답변 내용3</div>
+              </div>
+            </li>
+            <li>
+              <p><button>Q4. 자주 묻는 질문 내용?</button></p>
+              <div>
+                <div class="cont">답변 내용4</div>
+              </div>
+            </li>
+            <li>
+              <p><button>Q5. 자주 묻는 질문 내용?</button></p>
+              <div>
+                <div class="cont">답변 내용5</div>
+              </div>
+            </li>
+          </ul>
+      </div>
     </div>
   </body>
-  
+  <!-- <script>
+    $(function(){
+      $.fn.extend({
+        faq: function(){
+          var ts = $(this);
+          $.each(ts, function(i, o){
+            $("button", o).on("click", faqHanddler);
+            function faqHanddler(){
+              if($(this).parent().next().is(":hidden")){
+                $("li>div:visible", o).hide();
+                $(this).parent().next().show();
+              }else{$("li>div:visible", o).hide()}
+            }
+          })
+        }
+      })
+      $(".faq").faq();
+    })
+  </script> -->
 </html>
