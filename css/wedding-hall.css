@@ -73,6 +73,13 @@
   font-size: 22px;
   color: #777;
 }
+.w-tbox p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.w-tbox span {
+  color: #9e9e9e;
+}
 
 @media all and (max-width: 1266px) {
   .w-swiper {
@@ -112,5 +119,18 @@
   .w-swiper img {
     min-width: 288px;
     min-height: 218px;
+  }
+}
+@media all and (max-width: 472px) {
+  .title-text .title {
+    font-size: 36px;
+  }
+  .title-text p {
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 386px) {
+  .title-text p {
+    font-size: 16px;
   }
 }
