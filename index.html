@@ -120,7 +120,20 @@
     <!-- jquery 적용 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-    <!--  -->
+    <!-- slide -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <!-- script 불러오기 -->
     <script src="js/header.js"></script>
@@ -133,7 +146,6 @@
     <script src="js/looking.js"></script>
     <script src="js/notice.js"></script>
     <script src="js/footer.js"></script>
-
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -192,88 +204,52 @@
       <!-- visual -->
       <div class="visual clearfix">
         <div class="inner">
-         <!-- partial:index.partial.html -->
-<div id="app">
-  <transition name="carousel-fade" mode="out-in">
-    <div class="load-screen" v-if="loading" key="1">
-      <p>Loading MCU Timeline</p>
-    </div>
-    <div class="load-screen" v-else-if="!loading &amp;&amp; error" key="2">
-      <p>Timeline could not assemble</p>
-    </div>
-    <main class="main-screen" v-else="v-else" key="3" :class="{ 'show-modal' : showModal }">
-      <carousel v-if="movies.length" :class="scrollDirection" :options="carouselOptions" :movies="movies" :current="current" @scroll-direction="handleScrollDirection" @set-current="handleCurrentSlide" @trigger-modal="handleModal"></carousel>
-      <transition name="modal">
-        <modal v-if="showModal" :id="movies[current].id" @trigger-modal="handleModal"></modal>
-      </transition>
-    </main>
-  </transition>
-</div>
-<!-- Component templates-->
-<template id="tpl__carousel">
-  <div class="carousel">
-    <div class="image__viewport">
-      <transition name="fade" mode="out-in">
-        <carousel-image class="carousel__image" v-if="index === current" v-for="movie, index in movies" :backdrop="movie.backdrop_path" size="1280" :key="movie.id"></carousel-image>
-      </transition>
-    </div>
-    <embla ref="embla" :options="options">
-      <carousel-item v-for="movie in movies" :title="movie.title" :key="movie.id" v-on="$listeners"></carousel-item>
-    </embla>
-    <transition name="fade">
-      <button class="btn btn--prev" v-if="canScrollPrev()" @click="scrollPrev">
-        <svg class="icon--control" viewBox="0 0 24 24">
-          <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
-        </svg>
-      </button>
-    </transition>
-    <transition name="fade">
-      <button class="btn btn--next" v-if="canScrollNext()" @click="scrollNext">
-        <svg class="icon--control" viewBox="0 0 24 24">
-          <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
-        </svg>
-      </button>
-    </transition>
-    <div class="timeline">
-      <div class="dot" v-for="movie, index in movies" :class="{ current : index === current }" @click="scrollTo(index)">
-        <div class="dot__image-wrapper">
-          <carousel-image :backdrop="movie.poster_path" size="154" :key="movie.id"></carousel-image>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-<template id="tpl__embla">
-  <div class="carousel__viewport">
-    <div class="carousel__container">
-      <slot></slot>
-    </div>
-  </div>
-</template>
-<template id="tpl__carousel-item">
-  <li class="carousel__slide">
-    <h2 class="slide__title">{{ title }}</h2>
-    <button class="btn btn--cta" @click="handleModal">
-      <svg class="icon--play" viewBox="0 0 24 24">
-        <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z"></path>
-      </svg><span>Watch trailer</span>
-    </button>
-  </li>
-</template>
-<template id="tpl__carousel-image"><img :src="src"/></template>
-<template id="tpl__modal">
-  <div class="modal">
-    <div class="modal__overlay" @click="handleModal"></div>
-    <div class="modal__wrapper">
-      <iframe v-if="src" :src="src" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-      <button class="btn btn--close" title="Close trailer window" @click="handleModal">
-        <svg class="icon--close" viewBox="0 0 24 24">
-          <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</template>
+          <div class="main">
+            <div class="center" id="">
+              <!-- Slider indicator -->
+              <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <!-- sliderHeading -->
+              <div class="heading">
+                <h1>STUDIO</h1>
+                <h1>DRESS</h1>
+                <h1>BEAUTY</h1>
+                <h1>PACKAGE</h1>
+              </div>
+              <!-- slidertext -->
+              <div class="textContainer">
+                <div class="text">
+                  Rome is the capital city of Italy. It is also the capital of  of Greece. 
+                  It was also at the heart of Ancient
+                </div>
+                <div class="text">
+                  Athens is the capital of Greece. It was also at the heart of Ancient
+                  colonnaded Parthenon temple.
+                </div>
+                <div class="text">
+                  Istanbul is a major city in Turkey that straddles Europe and Asia
+                  ac-era Hippodrome was fortian obelisks aremain.
+                </div>
+                <div class="text">
+                  Istanbul is a major city in Turkey that straddles Europe and Asia
+                  across the Bosphorus Strait. Its Olects cultural          
+                </div>
+              </div>      
+              <!-- Slider Images -->
+              <div class="imgContainer" id="visual_back1">
+              </div>
+              <div class="imgContainer" id="visual_back2">
+              </div>
+              <div class="imgContainer" id="visual_back3">
+              </div>
+              <div class="imgContainer" id="visual_back4">
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </div>
@@ -336,7 +312,136 @@
       </div>
       <!-- BEST SDM -->
       <div class="sdm clearfix">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="sdm_title">
+            <h2>S.D.M OF THE MONTH</h2>
+          </div>
+          <div class="sdm_wrap">           
+            <div class="studio">
+              <div class="studio_img">
+                <img src="images/main_sdm_studio.png" alt="">
+              </div>
+              <div class="studio_name">
+                <h3>원규 스튜디오</h3>
+                <p>서울시 강남구</p>
+              </div>
+              <div class="studio_review">
+                <div class="wongu">
+                  <h4>원규 스튜디오 웨딩 컨시어지 센터</h4>                
+                  <p>서울특별시 강남구 청담동 영동대로 708</p>
+                </div>
+                <div class="studio_mitipo">
+                  <img src="images/Untitled-5.png" alt="">  
+                  <div class="studio_review_review">                 
+                    <div class="sdm_nukkimpyo"><img src="" alt=""></div>
+                  </div>
+                </div>     
+                <div>           
+                  <div class="studio_review_profile">
+                    <img src="images/profile01.png" alt="">
+                    <div class="studio_review_mitipo_">
+                      <h2>MITIPO</h2>
+                      <p>새싹</p>
+                    </div>
+                  </div>
+                  <div class="studio_review_profile_text">
+                  
+                    <div class="review_detail_studio">
+                      <p>작가님 너무 친절하게 잘 촬영해 주십니다.
+                      웨딩촬영 너무 고맙고 고생하셨습니다^^
+                    </p>
+                      <div class="sdm_heart"><img src="" alt=""></div>
+                      <p>반응을 남겨보세요.</p>
+                    </div>
+                    <button class="sdm_button">MORE INFO</button>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <div class="dress">
+              <div class="dress_img">
+                <img src="images/monica.png" alt="모니카">
+              </div>
+              <div class="dress_name">
+                <h3>모니카 블랑쉬</h3>
+                <p>서울시 강남구</p>
+              </div>
+              <div class="dress_review">
+                <div>
+                  <h4>Aiteo Monica Blanche</h4>                
+                  <p>서울특별시 강남구 선릉로 146길 15</p>
+                </div>
+                <div>
+                  <h4>4.5</h4>
+                  <div class="sdm_star_2"></div>
+                  <div class="dress_review_review">
+                    <p>리뷰 202개</p>
+                    <div class="sdm_nukkimpyo"><img src="" alt=""></div>
+                  </div>
+                </div>     
+                <div>           
+                  <div class="dress_review_profile">
+                    <img src="" alt="">
+                  </div>
+                  <div class="dress_review_profile_text">
+                    <h2>MITIPO</h2>
+                    <p>새싹</p>
+                    <div class="review_detail_dress">
+                      <p>작가님 너무 친절하게 잘 촬영해 주십니다.
+                      웨딩촬영 너무 고맙고 고생하셨습니다^^
+                    </p>
+                      <div class="sdm_heart"><img src="" alt=""></div>
+                      <p>반응을 남겨보세요.</p>
+                    </div>
+                    <button class="sdm_button">MORE INFO</button>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <div class="makeup">
+              <div class="makeup_img">
+                <img src="images/main_makeup.png" alt="메인메이크업">
+              </div>
+              <div class="makeup_name">
+                <h3>에이 바이 봄</h3>
+                <p>서울시 강남구</p>
+              </div>
+              <div class="makeup_review">
+                <div>
+                  <h4>A BY BOM</h4>                
+                  <p>서울특별시 강남구 선릉로 152길 40</p>
+                </div>
+                <div>
+                  <h4>5.0</h4>
+                  <div class="sdm_star"></div>
+                  <div class="makeup_review_review">
+                    <p>리뷰 119개</p>
+                    <div class="sdm_nukkimpyo"><img src="" alt=""></div>
+                  </div>
+                </div>     
+                <div>           
+                  <div class="makeup_review_profile">
+                    <img src="" alt="">
+                  </div>
+                  <div class="makeup_review_profile_text">
+                    <h2>Nagari22</h2>
+                    <p>씨앗</p>
+                    <div class="review_detail_makeup">
+                      <p>차 타고 40분을 달려갔는데 진짜 잘 찾아갔습니다.
+                        <br>
+                        시간이 하나도 아깝지 않게 머리가 너무 이쁘게 됐습니다!
+                    </p>
+                      <div class="sdm_heart"><img src="" alt=""></div>
+                      <p>반응을 남겨보세요.</p>
+                    </div>
+                    <button class="sdm_button">MORE INFO</button>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>            
+        </div>
+        </div>
       </div>
       <!-- review -->
       <div class="review clearfix">
