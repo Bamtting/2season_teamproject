@@ -80,7 +80,7 @@
     />
 
     <!-- title -->
-    <title>Wedding for you</title>
+    <title>login</title>
 
     <!-- Google Tag Manager -->
 
@@ -119,113 +119,40 @@
 
     <script src="js/footer.js"></script>
 
-    <script src="js/s_notice.js"></script>
+    <script src="js/login.js"></script>
 
 
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .header-2 ul li:nth-child(4) a{
-        color: #baa693;
-      }
-      .header-2 ul li:nth-child(4)::after{
-          content: '';
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          width: 120%;
-          opacity: 1;
-          height: 2px;
-          background-color: #baa693;
-          transition: width .5s, opacity .5s;
-      }
-    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFH6CXG7"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-    <div class="wrap">
-      <!-- header -->
-      <header class="header clearfix">
-        <div class="inner">
-          <div class="header-1">
-            <div class="logo">
-              <a href="index.html">
-                <img src="images/logo_black.png" alt="header-logo">
-              </a>
+  <div class="loginwrap">
+  <div id="container">
+      <div class="form-box">
+        <!-- <div class="ribbon"><img src="images/loginribbone.png" alt="loginribbone"></div> -->
+      <a href="index.html"><div class="loginlogo"></div></a>
+      <form id="login-form" name="login-form" action="#" method="post">
+        <input id="Id" class="login-form-input" type="text" name="your-Id" placeholder="ID" required>
+        <input id="password" class="login-form-input" type="password" name="your-password" placeholder="Password" required>
+        <button class="login-form-btn" type="submit">Login</button>
+        <p class="text"><a href="#">Forgot password?</a> or <a href="signup.html">Sign up</a>
+            <div class="snslogintext">
+                <hr>
+                <p>SNS 계정으로 로그인</p>
+                <hr>
             </div>
-            <div class="s-menu">
-              <ul>
-                <li><a href="login.html">login</a></li>
-                <li><a href="#">my page</a></li>
-              </ul>
-            </div>
-          </div>
-          <nav class="header-2">
-            <ul>
-              <li>
-                <a href="s_about.html">about</a>
-              </li>
-              <li>
-                <a href="s_weddinghall.html">wedding hall</a>
-              </li>
-              <li>
-                <a href="s_sdm.html">s.d.m</a>
-              </li>
-              <li>
-                <a href="s_notice.html">q&a</a>
-              </li>
-              <li>
-                <a href="#">review</a>
-              </li>
-              <li>
-                <a href="s_package.html">package</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="snslogin">
+            <a href="#"><img src="images/kakao-talk.png" alt="kakaologin"></a>
+            <a href="#"><img src="images/google.png" alt="googlelogin"></a>
+            <a href="#"><img src="images/네이버 아이콘.png" alt="naverlogin"></a>
         </div>
-      </header>
-      <div class="inner">
-        <div class="question">
-          <h2>자주묻는 질문</h2>
-          <div class="faq">
-            <ul>
-              <li>
-                <p><button>Q1. 자주 묻는 질문 내용?</button></p>
-                <div>
-                  <div class="cont">답변 내용1</div>
-                </div>
-              </li>
-              <li>
-                <p><button>Q2. 자주 묻는 질문 내용?</button></p>
-                <div>
-                  <div class="cont">답변 내용2</div>
-                </div>
-              </li>
-              <li>
-                <p><button>Q3. 자주 묻는 질문 내용?</button></p>
-                <div>
-                  <div class="cont">답변 내용3</div>
-                </div>
-              </li>
-              <li>
-                <p><button>Q4. 자주 묻는 질문 내용?</button></p>
-                <div>
-                  <div class="cont">답변 내용4</div>
-                </div>
-              </li>
-              <li>
-                <p><button>Q5. 자주 묻는 질문 내용?</button></p>
-                <div>
-                  <div class="cont">답변 내용5</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </form>
+    </div>
+  </div>
+</div>
   </body>
 </html>

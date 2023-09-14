@@ -34,7 +34,10 @@ body {
   word-break: keep-all;
   overflow-x: hidden;
   min-width: 320px;
-  height: 2000px;
+}
+::selection{
+  background-color: #baa693;
+  color: #fff;
 }
 .clearfix::after {
   position: relative;
