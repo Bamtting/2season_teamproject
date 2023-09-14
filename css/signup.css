@@ -22,11 +22,12 @@
   height: 40vw;
   min-height: 600px;
   padding: 30px 20px;
+  border: 2px solid #baa693;
   border-radius: 10px;
-  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+  /* box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
               -2px -2px 12px rgba(255, 255, 255, 0.5),
               inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-              2px 2px 8px rgba(0, 0, 0, .3);
+              2px 2px 8px rgba(0, 0, 0, .3); */
   background-color: #ffffff;
   position: absolute;
 }
@@ -42,7 +43,7 @@
   }
   #signup-form{
     width: 40vw;
-    height: 25vw;
+    height: 391px;
   }
 @media screen and (max-width: 480px) {
   #container {
