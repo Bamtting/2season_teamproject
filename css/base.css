@@ -39,6 +39,9 @@ body {
   background-color: #baa693;
   color: #fff;
 }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #F8F0E5 inset;
+}
 .clearfix::after {
   position: relative;
   display: block;
