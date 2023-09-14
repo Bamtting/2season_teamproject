@@ -47,10 +47,6 @@
   overflow: hidden;
 }
 .w-stext {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 150px;
   height: 40px;
   line-height: 40px;
@@ -59,12 +55,8 @@
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  display: none;
 }
-.w-img1:hover .w-stext,
-.w-img2:hover .w-stext {
-  display: block;
-}
+
 .w-img1:hover .w-simg,
 .w-img2:hover .w-simg2 {
   transform: scale(1.2);
