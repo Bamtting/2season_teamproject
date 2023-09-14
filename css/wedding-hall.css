@@ -19,67 +19,109 @@
   font-size: 22px;
   color: #777;
 }
-.w-img-box {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 50px;
-  width: 100%;
+.img-wrap {
+  text-align: center;
 }
-.w-box1 {
+.w-img-box {
+  display: flex;
+  justify-content: space-between;
+}
+.w-simg {
+  width: 100%;
+  max-height: 400px;
+}
+.w-simg2 {
+  width: 100%;
+  max-width: 450px;
+  max-height: 400px;
+}
+
+.w-img1 {
+  margin-bottom: 20px;
+}
+
+.w-img1,
+.w-img2 {
   position: relative;
   display: block;
   overflow: hidden;
 }
-.w-s-img {
-  width: 100%;
-}
-.text-box {
+.w-stext {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 150px;
   height: 40px;
   line-height: 40px;
-  transform: translate(-50%, -50%);
+  background-color: #e0a064a6;
   text-align: center;
-  background-color: #b98351af;
-  display: none;
-}
-.w-text {
-  color: #fff;
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
+  display: none;
 }
-.w-box1:hover .text-box {
+.w-img1:hover .w-stext,
+.w-img2:hover .w-stext {
   display: block;
 }
-.w-box1:hover .w-s-img {
-  transform: scale(1.1);
-  transition: all 0.5s;
+.w-img1:hover .w-simg,
+.w-img2:hover .w-simg2 {
+  transform: scale(1.2);
+  transition: all 0.8s;
 }
-
+@media all and (max-width: 1440px) {
+  .w-simg {
+    padding: 0px 10px;
+  }
+  .w-simg2 {
+    padding: 0px 10px;
+  }
+}
 @media all and (max-width: 1024px) {
+  .w-img-box .w-simg2 {
+    margin-bottom: 20px;
+  }
 }
 @media all and (max-width: 768px) {
   .w-img-box {
-    flex-direction: column;
-    margin-bottom: 0;
+    display: block;
   }
-  .w-s-img {
-    margin-bottom: 25px;
+  .w-simg {
+    width: 450px;
+    height: 340px;
   }
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 466px) {
+  .title-text .title {
+    font-size: 36px;
+  }
   .title-text p {
     font-size: 18px;
   }
 }
-@media all and (max-width: 360px) {
-  .title {
-    font-size: 24px;
+
+@media all and (max-width: 444px) {
+  .w-simg {
+    width: 100vw;
+    height: 100%;
+  }
+}
+@media all and (max-width: 381px) {
+  .title-text .title {
+    font-size: 30px;
   }
   .title-text p {
     font-size: 14px;
+  }
+}
+@media all and (max-width: 360px) {
+  .w-simg {
+    padding: 0px 20px;
+    height: 242px;
+  }
+  .w-simg2 {
+    width: 100vw;
+    padding: 0px 20px;
   }
 }
