@@ -1,9 +1,119 @@
 /* 웨딩 홀 */
+.wedding-hall {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.title-text {
+  width: 100%;
+  height: 92px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+.title-text .title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.title-text p {
+  font-size: 22px;
+  color: #777;
+}
+.img-wrap {
+  text-align: center;
+}
+.w-img-box {
+  display: flex;
+  justify-content: space-between;
+}
+.w-simg {
+  width: 100%;
+  max-height: 400px;
+}
+.w-simg2 {
+  width: 100%;
+  max-width: 450px;
+  max-height: 400px;
+}
+
+.w-img1 {
+  margin-bottom: 20px;
+}
+
+.w-img1,
+.w-img2 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.w-stext {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #e0a064a6;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.w-img1:hover .w-simg,
+.w-img2:hover .w-simg2 {
+  transform: scale(1.2);
+  transition: all 0.8s;
+}
+@media all and (max-width: 1440px) {
+  .w-simg {
+    padding: 0px 10px;
+  }
+  .w-simg2 {
+    padding: 0px 10px;
+  }
+}
 @media all and (max-width: 1024px) {
+  .w-img-box .w-simg2 {
+    margin-bottom: 20px;
+  }
 }
 @media all and (max-width: 768px) {
+  .w-img-box {
+    display: block;
+  }
+  .w-simg {
+    width: 450px;
+    height: 340px;
+  }
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 466px) {
+  .title-text .title {
+    font-size: 36px;
+  }
+  .title-text p {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 444px) {
+  .w-simg {
+    width: 100vw;
+    height: 100%;
+  }
+}
+@media all and (max-width: 381px) {
+  .title-text .title {
+    font-size: 30px;
+  }
+  .title-text p {
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 360px) {
+  .w-simg {
+    padding: 0px 20px;
+    height: 242px;
+  }
+  .w-simg2 {
+    width: 100vw;
+    padding: 0px 20px;
+  }
 }

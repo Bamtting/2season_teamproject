@@ -1,4 +1,6 @@
 /* 헤더 */
+
+
 .wrap{
     display: flex;
     flex-direction: column;
@@ -97,6 +99,7 @@
 .header-2 ul li:hover::after{
     opacity: 1;
     width: 120%;
+
 }
 @media all and (max-width: 1024px) {
 }
