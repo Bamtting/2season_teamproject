@@ -20,23 +20,20 @@
     position: relative;
 }
 .header-1{
-    height: 100px;
+    height: 80px;
     /* background-color: powderblue; */
     position: relative;
 }
-.header-1.active{
-    margin-bottom: 20px;
-}
 .header-1 .logo{
-    width: 240px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
     margin: 0 auto;
     margin-top: 20px;
     /* background-color: pink; */
 }
 .header-1 .logo img{
-    width: 240px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
 }
 .s-menu{
     width: 200px;
@@ -61,13 +58,13 @@
     text-transform: uppercase;
     opacity: 1;
     transform: translateY(0);
-    transition: display 1s, opacity 0.3s, transform 0.5s;
+    transition: opacity 0.2s, transform 0.4s;
 }
 .header-2.active{
-    display: none;
+    height: 20px;
     opacity: 0;
     transform: translateY(-40%);
-    transition: display 1s, opacity 0.3s, transform 0.5s;
+    transition: opacity 0.2s, transform 0.4s;
 }
 .header-2 ul{
     display: flex;
