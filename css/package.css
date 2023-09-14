@@ -1,4 +1,91 @@
 /* 패키지 */
+.package {
+  position: relative;
+  background-color: #baa693;
+}
+.package-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 700px;
+  margin: 50px auto;
+}
+.package-text-wrap {
+  position: relative;
+  display: block;
+}
+.package-title {
+  text-transform: uppercase;
+  font-size: 55px;
+  font-weight: bold;
+  color: #fff;
+}
+.package-text-wrap p {
+  margin-top: 70px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  color: #fff;
+}
+.package-text-wrap p span {
+  font-size: 50px;
+  color: #ffffff;
+  font-family: "Garlicha";
+}
+.package-more-btn {
+  margin-top: 20px;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  font-size: 24px;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #fff;
+  cursor: pointer;
+}
+.package-main-wrap {
+  position: relative;
+  display: block;
+}
+.package-main-wrap img {
+  position: absolute;
+  width: 450px;
+  right: 0;
+}
+.packimgwrap {
+  margin-top: 83px;
+  width: 750px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.packimgwrap li:first-child {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: url("../images/package-dress-1.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.packimgwrap li:nth-child(2) {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: url("../images/package-makeup-1.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.packimgwrap li:nth-child(3) {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: url("../images/package-studio-1.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+/* 반응형 */
+@media all and (max-width: 1440px) {
+}
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {

@@ -1,6 +1,5 @@
 window.addEventListener("load", function () {
     const header = document.querySelector(".header-2");
-    const headerlogo = document.querySelector(".header-1")
     let lastScrollY = window.scrollY || window.pageYOffset; // 이전 스크롤 위치 저장
   
     function updateHeader() {
@@ -9,11 +8,9 @@ window.addEventListener("load", function () {
       if (scy > lastScrollY) {
         // 스크롤을 내릴 때
         header.classList.add("active");
-        headerlogo.classList.add("active");
       } else {
         // 스크롤을 올릴 때
         header.classList.remove("active");
-        headerlogo.classList.remove("active");
       }
   
       lastScrollY = scy; // 현재 스크롤 위치를 이전 스크롤 위치로 저장
