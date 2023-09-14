@@ -49,6 +49,9 @@
 .s-menu ul li{
     margin: 10px 10px;
 }
+.s-menu ul li:hover a{
+    color: #baa693;
+}
 .header-2{
     height: 60px;
     /* background-color: palegoldenrod; */
