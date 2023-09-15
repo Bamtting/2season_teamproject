@@ -116,7 +116,7 @@
     <![endif]-->
 
     <!-- CSS3 적용 -->
-    <script src="js/prefixfree.min.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
 
     <!-- jquery 적용 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -125,25 +125,24 @@
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/s_weddinghall.js"></script>
-    
 
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
     <style>
-      .header-2 ul li:nth-child(2) a{
+      .header-2 ul li:nth-child(2) a {
         color: #baa693;
       }
-      .header-2 ul li:nth-child(2)::after{
-          content: '';
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          width: 120%;
-          opacity: 1;
-          height: 2px;
-          background-color: #baa693;
-          transition: width .5s, opacity .5s;
+      .header-2 ul li:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 120%;
+        opacity: 1;
+        height: 2px;
+        background-color: #baa693;
+        transition: width 0.5s, opacity 0.5s;
       }
     </style>
   </head>
@@ -165,7 +164,7 @@
           <div class="header-1">
             <div class="logo">
               <a href="index.html">
-                <img src="images/logo_black.png" alt="header-logo">
+                <img src="images/logo_black.png" alt="header-logo" />
               </a>
             </div>
             <div class="s-menu">
@@ -199,6 +198,34 @@
           </nav>
         </div>
       </header>
+      <div class="s_weddinghall">
+        <div class="text-area">
+          <img
+            src="images/a-joyful-celebration-of-love-and-marriage-generated-by-ai.jpg"
+            alt="소개 배경"
+          />
+          <p class="text-area-sub">
+            모든 로맨틱한 이야기는 특별한 장소에서 시작합니다. <br />
+            최고의 웨딩홀을 선택하여 여러분의 이야기를 시작하세요. <br />
+            화려함과 아름다움, 편안함을 함께하는 곳에서 완벽한 결혼식을
+            계획하세요.
+          </p>
+        </div>
+        <div class="inner">
+          <div class="hall-list">
+            <a href="#" class="hall-btn">전체</a>
+            <a href="#" class="hall-btn-1">일반 홀</a>
+            <a href="#" class="hall-btn-2">컨벤션 홀</a>
+            <a href="#" class="hall-btn-3">야외/하우스 홀</a>
+            <a href="#" class="hall-btn-4">채플 홀</a>
+            <a href="#" class="hall-btn-5">호텔 홀</a>
+          </div>
+          <div class="w-search-area">
+            <p class="w-search-text">웨딩 홀 상세 검색</p>
+            
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

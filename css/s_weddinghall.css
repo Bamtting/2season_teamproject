@@ -1,9 +1,87 @@
 /* 서브 웨딩 홀 */
+.s_weddinghall {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 5000px;
+}
+.hall-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  margin: -30px auto;
+}
+
+.s_weddinghall .text-area {
+  margin-top: 160px;
+}
+.text-area {
+  position: relative;
+  display: block;
+}
+.text-area img {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+}
+.text-area-sub {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+  color: #ededed;
+  font-size: 20px;
+  line-height: 70px;
+}
+
+.hall-btn,
+.hall-btn-1,
+.hall-btn-2,
+.hall-btn-3,
+.hall-btn-4,
+.hall-btn-5 {
+  display: block;
+  width: 240px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 500;
+}
+.w-search-area {
+  width: 100%;
+  height: 300px;
+}
+.w-search-text {
+  font-size: 24px;
+  font-weight: 600;
+}
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
 }
+@media all and (max-width: 671px) {
+  .text-area-sub {
+    font-size: 17px;
+  }
+}
+@media all and (max-width: 573px) {
+  .text-area-sub {
+    font-size: 14px;
+  }
+}
 @media all and (max-width: 480px) {
+  .text-area-sub {
+    font-size: 12px;
+  }
 }
 @media all and (max-width: 360px) {
 }
