@@ -203,6 +203,7 @@
           </nav>
         </div>
       </header>
+      <div class="modal-overlay"></div>
       <!-- visual -->
       <div class="visual clearfix">
         <div class="inner">
@@ -254,9 +255,11 @@
             </div>
           </div>
         </div>
-      </div>
+
+        </div>
 
       <!-- Package -->
+      
       <div class="package clearfix">
         <div class="inner">
           <div class="package-wrap">
@@ -276,17 +279,17 @@
             </div>
             <div class="package-img-wrap">
               <ul class="packimgwrap">
-                <li>
+                <li class="packimgli1">
                   <a href="s_package.html">
                     <!-- <img src="images/package-dress-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
-                <li>
+                <li class="packimgli2">
                   <a href="s_package.html">
                     <!-- <img src="images/package-makeup-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
-                <li>
+                <li class="packimgli3">
                   <a href="s_package.html">
                     <!-- <img src="images/package-studio-1.jpg" alt="package-dress1"> -->
                   </a>
@@ -298,7 +301,55 @@
       </div>
       <!-- package-review -->
       <div class="package-review clearfix">
-        <div class="inner"></div>
+        <!-- 모달 창 -->
+<div id="PackagemyModal" class="package-modal">
+  <span class="package-close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+        <div class="inner">
+          <div class="package-review-text-wrap">
+            <h2 class="package-review-title">package review</h2>
+            <p>추천 패키지를 이용해 보신 고객분들의 생생한 후기</p>
+          </div>
+          <div class="package-review-wrapper">
+            <div class="package-review-wrapper-inner1">
+              <div class="package-review-wrap review-wrap1">
+              <div class="package-review-thumbnail"></div>
+              <div class="package-review-wrap-text-wrap">
+                <h2 class="package-review-wrap-title"><span>고 * 아</span> 님</h2>
+                <!-- <button class="package-review-wrap-button" id="packageReviewBtn">view</button> -->
+              </div>
+            </div>
+            </div>
+            <div class="package-review-wrapper-inner2">
+              <div class="package-review-wrap review-wrap2">
+              <div class="package-review-thumbnail"></div>
+              <div class="package-review-wrap-text-wrap">
+                <h2 class="package-review-wrap-title"><span>김 * 화</span> 님</h2>
+                <!-- <button class="package-review-wrap-button" id="packageReviewBtn2">view</button> -->
+              </div>
+            </div>
+            </div>
+            <div class="package-review-wrapper-inner3">
+              <div class="package-review-wrap review-wrap3">
+              <div class="package-review-thumbnail"></div>
+              <div class="package-review-wrap-text-wrap">
+                <h2 class="package-review-wrap-title"><span>김 * 아</span> 님</h2>
+                <!-- <button class="package-review-wrap-button" id="packageReviewBtn3">view</button> -->
+              </div>
+            </div>
+            </div>
+            <div class="package-review-wrapper-inner4">
+              <div class="package-review-wrap review-wrap4">
+              <div class="package-review-thumbnail"></div>
+              <div class="package-review-wrap-text-wrap">
+                <h2 class="package-review-wrap-title"><span>박 * 정</span> 님</h2>
+                <!-- <button class="package-review-wrap-button" id="packageReviewBtn4">view</button> -->
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- wedding-hall -->
       <div class="wedding-hall clearfix">
@@ -512,7 +563,6 @@
             </div>
           </div>
         </div>
-      </div>
       <!-- review -->
       <div class="review clearfix">
         <div class="inner"></div>
@@ -530,5 +580,7 @@
         <div class="inner"></div>
       </footer>
     </div>
+  </div>
+</div>
   </body>
 </html>
