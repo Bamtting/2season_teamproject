@@ -5,10 +5,12 @@
 }
 .package-wrap {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  min-height: 700px;
-  margin: 50px auto;
+  min-height: 960px;
+  margin: 0 auto;
 }
 .package-text-wrap {
   position: relative;
@@ -16,12 +18,12 @@
 }
 .package-title {
   text-transform: uppercase;
-  font-size: 55px;
+  font-size: 42px;
   font-weight: bold;
   color: #fff;
 }
 .package-text-wrap p {
-  margin-top: 70px;
+  margin-top: 50px;
   font-size: 22px;
   font-weight: 400;
   line-height: 50px;
@@ -29,12 +31,12 @@
   color: #fff;
 }
 .package-text-wrap p span {
-  font-size: 50px;
+  font-size: 42px;
   color: #ffffff;
   font-family: "Garlicha";
 }
 .package-more-btn {
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 8px 15px;
   text-transform: uppercase;
   font-size: 24px;
@@ -53,11 +55,26 @@
   right: 0;
 }
 .packimgwrap {
-  margin-top: 83px;
+  margin-top: 72px;
   width: 750px;
   position: relative;
   display: flex;
   justify-content: space-between;
+}
+.package-review-wrap {
+  cursor: pointer;
+}
+.packimgli1:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+.packimgli2:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+.packimgli3:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 .packimgwrap li:first-child {
   position: relative;
@@ -66,6 +83,7 @@
   background: url("../images/package-dress-1.jpg") no-repeat center;
   background-size: cover;
   border-radius: 50%;
+  transition: transform 0.3s;
 }
 .packimgwrap li:nth-child(2) {
   position: relative;
@@ -74,6 +92,7 @@
   background: url("../images/package-makeup-1.jpg") no-repeat center;
   background-size: cover;
   border-radius: 50%;
+  transition: transform 0.3s;
 }
 .packimgwrap li:nth-child(3) {
   position: relative;
@@ -82,6 +101,7 @@
   background: url("../images/package-studio-1.jpg") no-repeat center;
   background-size: cover;
   border-radius: 50%;
+  transition: transform 0.3s;
 }
 /* 반응형 */
 @media all and (max-width: 1440px) {
