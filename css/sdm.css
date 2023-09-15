@@ -1,148 +1,284 @@
-/* ------------s.d.m---------- */
-.sdm .inner {
-  /* max-width: 1440px; */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+/* 박스이미지 */
+#studio_box {
+  background: url("../images/sutdio666.png") no-repeat center;
+  background-size: cover;
+  transition: all 0.5s;
+}
+#studio_box:hover {
+  background: url("../images/studio_hover2.png") no-repeat center;
+  background-size: cover;
+  transition: all 0.5s;
+}
+#drees_box {
+  background: url("../images/dreehover.png");
+  transition: all 0.5s;
+}
+#drees_box:hover {
+  background: url("../images/dress_hover.png");
+  transition: all 0.5s;
+}
+#makeup_box {
+  background: url("../images/makeup_hover.png");
+  transition: all 0.5s;
+}
+#makeup_box:hover {
+  background: url("../images/makeup222.png") no-repeat center;
+  background-size: cover;
+  transition: all 0.5s;
+}
+#sdm_subtitle {
+  text-align: center;
+  padding: 25px;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: uppercase;
+  user-select: none;
+}
+/*  */
+.sdm_title {
+  font-size: 68px;
+  text-align: center;
+  color: #887160;
+  margin-top: 5%;
+  padding: 5%;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 600;
+  user-select: none;
 }
 .sdm_wrap {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.sdm_box {
+  width: 406px;
+  height: 652px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sdm_imgbox {
+  width: 406px;
+  height: 287px;
+  position: relative;
+}
+.imgbox_hover {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(102, 73, 37, 0.8);
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  user-select: none;
+}
+.sdm_box_name {
+  text-align: center;
+  border: 1px solid #cecece;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sdm_box_name h3 {
+  font-size: 28px;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 700;
+}
+.sdm_box_name p {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  padding-top: 4px;
+}
+.sdm_box_review {
+  width: 100%;
+  height: 322px;
+  border: 1px solid #cecece;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review_1 {
+  width: 90%;
+  height: 18%;
+  /* background-color: aqua; */
+  user-select: none;
+}
+.review_1 h4 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.review_1 p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 8px;
+}
+/* review2 */
+.review_2 {
+  width: 90%;
+  height: 10%;
+  /* background-color: rgb(136, 255, 0); */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  user-select: none;
 }
-.sdm_title {
-  font-size: 70px;
-  text-align: center;
-  color: #aa9688;
-  margin-top: 10%;
-  padding: 5%;
-}
-/* studio */
-.studio {
-  position: relative;
-  width: 406px;
-  height: 702px;
-}
-.studio_name {
-  width: 100%;
-  height: 92px;
-  text-align: center;
-  border: 1px solid #cecece;
+.review_2_1 {
+  width: 150px;
   display: flex;
-  flex-direction: column;
+  justify-content: baseline;
   align-items: center;
-  justify-content: center;
-  line-height: 24px;
-}
-.studio_name h3 {
-  font-size: 24px;
-  font-family: "Noto Serif KR", serif;
-  font-weight: 700;
-}
-.studio_name p {
-  font-size: 14px;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
-}
-.wongu {
-  padding-bottom: 10px;
-}
-.studio_review {
-  padding: 30px;
   position: relative;
-  width: 406px;
-  height: 332px;
-  border: 1px solid #cecece;
+  /* background-color: antiquewhite; */
+}
+.review_2_2 {
+  width: 100px;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* align-items: center; */
+  justify-content: baseline;
+  align-items: center;
+  position: relative;
+  /* background-color: antiquewhite; */
+}
+.review_2 h4 {
+  font-size: 24px;
+  font-weight: 500;
   font-family: "Noto Sans KR", sans-serif;
+  padding-right: 5px;
 }
-.studio_mitipo {
-  width: 323px;
-  height: 18px;
-}
-.studio_review_review {
-  float: right;
-}
-.studio_review h4 {
-  font-size: 23px;
-  padding-bottom: 5px;
-}
-.studio_review_profile {
-  padding-top: 50px;
-}
-.studio_review_profile_text {
-  margin-left: 50px;
-  line-height: 18px;
-}
-.studio_review_profile_text h2 {
-  font-size: 18px;
+.review_2 p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
   font-weight: 600;
+  padding: 5px;
 }
-.studio_review_profile_text p {
-  font-weight: 400;
+.review_tting {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+  text-align: center;
+  background: none;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.review_tting p {
+  font-size: 10px;
+  font-weight: 900;
+}
+.review_tting:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+/* review3 */
+.review_3 {
+  margin-top: 20px;
+  width: 100%;
+  height: 45%;
+  /* background-color: rgb(136, 255, 0); */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+}
+.review_profile {
+  width: 90%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  position: relative;
+  user-select: none;
+}
+.review_3_text {
+  width: 100%;
+  height: 20px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.review_3_text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.review_3_text p {
   font-size: 12px;
-}
-.studio_review_mitipo_ {
-}
-/* dress */
-.dress {
-  width: 406px;
-  height: 702px;
-}
-.dress_name {
-  width: 100%;
-  height: 92px;
-  text-align: center;
-  border: 1px solid #cecece;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: 24px;
-}
-.dress_name h3 {
-  font-size: 24px;
-  font-family: "Noto Serif KR", serif;
-  font-weight: 700;
-}
-.dress_name p {
-  font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
+  padding-top: 3px;
 }
-/* makeup */
-.makeup {
-  width: 406px;
-  height: 702px;
-}
-.makeup_name {
-  width: 100%;
-  height: 92px;
-  text-align: center;
-  border: 1px solid #cecece;
+.review_3_text2 {
+  width: 90%;
   display: flex;
-  flex-direction: column;
+  justify-content: baseline;
   align-items: center;
-  justify-content: center;
-  line-height: 24px;
+  position: relative;
+  font-size: 13px;
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 15px;
 }
-.makeup_name h3 {
-  font-size: 24px;
-  font-family: "Noto Serif KR", serif;
-  font-weight: 700;
-}
-.makeup_name p {
-  font-size: 14px;
+.review_3_text3 {
+  width: 84%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 11px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
+  letter-spacing: 0.5px;
 }
-@media all and (max-width: 1024px) {
+.review_heart {
+  padding-left: 3px;
 }
-@media all and (max-width: 768px) {
+.review_button {
+  position: absolute;
+  padding: 12px;
+  width: 90%;
+  bottom: 12px;
+  border-radius: 50px;
+  border: none;
+  background-color: #887160;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
 }
-@media all and (max-width: 480px) {
+.review_button a {
+  color: #fff;
 }
-@media all and (max-width: 360px) {
+.review_button:hover {
+  background-color: #fff;
+  color: #887160;
+  cursor: pointer;
+  border: 2px solid #887160;
+  transition: all 0.3s;
+}
+.review_button:hover .button_a {
+  color: #887160;
 }

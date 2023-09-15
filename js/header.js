@@ -1,4 +1,5 @@
 window.addEventListener("load", function () {
+    const mainheader = document.querySelector(".header")
     const header = document.querySelector(".header-2");
     let lastScrollY = window.scrollY || window.pageYOffset; // 이전 스크롤 위치 저장
   
@@ -22,6 +23,9 @@ window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
       // 스크롤 이벤트가 발생할 때마다 헤더 업데이트
       updateHeader();
+    });
+    mainheader.addEventListener("mouseover", function(){
+      header.classList.remove("active"); // header에서 클래스 제거
     });
   });
 
