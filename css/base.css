@@ -35,6 +35,16 @@ body {
   overflow-x: hidden;
   min-width: 320px;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: #baa693;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F0E5;
+}
 ::selection{
   background-color: #baa693;
   color: #fff;
