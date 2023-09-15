@@ -112,17 +112,17 @@
 .login-form-btn:hover {
     background-color: #9c8b7b;
 }
-.text {
+.logintext {
   margin: 10px 0;
   padding: 0;
   color: #5c5c5c;
   font-size: 14px;
   text-align: center;
 }
-.text a {
+.logintext a {
   color: #5c5c5c;
 }
-.text a:hover{
+.logintext a:hover{
     color: #baa693;
 }
 .snslogin{

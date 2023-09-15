@@ -36,7 +36,7 @@ body {
   min-width: 320px;
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 ::-webkit-scrollbar-thumb {
   background: #baa693;
