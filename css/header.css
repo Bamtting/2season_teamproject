@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   background-color: #fff;
   z-index: 99999;
-  display: none;
+  /* display: none; */
 }
 .header .inner {
   display: flex;

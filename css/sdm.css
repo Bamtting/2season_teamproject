@@ -37,9 +37,10 @@
   font-size: 24px;
   font-family: "Noto Serif KR", serif;
   font-weight: 700;
+  padding-bottom: 1px;
 }
 .studio_name p {
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
 }
@@ -84,7 +85,11 @@
   font-weight: 400;
   font-size: 12px;
 }
-.studio_review_mitipo_ {
+.studio_review_profile {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  align-items: center;
 }
 /* dress */
 .dress {
