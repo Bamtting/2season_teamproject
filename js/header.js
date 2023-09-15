@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
       // 스크롤 이벤트가 발생할 때마다 헤더 업데이트
       updateHeader();
     });
-    window.addEventListener("mouseover", function(){
+    mainheader.addEventListener("mouseover", function(){
       header.classList.remove("active"); // header에서 클래스 제거
     });
   });
