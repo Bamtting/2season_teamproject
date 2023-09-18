@@ -76,7 +76,8 @@ $(document).ready(function () {
   $(".package-review-wrapper-inner1").click(function () {
     // 모달 이미지 열기
     $("#modalImage").attr("src", "../images/package_review1-1.png");
-    $("#PackagemyModal").css("display", "block");
+    $("#modalImage1").attr("src", "../images/pk_review_main4.jpg").css({ left: "-650px", top: "120px" });
+    $("#PackagemyModal").css("display", "block").css("position", "fixed");
     //백그라운드 어둡게 하기
     $(".modal-overlay").css("display", "block");
   });
@@ -84,7 +85,10 @@ $(document).ready(function () {
   $(".package-review-wrapper-inner2").click(function () {
     // 모달 이미지 열기
     $("#modalImage").attr("src", "../images/package_review2-1.png");
-    $("#PackagemyModal").css("display", "block");
+    $("#modalImage1")
+      .attr("src", "../images/pk_review_main1.jpg")
+      .css({ left: "-650px", top: "5px" });
+    $("#PackagemyModal").css("display", "block").css("position", "fixed");
     //백그라운드 어둡게 하기
     $(".modal-overlay").css("display", "block");
   });
@@ -92,7 +96,10 @@ $(document).ready(function () {
   $(".package-review-wrapper-inner3").click(function () {
     // 모달 이미지 열기
     $("#modalImage").attr("src", "../images/package_review3-1.png");
-    $("#PackagemyModal").css("display", "block");
+    $("#modalImage1")
+      .attr("src", "../images/pk_review_main3.jpg")
+      .css({ left: "-650px", top: "230px" });
+    $("#PackagemyModal").css("display", "block").css("position", "fixed");
     //백그라운드 어둡게 하기
     $(".modal-overlay").css("display", "block");
   });
@@ -100,7 +107,10 @@ $(document).ready(function () {
   $(".package-review-wrapper-inner4").click(function () {
     // 모달 이미지 열기
     $("#modalImage").attr("src", "../images/package_review4-1.png");
-    $("#PackagemyModal").css("display", "block");
+    $("#modalImage1")
+      .attr("src", "../images/pk_review_main2.jpg")
+      .css({ left: "-650px", top: "230px" });
+    $("#PackagemyModal").css("display", "block").css("position", "fixed");
     //백그라운드 어둡게 하기
     $(".modal-overlay").css("display", "block");
   });
