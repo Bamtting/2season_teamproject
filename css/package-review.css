@@ -9,7 +9,7 @@
   display: block;
 }
 .package-review-title {
-  color: #aa9688;
+  color: #887160;
   font-size: 42px;
   font-weight: bold;
   text-transform: uppercase;
@@ -17,7 +17,7 @@
 }
 .package-review-text-wrap p {
   font-size: 22px;
-  color: #aa9688;
+  color: #887160;
   margin-top: 30px;
 }
 .package-review-wrapper {
@@ -27,6 +27,7 @@
   justify-content: space-between;
 }
 .package-review-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +48,8 @@
   font-size: 22px;
   padding: 13px 18px;
   background-color: #aa9688a1;
-  border-radius: 50%;
+  border-radius: 50px;
+  color: #ffffff;
 }
 .package-review-wrap-title span {
   font-weight: 500;
@@ -74,11 +76,21 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   display: none;
   z-index: 999;
 }
-.package-close{
+#modalImage1 {
+  position: absolute;
+  left: -650px;
+  top: 5px;
+}
+#modalImage2 {
+  position: absolute;
+  left: -650px;
+  top: 230px;
+}
+.package-close {
   cursor: pointer;
 }
 .modal-overlay {
@@ -91,21 +103,38 @@
   background: rgba(0, 0, 0, 0.7); /* 어둡게 만들 배경 색상 */
   z-index: 998; /* 모달보다 아래에 위치하도록 설정 */
 }
-/* .package-review-wrap1-button {
+.package-close {
+  position: absolute;
+  font-size: 35px;
+  color: #aa9688;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+}
+.package-close:hover {
+  color: black;
+}
+.pk-review-more {
+  position: absolute;
+  top: 680px;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: "Noto Serif KR", serif;
-  font-size: 20px;
-  padding: 2px 7px;
+  font-size: 22px;
+  padding: 5px 15px;
+  border-radius: 50px;
   text-transform: uppercase;
   border: 1px solid #000;
   cursor: pointer;
+  background: none;
   transition: 0.15s ease-in-out;
 }
-.package-review-wrap1-button:hover {
+.pk-review-more:hover {
   background-color: #aa9688;
   border: 1px solid #ffffff;
   color: #ffffff;
   transition: 0.15s ease-in-out;
-} */
+}
 
 @media all and (max-width: 1024px) {
 }
