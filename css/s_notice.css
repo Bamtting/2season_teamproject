@@ -19,20 +19,36 @@
 .faq button{
     width: 100%;
     text-align: left;
-    padding: 7px;
+    padding: 15px;
     background: none;
     border: none;
     /* border-bottom: 1px solid #333; */
     cursor: pointer;
+    font-size: 16px;
 }
 .cont{
-    margin: 10px 15px;
-    padding: 10px;
+    margin: 0 15px 20px 15px;
+    padding: 15px 20px;
     background-color: #efefef;
     border-radius: 0.5vw;
+    font-size: 15px;
+}
+.big-font{
+    font-size: 20px;
+    font-weight: 600;
 }
 .faq  li > div{
     display: none;
+}
+.question2{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+}
+.question2 h2{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 @media all and (max-width: 1024px) {
 }
