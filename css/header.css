@@ -200,6 +200,20 @@ html.active {
 }
 }
 @media all and (max-width: 550px) {
+  .header .inner{
+    width: 90vw;
+  }
+  .header-1{
+    height: 60px;
+  }
+  .header-1 .logo{
+    width: 120px;
+    height: 40px;
+  }
+  .header-1 .logo img{
+    width: 120px;
+    height: 40px;
+  }
   .s-menu,
   .header-2 ul{
     display: none;
