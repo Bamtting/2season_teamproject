@@ -1,9 +1,934 @@
 /* 서브 스드메 */
+/* main */
+.s_sdm {
+  display: flex;
+  justify-content: center;
+}
+.s_sdm .inner {
+  max-width: 1920px;
+}
+.s_sdm_wrap {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 950px;
+  background: url("../images/sub_back.png") no-repeat;
+  background-position: center;
+}
+.sdmmain_01 {
+  width: 100%;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  display: block;
+  overflow: hidden;
+  animation: box-ani 3s linear infinite forwards; /* 애니메이션 적용 */
+}
+@keyframes box-ani {
+  0% {
+    transform: translate(15px, 0px) rotate(-0.2deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(15px, 0px) rotate(-0.2deg);
+  }
+}
+.sdmmain_02 {
+  width: 100%;
+  position: absolute;
+  top: 19%;
+  left: 40%;
+  overflow: hidden;
+  animation: box-ani2 1s linear infinite forwards; /* 애니메이션 적용 */
+}
+@keyframes box-ani2 {
+  0% {
+    transform: translate(0px, 4px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 4px) rotate(0deg);
+  }
+}
+.sdmmain_03 {
+  width: 100%;
+  position: absolute;
+  left: 63%;
+  top: 15%;
+  display: block;
+  animation: box-ani3 4s linear infinite forwards; /* 애니메이션 적용 */
+}
+@keyframes box-ani3 {
+  0% {
+    transform: translate(20px, 1px) rotate(0.2deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(20px, 1px) rotate(0.2deg);
+  }
+}
+.sdmmain_04 {
+  width: 100%;
+  position: absolute;
+  left: 10%;
+  top: 75%;
+  display: block;
+  overflow: hidden;
+  animation: box-ani4 2s linear infinite forwards; /* 애니메이션 적용 */
+}
+@keyframes box-ani4 {
+  0% {
+    transform: translate(0px, 2px) rotate(-0.2deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 2px) rotate(-0.2deg);
+  }
+}
+.sdmmain_05 {
+  width: 100%;
+  position: absolute;
+  top: 48%;
+  left: 40%;
+  overflow: hidden;
+  animation: box-ani5 3s linear infinite forwards; /* 애니메이션 적용 */
+}
+@keyframes box-ani5 {
+  0% {
+    transform: translate(10px, 0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(10px, 0px) rotate(0deg);
+  }
+}
+.sdmmain_06 {
+  width: 100%;
+  position: absolute;
+  left: 70%;
+  bottom: 10%;
+  display: block;
+  animation: box-ani6 2s linear infinite forwards; /* 애니메이션 적용 */
+}
+.sdmmain_07 {
+  width: 100%;
+  position: absolute;
+  left: 78%;
+  bottom: 10%;
+  display: block;
+  animation: box-ani7 2.5s linear infinite forwards; /* 애니메이션 적용 */
+}
+@keyframes box-ani6 {
+  0% {
+    transform: translate(4px, 0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(4px, 0px) rotate(0deg);
+  }
+}
+@keyframes box-ani7 {
+  0% {
+    transform: translate(0px, 6px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 6px) rotate(0deg);
+  }
+}
+/* studio */
+.sdm_studio {
+  position: relative;
+  top: 5%;
+}
+.sdm_studio_title {
+  font-size: 78px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sdm_studio_title h3 {
+  font-family: "Noto Serif KR", serif;
+  color: #887160;
+  padding-bottom: 20px;
+}
+.sdm_studio_title button {
+  width: 130px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50px;
+  border: 2px solid #887160;
+  background: none;
+  color: #887160;
+}
+.sdm_studio_title button:hover {
+  background-color: #887160;
+  color: #fff;
+  cursor: pointer;
+}
+.sdm_studio_title button p {
+  font-size: 13px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+#studio_nemo {
+  position: relative;
+  width: 490px;
+  height: 300px;
+  /* background-color: beige; */
+  padding: 30px;
+  margin: 10px;
+}
+.sdm_studio_wrap {
+  width: 100%;
+  height: 705px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: aquamarine; */
+}
+.sdm_studio_wrap h3 {
+  font-size: 28px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  font-family: "Noto Serif KR", serif;
+}
+.sdm_studio_wrap p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.sdm_studio_wrap button {
+  padding: 5px;
+  margin-top: 12px;
+  background: #887160;
+  border: none;
+  color: #fff;
+  width: 130px;
+  height: 35px;
+}
+.sdm_studio_wrap button:hover {
+  background: none;
+  color: #887160;
+  border: 2px solid #887160;
+  cursor: pointer;
+}
+.sdm_studio_wrap button p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.studio_firstbox {
+  display: flex;
+  flex-direction: row;
+}
+.sdm_studio01 {
+  background: url("../images/studio01.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.sdm_studio02 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #cecece;
+}
+.studio_secondbox {
+  display: flex;
+  flex-direction: row;
+}
+.sdm_studio03 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #cecece;
+}
+.sdm_studio04 {
+  background: url("../images/studio_some05.jpg") no-repeat;
+  opacity: rgba(0,0,0,0.2);
+  background-position: center center;
+  background-size: cover;
+}
+/* eight */
+.sdm_studio_eight {
+  position: relative;
+  margin: auto;
+  width: 1000px;
+  height: 500px;
+  /* background-color: aqua; */
+}
+#ss_eight {
+  width: 250px;
+  height: 250px;
+}
+.eight_first {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.eight_1 {
+  position: relative;
+  background: url("../images/eight_01.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_2 {
+  position: relative;
+  background: url("../images/eight_02.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_3 {
+  position: relative;
+  background: url("../images/eight_03.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_4 {
+  position: relative;
+  background: url("../images/eight_04.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_two {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.eight_5 {
+  position: relative;
+  background: url("../images/eight_05.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_6 {
+  position: relative;
+  background: url("../images/eight_06.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_7 {
+  position: relative;
+  background: url("../images/eight_07.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.eight_8 {
+  position: relative;
+  background: url("../images/eight_08.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* 견적 */
+.sdm_reservation {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 8%;
+  width: 100%;
+  height: 200px;
+  background-color: #ece8e4;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.sdm_reservation h3 {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.sdm_reservation p {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.sdm_reservation button {
+  padding: 5px;
+  margin-top: 15px;
+  background: #887160;
+  border: none;
+  color: #fff;
+  width: 130px;
+  height: 35px;
+}
+.sdm_reservation button p {
+  font-weight: 500;
+}
+.sdm_reservation button:hover {
+  background: none;
+  color: #887160;
+  font-weight: 600;
+  border: 2px solid #887160;
+  cursor: pointer;
+}
+.sdm_reservation button:hover .reservation_button {
+  font-weight: 600;
+}
+/* dress */
+.dress_wrap {
+  /* background-color: aqua; */
+  width: 100%;
+  height: 800px;
+  position: relative;
+  display: block;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.dress_title {
+  width: 100%;
+  height: 150px;
+}
+.dress_title h3 {
+  font-size: 78px;
+  text-align: center;
+  font-family: "Noto Serif KR", serif;
+  color: #887160;
+}
+.dress_more_button {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  padding: 5px;
+}
+.dress_more_button p {
+  font-weight: 500;
+}
+.dress_more_button button {
+  width: 130px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50px;
+  border: 2px solid #887160;
+  background: none;
+  color: #887160;
+}
+.dress_more_button button:hover {
+  background-color: #887160;
+  color: #fff;
+  cursor: pointer;
+}
+.dress_logo {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 25%;
+}
+.dl_01 {
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+.dl01_img {
+  background: url("../images/dress_logo.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.dl02_img {
+  background: url("../images/dress_logo1.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.dl03_img {
+  background: url("../images/dress_logo2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#dl01_first {
+  width: 100%;
+  height: 65%;
+  /* background-color: #cecece; */
+}
+.dlo01_box {
+  width: 100%;
+  height: 35%;
+  /* background-color: beige; */
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -10%;
+  line-height: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.dlo01_box h3 {
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.dress_img {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  top: 45%;
+}
+#dress_img_first {
+  width: 230px;
+  height: 200px;
+  float: left;
+  margin: 10px;
+}
+#dress_img_second {
+  width: 230px;
+  height: 274px;
+  float: left;
+  margin: 10px;
+}
+.dress_fb {
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+}
+.dress_sb {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: -8%;
+}
+.dressimg_hover {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+}
+.dressimg_black {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.dress_img_01 {
+  background: url("../images/dress_01.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+#dress_img_first:hover .dressimg_black {
+  display: block;
+  cursor: pointer;
+}
+#dress_img_second:hover .dressimg_black {
+  display: block;
+  cursor: pointer;
+}
+.dress_img_02 {
+  background: url("../images/dress_02.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.dress_img_03 {
+  background: url("../images/dress_03.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.dress_img_04 {
+  background: url("../images/dress_04.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.dress_img_05 {
+  background: url("../images/dress_05.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.dress_img_06 {
+  background: url("../images/dress_06.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.dress_img_07 {
+  background: url("../images/dress_07.jpg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.dress_img_08 {
+  background: url("../images/dress_08.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* makeup */
+.makeup_wrap {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 22%;
+  height: 700px;
+}
+.makeup_wrap_title {
+  width: 100%;
+}
+.makeup_wrap_title h3 {
+  font-size: 78px;
+  text-align: center;
+  font-family: "Noto Serif KR", serif;
+  color: #887160;
+}
+.makeup_wrap_box {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 25%;
+}
+.makeup_box01 {
+  /* background-color: #cecece; */
+  width: 450px;
+  height: 500px;
+  margin: 30px;
+  text-align: center;
+}
+.makeup_box01_img {
+  width: 100%;
+  height: 60%;
+  background: url("../images/makeup_01.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.makeup_box02_img {
+  width: 100%;
+  height: 60%;
+  background: url("../images/main_makeup.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.makeup_box01_text {
+  padding-top: 5%;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.makeup_box01_text h4 {
+  float: left;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+.mbt_gold {
+  width: 33%;
+  border: 2px solid #887160;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #887160;
+}
+.mbt_black {
+  width: 33%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mbt_gold:hover {
+  background-color: #887160;
+  color: #fff;
+}
+.mbt_black:hover {
+  background-color: #887160;
+  color: #fff;
+}
+.mbt_black:hover h4 {
+  font-weight: 400;
+}
+.makeup_box01_text2 {
+  padding-top: 18px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.makeupbox_button {
+  position: relative;
+  top: 80%;
+}
+.makeupbox_button button {
+  width: 80px;
+  padding: 8px;
+  border: 2px solid #887160;
+  background: none;
+  border-radius: 50px;
+}
+.makeupbox_button button p {
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #887160;
+}
+.makeupbox_button button:hover {
+  background-color: #887160;
+  cursor: pointer;
+}
+.makeupbox_button button:hover .mb_button {
+  color: #fff;
+}
+.makeupimg_hover {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+.makeupimg_black {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.makeup_box01_img:hover .makeupimg_black {
+  display: block;
+  cursor: pointer;
+}
+.makeup_box02_img:hover .makeupimg_black {
+  display: block;
+  cursor: pointer;
+}
+/* ------------------------------- */
+/* ----------반응형----------- */
+@media all and (max-width: 1484px) {
+  .sdmmain_02 {
+    display: none;
+  }
+  .sdmmain_05 {
+    display: none;
+  }
+  .sdmmain_06 {
+    left: 63%;
+  }
+}
 @media all and (max-width: 1024px) {
+  .sdmmain_01 {
+    left: 5%;
+  }
+  .sdmmain_02 {
+    display: none;
+  }
+  .sdmmain_03 {
+    left: 45%;
+  }
+  .sdmmain_05 {
+    display: none;
+  }
+  .sdmmain_06 {
+    left: 50%;
+  }
+  .sdmmain_07 {
+    left: 70%;
+  }
+  .makeup_box01 h4 {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 888px) {
+  .makeup_box01 h4 {
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 809px) {
+  .makeup_box01_text {
+    width: 90%;
+  }
 }
 @media all and (max-width: 768px) {
+  .sdmmain_03 {
+    display: none;
+  }
+  .sdmmain_04 {
+    display: none;
+  }
+  .sdmmain_06 {
+    display: none;
+  }
+  .sdmmain_07 {
+    left: 65%;
+  }
+  #studio_nemo {
+    position: relative;
+    width: 240px;
+    height: 300px;
+    /* background-color: beige; */
+    padding: 10px;
+    margin: 5px;
+  }
+  .sdm_studio_wrap h3 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .sdm_studio_wrap p {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .sdm_studio_wrap button {
+    width: 100px;
+    background: none;
+    color: #887160;
+    border: 2px solid #887160;
+  }
+  .sdm_studio_wrap button:hover {
+    background-color: #887160;
+    color: #fff;
+  }
+  .sdm_studio_wrap button:hover p {
+    font-weight: 400;
+  }
+  .sdm_studio_wrap button p {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .dress_img {
+    margin-top: -10%;
+  }
+  .dress_img_01 {
+    display: none;
+  }
+  .dress_img_02 {
+    display: none;
+  }
+  .dress_img_05 {
+    display: none;
+  }
+  .dress_img_06 {
+    display: none;
+  }
+  .dress_more_button {
+    top: 24%;
+    z-index: 999;
+  }
+  .dl_01:first-child {
+    display: none;
+  }
+  .dlo01_box {
+    margin-top: -20%;
+  }
+  .dlo01_box h3 {
+    font-size: 18px;
+  }
+  .dress_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .makeupbox_button {
+    margin-top: 50%;
+  }
+  .makeup_box01 h4 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .makeup_box01 p {
+    font-weight: 600;
+  }
+  .makeup_box01_text {
+    width: 88%;
+  }
+  .makeup_box01_img {
+    height: 300px;
+  }
+  .makeup_box02_img {
+    height: 300px;
+  }
+  .makeup_wrap_box {
+    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .makeup_wrap {
+    height: 1020px;
+  }
+}
+@media all and (max-width: 650px) {
+  .sdmmain_07 {
+    left: 56%;
+  }
 }
 @media all and (max-width: 480px) {
+  .sdmmain_01 {
+    left: 2%;
+  }
+  .sdmmain_07 {
+    left: 45%;
+  }
 }
 @media all and (max-width: 360px) {
 }
