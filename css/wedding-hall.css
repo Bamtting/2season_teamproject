@@ -49,10 +49,11 @@
 .w-tbox {
   width: 360px;
   height: 277px;
+  padding: 15px;
   text-align: center;
 }
 .w-tbox img {
-  width: 80%;
+  width: 90%;
   cursor: pointer;
 }
 .w-tbox p {

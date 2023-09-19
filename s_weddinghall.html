@@ -103,7 +103,8 @@
 
     <!-- Swiper Js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <!-- isotope Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <!-- Link Swiper's css -->
     <link
       rel="stylesheet"
@@ -125,6 +126,7 @@
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/s_weddinghall.js"></script>
+    <script src="js/load-weddinghalls.js"></script>
 
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
@@ -185,9 +187,7 @@
               <li>
                 <a href="s_sdm.html">s.d.m</a>
               </li>
-              <li>
-                <a href="s_notice.html">q&a</a>
-              </li>
+              <li><a href="s_notice.html">q&a</a>호텔</li>
               <li>
                 <a href="#">review</a>
               </li>
@@ -200,10 +200,7 @@
       </header>
       <div class="s_weddinghall">
         <div class="text-area">
-          <img
-            src="images/a-joyful-celebration-of-love-and-marriage-generated-by-ai.jpg"
-            alt="소개 배경"
-          />
+          <img src="images/wedding-2595862_1920.jpg" alt="소개 배경" />
           <p class="text-area-sub">
             모든 로맨틱한 이야기는 특별한 장소에서 시작합니다. <br />
             최고의 웨딩홀을 선택하여 여러분의 이야기를 시작하세요. <br />
@@ -213,16 +210,109 @@
         </div>
         <div class="inner">
           <div class="hall-list">
-            <a href="#" class="hall-btn">전체</a>
-            <a href="#" class="hall-btn-1">일반 홀</a>
-            <a href="#" class="hall-btn-2">컨벤션 홀</a>
-            <a href="#" class="hall-btn-3">야외/하우스 홀</a>
-            <a href="#" class="hall-btn-4">채플 홀</a>
-            <a href="#" class="hall-btn-5">호텔 홀</a>
+            <a href="#" class="hall-btn" data-filter="all">전체</a>
+            <a href="#" class="hall-btn-1" data-filter=".nomal">일반 홀</a>
+            <a href="#" class="hall-btn-2" data-filter=".convention"
+              >컨벤션 홀</a
+            >
+            <a href="#" class="hall-btn-3" data-filter=".out">야외/하우스 홀</a>
+            <a href="#" class="hall-btn-4" data-filter=".chapel">채플 홀</a>
+            <a href="#" class="hall-btn-5" data-filter=".hotel">호텔 홀</a>
           </div>
+          <div class="hall-list2">
+            <a href="#" class="hall2-btn" data-filter="all">전체</a>
+            <a href="#" class="hall2-btn-1" data-filter=".nomal">일반 홀</a>
+            <a href="#" class="hall2-btn-2" data-filter=".convention"
+              >컨벤션 홀</a
+            >
+          </div>
+          <div class="hall-list2">
+            <a href="#" class="hall2-btn-3" data-filter=".out"
+              >야외/하우스 홀</a
+            >
+            <a href="#" class="hall2-btn-4" data-filter=".chapel">채플 홀</a>
+            <a href="#" class="hall2-btn-5" data-filter=".hotel">호텔 홀</a>
+          </div>
+          <!-- 검색 영역 -->
           <div class="w-search-area">
             <p class="w-search-text">웨딩 홀 상세 검색</p>
-            
+            <div class="select-box">
+              <form action="#">
+                <label for="#">지역(시/도)</label>
+                <select id="selcity" name="selcity">
+                  <option value=".all">전체</option>
+                  <option value=".seoul">서울</option>
+                  <option value=".gyeonggi">경기</option>
+                  <option value=".gangwon">강원</option>
+                  <option value=".gyeongnam">경남</option>
+                  <option value=".gwangju">광주</option>
+                  <option value=".daejeon">대전</option>
+                  <option value=".daegu">대구</option>
+                  <option value=".busan">부산</option>
+                  <option value=".ulsan">울산</option>
+                  <option value=".incheon">인천</option>
+                  <option value=".jeonbuk">전북</option>
+                  <option value=".chungnam">충남</option>
+                  <option value=".chungbuk">충북</option>
+                  <option value=".Jeju">제주</option>
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">지역(시/군/구)</label>
+                <select id="city" name="city">
+                  <option value="all">지역을 선택해주세요.</option>
+                  <!-- JavaScript로 옵션 추가될 자리 -->
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">보증인원</label>
+                <select id="guarantors" name="guarantors">
+                  <!-- JavaScript로 옵션 추가될 자리 -->
+                </select>
+              </form>
+            </div>
+            <div class="select-box">
+              <form action="#">
+                <label for="#">식대</label>
+                <select id="meals" name="meals">
+                  <!-- JavaScript로 옵션 추가될 자리 -->
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">식사메뉴</label>
+                <select id="mealmenu" name="mealmenu">
+                  <!-- JavaScript로 옵션 추가될 자리 -->
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">예식형태</label>
+                <select id="ceremony" name="ceremony">
+                  <!-- JavaScript로 옵션 추가될 자리 -->
+                </select>
+              </form>
+            </div>
+            <div class="select-box">
+              <div class="search-container">
+                <!-- 텍스트로 검색할 입력 상자 -->
+                <label for="searchText">웨딩홀 명:</label>
+                <input
+                  type="text"
+                  id="searchText"
+                  placeholder="웨딩홀 명을 입력하세요."
+                />
+              </div>
+              <!-- 검색 버튼 -->
+              <button class="w-serach-btn" onclick="searchWeddingHalls()">
+                검색
+              </button>
+              <!-- 검색 결과를 표시할 영역 -->
+            </div>
+          </div>
+          <div class="information-area">
+            <div id="results">
+              <div id="weddingHallsList"></div>
+              <!-- 검색 결과가 여기에 표시됩니다. -->
+            </div>
           </div>
         </div>
       </div>
