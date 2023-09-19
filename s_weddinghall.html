@@ -125,7 +125,6 @@
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/s_weddinghall.js"></script>
-    <script src="js/load-weddinghalls.js"></script>
 
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
@@ -209,7 +208,7 @@
         </div>
         <div class="inner">
           <div class="hall-list">
-            <button class="hall-btn active" data-filter="all">전체</button>
+            <button class="hall-btn active" data-filter=".all">전체</button>
             <button class="hall-btn-1" data-filter=".nomal">일반 홀</button>
             <button class="hall-btn-2" data-filter=".convention">
               컨벤션 홀
@@ -221,7 +220,7 @@
             <button class="hall-btn-5" data-filter=".hotel">호텔 홀</button>
           </div>
           <div class="hall-list2">
-            <button class="hall2-btn" data-filter="all">전체</button>
+            <button class="hall2-btn" data-filter=".all">전체</button>
             <button class="hall2-btn-1" data-filter=".nomal">일반 홀</button>
             <button class="hall2-btn-2" data-filter=".convention">
               컨벤션 홀
@@ -241,21 +240,23 @@
               <form action="#">
                 <label for="#">지역(시/도)</label>
                 <select id="selcity" name="selcity">
-                  <option value="all">전체</option>
-                  <option value=".seoul">서울</option>
-                  <option value=".gyeonggi">경기</option>
-                  <option value=".gangwon">강원</option>
-                  <option value=".gyeongnam">경남</option>
-                  <option value=".gwangju">광주</option>
-                  <option value=".daejeon">대전</option>
-                  <option value=".daegu">대구</option>
-                  <option value=".busan">부산</option>
-                  <option value=".ulsan">울산</option>
-                  <option value=".incheon">인천</option>
-                  <option value=".jeonbuk">전북</option>
-                  <option value=".chungnam">충남</option>
-                  <option value=".chungbuk">충북</option>
-                  <option value=".Jeju">제주</option>
+                  <option value="all" data-filter=".all">전체</option>
+                  <option value="seoul" data-filter=".seoul">서울</option>
+                  <option value="gyeonggi" data-filter=".gyeonggi">경기</option>
+                  <option value="gangwon" data-filter=".gangwon">강원</option>
+                  <option value="gyeongnam" data-filter=".gyeongnam">
+                    경남
+                  </option>
+                  <option value="gwangju" data-filter=".gwangju">광주</option>
+                  <option value="daejeon" data-filter=".daejeon">대전</option>
+                  <option value="daegu" data-filter=".daegu">대구</option>
+                  <option value="busan" data-filter=".busan">부산</option>
+                  <option value="ulsan" data-filter=".ulsan">울산</option>
+                  <option value="incheon" data-filter=".incheon">인천</option>
+                  <option value="jeonbuk" data-filter=".jeonbuk">전북</option>
+                  <option value="chungnam" data-filter=".chungnam">충남</option>
+                  <option value="chungbuk" data-filter=".chungbuk">충북</option>
+                  <option value="Jeju" data-filter=".Jeju">제주</option>
                 </select>
               </form>
               <form action="#">
@@ -268,7 +269,13 @@
               <form action="#">
                 <label for="#">보증인원</label>
                 <select id="guarantors" name="guarantors">
-                  <!-- JavaScript로 옵션 추가될 자리 -->
+                  <option value="0" data-filter=".0">49명이하</option>
+                  <option value="50" data-filter=".50">50~99명</option>
+                  <option value="100" data-filter=".100">100~199명</option>
+                  <option value="200" data-filter=".200">200~299명</option>
+                  <option value="300" data-filter=".300">300~399명</option>
+                  <option value="400" data-filter=".400">400~499명</option>
+                  <option value="500" data-filter=".500">500명이상</option>
                 </select>
               </form>
             </div>
@@ -276,19 +283,41 @@
               <form action="#">
                 <label for="#">식대</label>
                 <select id="meals" name="meals">
-                  <!-- JavaScript로 옵션 추가될 자리 -->
+                  <option value="39won" data-filter=".39won">
+                    3만9천원이하
+                  </option>
+                  <option value="49won" data-filter=".49won">
+                    4만원~4만9천원
+                  </option>
+                  <option value="59won" data-filter=".59won">
+                    5만원~5만9천원
+                  </option>
+                  <option value="79won" data-filter=".79won">
+                    6만원~7만9천원
+                  </option>
+                  <option value="99won" data-filter=".99won">
+                    8만원~9만9천원
+                  </option>
+                  <option value="100won" data-filter=".100won">
+                    10만원이상
+                  </option>
                 </select>
               </form>
               <form action="#">
                 <label for="#">식사메뉴</label>
                 <select id="mealmenu" name="mealmenu">
-                  <!-- JavaScript로 옵션 추가될 자리 -->
+                  <option value="buffet" data-filter=".bf">뷔페</option>
+                  <option value="western" data-filter=".wt">양식</option>
+                  <option value="korean" data-filter=".ko">한식</option>
+                  <option value="chinese" data-filter=".ch">중식</option>
+                  <option value="fusion" data-filter=".fs">퓨전</option>
                 </select>
               </form>
               <form action="#">
                 <label for="#">예식형태</label>
                 <select id="ceremony" name="ceremony">
-                  <!-- JavaScript로 옵션 추가될 자리 -->
+                  <option value="sc" data-filter=".sc">분리예식</option>
+                  <option value="mc" data-filter=".mc">동시예식</option>
                 </select>
               </form>
             </div>

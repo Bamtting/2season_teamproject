@@ -1,235 +1,288 @@
 $(document).ready(function () {
-  // 가상의 지역 데이터
-  const regions = [
-    { Velue: "all", name: "전체" },
-    { id: "seoul", name: "서울" },
-    { id: "gyeonggi", name: "경기" },
-    { id: "gangwon", name: "강원" },
-    { id: "gyeongnam", name: "경남" },
-    { id: "gwangju", name: "광주" },
-    { id: "daejeon", name: "대전" },
-    { id: "daegu", name: "대구" },
-    { id: "busan", name: "부산" },
-    { id: "ulsan", name: "울산" },
-    { id: "incheon", name: "인천" },
-    { id: "jeonbuk", name: "전북" },
-    { id: "chungnam", name: "충남" },
-    { id: "chungbuk", name: "충북" },
-    { id: "Jeju", name: "제주" },
-  ];
-
-  // 가상의 지역(시/군/구) 데이터
-  const loungeData = {
-    all: [
-      "전체",
-      "강남구",
-      "영등포구",
-      "중구",
-      "서초구",
-      "강서구",
-      "송파구",
-      "구로구",
-      "용산구",
-      "종로구",
-      "마포구",
-      "성동구",
-      "양천구",
-      "광진구",
-      "성북구",
-      "강동구",
-      "강북구",
-      "동대문구",
-      "동작구",
-      "은평구",
-      "관악구",
-      "도봉구",
-      "노원구",
-      "금천구",
-      "서대문구",
-    ],
-    seoul: [
-      "전체",
-      "강남구",
-      "영등포구",
-      "중구",
-      "서초구",
-      "강서구",
-      "송파구",
-      "구로구",
-      "용산구",
-      "종로구",
-      "마포구",
-      "성동구",
-      "양천구",
-      "광진구",
-      "성북구",
-      "강동구",
-      "강북구",
-      "동대문구",
-      "동작구",
-      "은평구",
-      "관악구",
-      "도봉구",
-      "노원구",
-      "금천구",
-      "서대문구",
-      "고양시",
-      "광명시",
-      "구리시",
-      "군포시",
-      "김포시",
-      "남양주시",
-      "동두천시",
-      "부천시",
-      "성남시",
-      "수원시",
-      "시흥시",
-      "안산시",
-      "안양시",
-      "오산시",
-      "용인시",
-      "의정부시",
-      "이천시",
-      "파주시",
-      "평택시",
-      "포천시",
-      "하남시",
-      "화성시",
-    ],
-    gyeonggi: [
-      "전체",
-      "고양시",
-      "광명시",
-      "구리시",
-      "군포시",
-      "김포시",
-      "남양주시",
-      "동두천시",
-      "부천시",
-      "성남시",
-      "수원시",
-      "시흥시",
-      "안산시",
-      "안양시",
-      "오산시",
-      "용인시",
-      "의정부시",
-      "이천시",
-      "파주시",
-      "평택시",
-      "포천시",
-      "하남시",
-      "화성시",
-    ],
-  };
-
-  const selcity = document.getElementById("selcity");
-  const city = document.getElementById("city");
-
-  // 지역 옵션 추가
-  regions.forEach((region) => {
-    const option = document.createElement("option");
-    option.value = region.id;
-    option.textContent = region.name;
-    selcity.appendChild(option);
+  // 상위 홀 선택 버튼 클릭시 필터링
+  $(".hall-list button").click(function () {
+    $(".hall-list button").removeClass("active");
+    $(this).addClass("active");
+    var selector = $(this).attr("data-filter");
+    $(".mix-wrapper").isotope({
+      filter: selector,
+    });
   });
-  // 지역 옵션 선택 시 지역 업데이트
-  selcity.addEventListener("change", () => {
-    const selectedRegion = selcity.value;
-    city.innerHTML = ""; // 선택지 초기화
+  // 셀렉트 박스 내 선택시 필터링
+  $("#selcity").change(function () {
+    var selcity = $(this).val(); // 선택된 옵션의 값 가져오기
+    var filterValue = selcity === "all" ? "*" : "." + selcity;
 
-    if (selectedRegion in loungeData) {
-      loungeData[selectedRegion].forEach((lounge) => {
-        const option = document.createElement("option");
-        option.value = lounge;
-        option.textContent = lounge;
-        city.appendChild(option);
-      });
+    $(".mix-wrapper").isotope({
+      filter: filterValue,
+    });
+  });
+
+  // "지역(시/도)" 셀렉트 박스 변경 이벤트 핸들러
+  $("#selcity").change(function () {
+    var selectedCity = $(this).val();
+    var citySelect = $("#city");
+
+    // "전체"를 선택한 경우, "지역(시/군/구)" 셀렉트 박스 초기화
+    if (selectedCity === "all") {
+      citySelect.empty();
+      citySelect.append('<option value="all">지역을 선택해주세요.</option>');
     } else {
-      const option = document.createElement("option");
-      option.textContent = "지역을 선택해주세요";
-      city.appendChild(option);
+      // 선택한 "시/도"에 따라 해당하는 동 이름 추가
+      var cityOptions = getCityOptions(selectedCity);
+      citySelect.html(cityOptions);
     }
   });
-  // 식대
-  const meals = [
-    { value: "all", label: "가격을 선택해주세요." },
-    { value: "30000", label: "39,000원 미만" },
-    { value: "40000", label: "40,000원 - 49,000원" },
-    { value: "50000", label: "50,000원 - 59,000원" },
-    { value: "60000", label: "60,000원 - 79,000원" },
-    { value: "80000", label: "80,000원 - 99,000원" },
-    { value: "100000", label: "10만원 이상" },
-  ];
 
-  const mealsSelect = document.getElementById("meals");
+  // "시/도"에 따라 해당하는 동 이름을 가져오는 함수 (예시)
+  function getCityOptions(selectedCity) {
+    var cityOptions = "";
 
-  meals.forEach((meal) => {
-    const option = document.createElement("option");
-    option.value = meal.value;
-    option.textContent = meal.label;
-    mealsSelect.appendChild(option);
-  });
-  // 보증인원
-  const guarantors = [
-    { value: "all", label: "보증인원을 선택해주세요." },
-    { value: "50", label: "50명 미만" },
-    { value: "100", label: "50명 - 100명" },
-    { value: "150", label: "100명 - 150명" },
-    { value: "200", label: "150명 - 200명" },
-    { value: "250", label: "200명 - 250명" },
-  ];
+    // 선택한 "시/도"에 따라 동적으로 옵션 추가
+    switch (selectedCity) {
+      case "seoul":
+        cityOptions =
+          '<option value="all" data-filter=".sall" >전체</option>' +
+          '<option value="gangnam" data-filter=".gangnam" >강남구</option>' +
+          '<option value="Seocho" data-filter=".seocho">서초</option>' +
+          '<option value="gangseo" data-filter=".gangseo">강서/양천</option>' +
+          '<option value="songpa" data-filter=".songpa">송파/잠실</option>' +
+          '<option value="sindorim" data-filter=".sindorim">신도림/구로/영등포</option>' +
+          '<option value="mapo" data-filter=".mapo">마포/서대문/은평</option>' +
+          '<option value="gangdong" data-filter=".gangdong">강동</option>' +
+          '<option value="seongdong" data-filter=".seongdong">성동/광진</option>' +
+          '<option value="junggu" data-filter=".junggu">중구/용산/종로</option>' +
+          '<option value="gwanak" data-filter=".gwanak">관악/동작/금천</option>' +
+          '<option value="seongbuk" data-filter=".seongbuk">성북/동대문/중랑</option>' +
+          '<option value="gangbuk" data-filter=".gangbuk">강북/노원/도봉</option>';
+        break;
+      case "gyeonggi":
+        cityOptions =
+          '<option value="all-gyeonggi" data-filter=".gall">전체</option>' +
+          '<option value="seongnam" data-filter=".seongnam">성남/분당</option>' +
+          '<option value="suwon" data-filter=".suwon">수원</option>' +
+          '<option value="yongin" data-filter=".yongin">용인</option>' +
+          '<option value="anyang" data-filter=".anyang">안양/광명</option>' +
+          '<option value="ansan" data-filter=".ansan">안산</option>' +
+          '<option value="bucheon" data-filter=".bucheon">부천</option>' +
+          '<option value="ilsan" data-filter=".ilsan">일산</option>' +
+          '<option value="pyeongtaek" data-filter=".pyeongtaek">평택</option>' +
+          '<option value="uijeongbu" data-filter=".uijeongbu">의정부</option>';
+        break;
+      case "gangwon":
+        cityOptions =
+          '<option value="all-gangwon" data-filter=".gwall">전체</option>';
+        break;
+      case "gyeongnam":
+        cityOptions =
+          '<option value="all-gyeongnam" data-filter=".gnall">전체</option>';
+        break;
+      case "gwangju":
+        cityOptions =
+          '<option value="all-gwangju" data-filter=".gjall">전체</option>';
+        break;
+      case "daejeon":
+        cityOptions =
+          '<option value="all-daejeon" data-filter=".djall">전체</option>';
+        break;
+      case "daegu":
+        cityOptions =
+          '<option value="all-daegu" data-filter=".dgall">전체</option>';
+        break;
+      case "busan":
+        cityOptions =
+          '<option value="all-busan" data-filter=".bsall">전체</option>';
+        break;
+      case "ulsan":
+        cityOptions =
+          '<option value="all-ulsan" data-filter=".usall">전체</option>';
+        break;
+      case "incheon":
+        cityOptions =
+          '<option value="all-incheon" data-filter=".icall">전체</option>';
+        break;
+      case "jeonbuk":
+        cityOptions =
+          '<option value="all-jeonbuk" data-filter=".jball">전체</option>';
+        break;
+      case "chungnam":
+        cityOptions =
+          '<option value="all-chungnam" data-filter=".cnall">전체</option>';
+        break;
+      case "chungbuk":
+        cityOptions =
+          '<option value="all-gyeonggi" data-filter=".cball">전체</option>';
+        break;
+      case "Jeju":
+        cityOptions =
+          '<option value="all-Jeju" data-filter=".jjall">전체</option>';
+        break;
+      // 다른 시/도에 대한 경우 추가
+    }
 
-  const guarantorsSelect = document.getElementById("guarantors");
-
-  guarantors.forEach((guarantor) => {
-    const option = document.createElement("option");
-    option.value = guarantor.value;
-    option.textContent = guarantor.label;
-    guarantorsSelect.appendChild(option);
-  });
-  // 식사메뉴
-  const mealmenus = [
-    { value: "all", label: "식사메뉴를 선택해주세요." },
-    { value: "buffet", label: "뷔페" },
-    { value: "Korean", label: "한식" },
-    { value: "Western", label: "양식" },
-    { value: "Chinese", label: "중식" },
-    { value: "Fusion ", label: "퓨전" },
-  ];
-
-  const mealmenusSelect = document.getElementById("mealmenu");
-
-  mealmenus.forEach((mealmenus) => {
-    const option = document.createElement("option");
-    option.value = mealmenus.value;
-    option.textContent = mealmenus.label;
-    mealmenusSelect.appendChild(option);
-  });
-  // 예식형태
-  const ceremonys = [
-    { value: "all", label: "예식형태를 선택해주세요." },
-    { value: "buffet", label: "분리예식" },
-    { value: "Korean", label: "동시예식" },
-  ];
-
-  const ceremonysSelect = document.getElementById("ceremony");
-
-  ceremonys.forEach((ceremonys) => {
-    const option = document.createElement("option");
-    option.value = ceremonys.value;
-    option.textContent = ceremonys.label;
-    ceremonysSelect.appendChild(option);
-  });
-  // 검색 버튼 클릭 시 웨딩홀 검색 함수 호출
-  $("#searchButton").click(function () {
-    searchWeddingHalls();
-  });
-
-  // 웨딩홀 검색 함수 (기존 코드에서 분리)
-  function searchWeddingHalls() {
-    const selectedLocation = $("#city").val();
-    // 여기에서 선택한 지역 및 다른 필터 기준에 따라 웨딩홀을 검색 및 표시하는 코드 작성
-    // 필요한 데이터를 JSON 파일에서 가져와서 화면에 표시하는 로직을 구현하면 됩니다.
+    return cityOptions;
   }
+
+  // JSON 데이터 예시 (웨딩홀 정보)
+  const weddingHallData = [
+    {
+      imageSrc: "images/wd1.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "호텔",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 500명",
+      id: "all seoul sall gangnam hotel bf 300 79won sc",
+    },
+    {
+      imageSrc: "images/wd2.jpg",
+      location: "서울 강남구",
+      name: "상록 아트홀",
+      hallType: "",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all seoul sall gangnam convention 300 79won sc bf",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel out seoul",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel out",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel out",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel",
+    },
+    {
+      imageSrc: "images/test.jpg",
+      location: "서울 강남구",
+      name: "발라드지디 수서",
+      hallType: "채플",
+      menuType: "뷔페",
+      mealCost: "85,000원",
+      capacity: "최대 400명",
+      id: "all chapel",
+    },
+
+    // 다른 웨딩홀 데이터를 추가할 수 있습니다.
+  ];
+
+  // 웨딩홀 정보를 동적으로 생성하고 페이지에 추가하는 함수
+  function createWeddingHallElements(data) {
+    const weddingHallsList = $("#weddingHallsList");
+
+    data.forEach((hall) => {
+      const hallContainer = $("<div>").addClass(`mix ${hall.id}`);
+
+      // 이미지 추가
+      const image = $("<img>")
+        .attr("src", hall.imageSrc)
+        .attr("alt", "웨딩홀 이미지");
+      hallContainer.append(image);
+
+      const leftContainer = $("<div>").addClass("w-box-left");
+      // 위치 정보 추가
+      const location = $("<p>").text(hall.location);
+      leftContainer.append(location);
+
+      const name = $("<h3>").text(hall.name);
+      leftContainer.append(name);
+
+      hallContainer.append(leftContainer);
+
+      const rightContainer = $("<div>").addClass("w-box-right");
+
+      // 홀 종류 추가
+      const hallType = $("<p>").html(`<span>홀 종류: </span>${hall.hallType}`);
+      rightContainer.append(hallType);
+
+      // 메뉴 종류 추가
+      const menuType = $("<p>").html(
+        `<span>메뉴 종류: </span>${hall.menuType}`
+      );
+      rightContainer.append(menuType);
+
+      // 식사 비용 추가
+      const mealCost = $("<p>").html(
+        `<span>식사 비용: </span>${hall.mealCost}`
+      );
+      rightContainer.append(mealCost);
+
+      // 보증 인원 추가
+      const capacity = $("<p>").html(
+        `<span>보증 인원: </span>${hall.capacity}`
+      );
+      rightContainer.append(capacity);
+
+      hallContainer.append(rightContainer);
+
+      // 페이지에 추가
+      weddingHallsList.append(hallContainer);
+    });
+  }
+
+  // 페이지 로드 시 웨딩홀 정보 생성
+  createWeddingHallElements(weddingHallData);
 });
