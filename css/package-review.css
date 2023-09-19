@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 330px;
   height: 480px;
   background-size: cover;
   transition: 1s ease-in-out;
@@ -75,20 +75,37 @@
 .package-modal {
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translateY(-50%);
   display: none;
   z-index: 999;
 }
-#modalImage1 {
-  position: absolute;
-  left: -650px;
-  top: 5px;
+.modal-wrap-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#modalImage2 {
-  position: absolute;
-  left: -650px;
-  top: 230px;
+.modal-wrap-close {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row-reverse;
+}
+#modalImage1 {
+  background: no-repeat center;
+  background-size: cover;
+  width: 500px;
+  height: 700px;
+}
+#modalImage {
+  height: 700px;
+}
+.modal-wraper {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
 }
 .package-close {
   cursor: pointer;
@@ -100,25 +117,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* 어둡게 만들 배경 색상 */
-  z-index: 998; /* 모달보다 아래에 위치하도록 설정 */
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
 }
 .package-close {
   position: absolute;
-  font-size: 38px;
+  font-size: 33px;
   color: #ffffff;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -50px;
+  background-color: #887160;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
 }
 .package-close:hover {
-  color: #887160;
+  color: #000000;
 }
 .pk-review-more {
   position: absolute;
-  top: 680px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 630px;
   font-family: "Noto Serif KR", serif;
   font-size: 22px;
   padding: 5px 15px;
@@ -136,10 +153,20 @@
   transition: 0.15s ease-in-out;
 }
 
+@media all and (max-width: 1470px) {
+  .package-review {
+    margin: 0 auto;
+    min-width: 1470px;
+  }
+  .package-review-wrapper {
+    width: auto;
+    height: auto;
+  }
+}
 @media all and (max-width: 1280px) {
   .package-review {
     margin: 0 auto;
-    width: 95%;
+    min-width: 1280px;
   }
   .package-review-wrap {
     width: 280px;
@@ -161,21 +188,18 @@
     left: 200px;
     right: 0;
   }
-  .pk-review-more {
-    top: 560px;
-  }
 }
 @media all and (max-width: 1180px) {
   .package-review {
     margin: 0 auto;
-    width: 95%;
+    min-width: 1180px;
   }
-  .package-review-wrap {
+  /* .package-review-wrap {
     width: 280px;
     height: 440px;
     background-size: cover;
     transition: 1s ease-in-out;
-  }
+  } */
 }
 @media all and (max-width: 1024px) {
 }

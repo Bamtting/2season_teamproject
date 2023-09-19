@@ -65,7 +65,7 @@
 }
 .packimgwrap {
   margin-top: 72px;
-  width: 750px;
+  width: 830px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -157,12 +157,12 @@
   .package-main-wrap img {
     width: 400px;
   }
-  /* .package-title {
+  .package-title {
     font-size: 38px;
   }
   .package-text-wrap p span {
     font-size: 32px;
-  } */
+  }
   .package-text-wrap p {
     margin-top: 30px;
   }
