@@ -100,10 +100,13 @@
 
     <!-- css 초기화 -->
     <link rel="stylesheet" href="css/reset.css" />
-
+    <!-- jquery 적용 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Swiper Js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <!-- mixitup Js -->
+    
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <!-- Link Swiper's css -->
     <link
       rel="stylesheet"
@@ -116,34 +119,30 @@
     <![endif]-->
 
     <!-- CSS3 적용 -->
-    <script src="js/prefixfree.min.js"></script>
-
-    <!-- jquery 적용 -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- <script src="js/prefixfree.min.js"></script> -->
 
     <!-- script 불러오기 -->
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/s_weddinghall.js"></script>
-    
 
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
     <style>
-      .header-2 ul li:nth-child(2) a{
+      .header-2 ul li:nth-child(2) a {
         color: #baa693;
       }
-      .header-2 ul li:nth-child(2)::after{
-          content: '';
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          width: 120%;
-          opacity: 1;
-          height: 2px;
-          background-color: #baa693;
-          transition: width .5s, opacity .5s;
+      .header-2 ul li:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 120%;
+        opacity: 1;
+        height: 2px;
+        background-color: #baa693;
+        transition: width 0.5s, opacity 0.5s;
       }
     </style>
   </head>
@@ -194,9 +193,7 @@
               <li>
                 <a href="s_sdm.html">s.d.m</a>
               </li>
-              <li>
-                <a href="s_notice.html">q&a</a>
-              </li>
+              <li><a href="s_notice.html">q&a</a>호텔</li>
               <li>
                 <a href="#">review</a>
               </li>
@@ -205,15 +202,157 @@
           </nav>
         </div>
       </header>
-      <div class="hamburger-menu">
-        <ul class="hamburger-menu-contents">
-            <li><a href="s_package.html">PACKAGE</a></li>
-            <li><a href="s_about.html">ABOUT</a></li>
-            <li><a href="s_weddinghall.html">WEDDING HALL</a></li>
-            <li><a href="s_sdm.html">S.D.M</a></li>
-            <li><a href="s_notice.html">Q&A</a></li>
-            <li><a href="s_review.html">REVIEW</a></li>
-        </ul>
+      <div class="s_weddinghall">
+        <div class="text-area">
+          <img src="images/wedding-2595862_1920.jpg" alt="소개 배경" />
+          <p class="text-area-sub">
+            모든 로맨틱한 이야기는 특별한 장소에서 시작합니다. <br />
+            최고의 웨딩홀을 선택하여 여러분의 이야기를 시작하세요. <br />
+            화려함과 아름다움, 편안함을 함께하는 곳에서 완벽한 결혼식을
+            계획하세요.
+          </p>
+        </div>
+        <div class="inner">
+          <div class="hall-list">
+            <button class="hall-btn active" data-filter=".all">전체</button>
+            <button class="hall-btn-1" data-filter=".nomal">일반 홀</button>
+            <button class="hall-btn-2" data-filter=".convention">
+              컨벤션 홀
+            </button>
+            <button class="hall-btn-3" data-filter=".out">
+              야외/하우스 홀
+            </button>
+            <button class="hall-btn-4" data-filter=".chapel">채플 홀</button>
+            <button class="hall-btn-5" data-filter=".hotel">호텔 홀</button>
+          </div>
+          <div class="hall-list2">
+            <button class="hall2-btn" data-filter=".all">전체</button>
+            <button class="hall2-btn-1" data-filter=".nomal">일반 홀</button>
+            <button class="hall2-btn-2" data-filter=".convention">
+              컨벤션 홀
+            </button>
+          </div>
+          <div class="hall-list2">
+            <button class="hall2-btn-3" data-filter=".out">
+              야외/하우스 홀
+            </button>
+            <button class="hall2-btn-4" data-filter=".chapel">채플 홀</button>
+            <button class="hall2-btn-5" data-filter=".hotel">호텔 홀</button>
+          </div>
+          <!-- 검색 영역 -->
+          <div class="w-search-area">
+            <p class="w-search-text">웨딩 홀 상세 검색</p>
+            <div class="select-box">
+              <form action="#">
+                <label for="#">지역(시/도)</label>
+                <select id="selcity" name="selcity">
+                  <option value="all" data-filter=".all">전체</option>
+                  <option value="seoul" data-filter=".seoul">서울</option>
+                  <option value="gyeonggi" data-filter=".gyeonggi">경기</option>
+                  <option value="gangwon" data-filter=".gangwon">강원</option>
+                  <option value="gyeongnam" data-filter=".gyeongnam">
+                    경남
+                  </option>
+                  <option value="gwangju" data-filter=".gwangju">광주</option>
+                  <option value="daejeon" data-filter=".daejeon">대전</option>
+                  <option value="daegu" data-filter=".daegu">대구</option>
+                  <option value="busan" data-filter=".busan">부산</option>
+                  <option value="ulsan" data-filter=".ulsan">울산</option>
+                  <option value="incheon" data-filter=".incheon">인천</option>
+                  <option value="jeonbuk" data-filter=".jeonbuk">전북</option>
+                  <option value="chungnam" data-filter=".chungnam">충남</option>
+                  <option value="chungbuk" data-filter=".chungbuk">충북</option>
+                  <option value="Jeju" data-filter=".Jeju">제주</option>
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">지역(시/군/구)</label>
+                <select id="city" name="city">
+                  <option value="all">지역을 선택해주세요.</option>
+                  <!-- JavaScript로 옵션 추가될 자리 -->
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">보증인원</label>
+                <select id="guarantors" name="guarantors">
+                  <option value="0" data-filter=".0">49명이하</option>
+                  <option value="50" data-filter=".50">50~99명</option>
+                  <option value="100" data-filter=".100">100~199명</option>
+                  <option value="200" data-filter=".200">200~299명</option>
+                  <option value="300" data-filter=".300">300~399명</option>
+                  <option value="400" data-filter=".400">400~499명</option>
+                  <option value="500" data-filter=".500">500명이상</option>
+                </select>
+              </form>
+            </div>
+            <div class="select-box">
+              <form action="#">
+                <label for="#">식대</label>
+                <select id="meals" name="meals">
+                  <option value="39won" data-filter=".39won">
+                    3만9천원이하
+                  </option>
+                  <option value="49won" data-filter=".49won">
+                    4만원~4만9천원
+                  </option>
+                  <option value="59won" data-filter=".59won">
+                    5만원~5만9천원
+                  </option>
+                  <option value="79won" data-filter=".79won">
+                    6만원~7만9천원
+                  </option>
+                  <option value="99won" data-filter=".99won">
+                    8만원~9만9천원
+                  </option>
+                  <option value="100won" data-filter=".100won">
+                    10만원이상
+                  </option>
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">식사메뉴</label>
+                <select id="mealmenu" name="mealmenu">
+                  <option value="buffet" data-filter=".bf">뷔페</option>
+                  <option value="western" data-filter=".wt">양식</option>
+                  <option value="korean" data-filter=".ko">한식</option>
+                  <option value="chinese" data-filter=".ch">중식</option>
+                  <option value="fusion" data-filter=".fs">퓨전</option>
+                </select>
+              </form>
+              <form action="#">
+                <label for="#">예식형태</label>
+                <select id="ceremony" name="ceremony">
+                  <option value="sc" data-filter=".sc">분리예식</option>
+                  <option value="mc" data-filter=".mc">동시예식</option>
+                </select>
+              </form>
+            </div>
+            <div class="select-box">
+              <div class="search-container">
+                <!-- 텍스트로 검색할 입력 상자 -->
+                <label for="searchText">웨딩홀 명:</label>
+                <input
+                  type="text"
+                  id="searchText"
+                  placeholder="웨딩홀 명을 입력하세요."
+                />
+              </div>
+              <!-- 검색 버튼 -->
+              <button class="w-serach-btn" onclick="searchWeddingHalls()">
+                검색
+              </button>
+              <!-- 검색 결과를 표시할 영역 -->
+            </div>
+          </div>
+          <div class="information-area">
+            <div id="results">
+              <div id="weddingHallsList" class="mix-wrapper">
+                <!-- 데이터 출력 공간 -->
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
