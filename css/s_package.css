@@ -1,4 +1,34 @@
 /* 서브 패키지 */
+.package-visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 960px;
+}
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+.pk-list1-makeup img {
+  width: 300px;
+}
+.pk-list1-hall img {
+  width: 200px;
+}
+.pk-list2 img {
+  width: 200px;
+}
+.pk-list3 img {
+  width: 200px;
+}
+/* 패키지 */
+@media all and (max-width: 1440px) {
+}
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
