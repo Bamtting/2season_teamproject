@@ -23,7 +23,11 @@
   height: 60px;
   margin: 0 auto;
 }
-
+.hall-list button.active {
+  background-color: #b99664;
+  color: #fff;
+  font-weight: bold;
+}
 .s_weddinghall .text-area {
   margin-top: 160px;
 }
@@ -167,13 +171,14 @@
   height: 500px;
   background-color: #e4bf8b;
 }
-.w-image-box {
+.mix {
   width: 450px;
   height: 350px;
   padding: 20px;
+  margin: 0 auto;
 }
-.w-image-box img {
-  width: 400px;
+.mix img {
+  width: 420px;
   height: 200px;
   object-fit: cover;
 }
@@ -190,12 +195,13 @@
 .w-box-right p {
   margin: 10px 0;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
 }
-.w-image-box h3 {
+.mix h3 {
   font-size: 14px;
 }
 .w-box-right span {
+  width: 57px;
   font-size: 12px;
   color: #999;
 }
@@ -203,7 +209,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 @media all and (max-width: 1024px) {
 }

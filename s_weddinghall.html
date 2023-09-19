@@ -100,11 +100,13 @@
 
     <!-- css 초기화 -->
     <link rel="stylesheet" href="css/reset.css" />
-
+    <!-- jquery 적용 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Swiper Js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!-- isotope Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <!-- mixitup Js -->
+    <script src="mixitup-v3/patrickkunka-mixitup-61dac05/demos/mixitup.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <!-- Link Swiper's css -->
     <link
       rel="stylesheet"
@@ -118,9 +120,6 @@
 
     <!-- CSS3 적용 -->
     <!-- <script src="js/prefixfree.min.js"></script> -->
-
-    <!-- jquery 적용 -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
     <!-- script 불러오기 -->
     <script src="js/header.js"></script>
@@ -210,28 +209,30 @@
         </div>
         <div class="inner">
           <div class="hall-list">
-            <a href="#" class="hall-btn" data-filter="all">전체</a>
-            <a href="#" class="hall-btn-1" data-filter=".nomal">일반 홀</a>
-            <a href="#" class="hall-btn-2" data-filter=".convention"
-              >컨벤션 홀</a
-            >
-            <a href="#" class="hall-btn-3" data-filter=".out">야외/하우스 홀</a>
-            <a href="#" class="hall-btn-4" data-filter=".chapel">채플 홀</a>
-            <a href="#" class="hall-btn-5" data-filter=".hotel">호텔 홀</a>
+            <button class="hall-btn active" data-filter="all">전체</button>
+            <button class="hall-btn-1" data-filter=".nomal">일반 홀</button>
+            <button class="hall-btn-2" data-filter=".convention">
+              컨벤션 홀
+            </button>
+            <button class="hall-btn-3" data-filter=".out">
+              야외/하우스 홀
+            </button>
+            <button class="hall-btn-4" data-filter=".chapel">채플 홀</button>
+            <button class="hall-btn-5" data-filter=".hotel">호텔 홀</button>
           </div>
           <div class="hall-list2">
-            <a href="#" class="hall2-btn" data-filter="all">전체</a>
-            <a href="#" class="hall2-btn-1" data-filter=".nomal">일반 홀</a>
-            <a href="#" class="hall2-btn-2" data-filter=".convention"
-              >컨벤션 홀</a
-            >
+            <button class="hall2-btn" data-filter="all">전체</button>
+            <button class="hall2-btn-1" data-filter=".nomal">일반 홀</button>
+            <button class="hall2-btn-2" data-filter=".convention">
+              컨벤션 홀
+            </button>
           </div>
           <div class="hall-list2">
-            <a href="#" class="hall2-btn-3" data-filter=".out"
-              >야외/하우스 홀</a
-            >
-            <a href="#" class="hall2-btn-4" data-filter=".chapel">채플 홀</a>
-            <a href="#" class="hall2-btn-5" data-filter=".hotel">호텔 홀</a>
+            <button class="hall2-btn-3" data-filter=".out">
+              야외/하우스 홀
+            </button>
+            <button class="hall2-btn-4" data-filter=".chapel">채플 홀</button>
+            <button class="hall2-btn-5" data-filter=".hotel">호텔 홀</button>
           </div>
           <!-- 검색 영역 -->
           <div class="w-search-area">
@@ -240,7 +241,7 @@
               <form action="#">
                 <label for="#">지역(시/도)</label>
                 <select id="selcity" name="selcity">
-                  <option value=".all">전체</option>
+                  <option value="all">전체</option>
                   <option value=".seoul">서울</option>
                   <option value=".gyeonggi">경기</option>
                   <option value=".gangwon">강원</option>
@@ -310,8 +311,9 @@
           </div>
           <div class="information-area">
             <div id="results">
-              <div id="weddingHallsList"></div>
-              <!-- 검색 결과가 여기에 표시됩니다. -->
+              <div id="weddingHallsList" class="mix-wrapper">
+                <!-- 데이터 출력 공간 -->
+              </div>
             </div>
           </div>
         </div>
