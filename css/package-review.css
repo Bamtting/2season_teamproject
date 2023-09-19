@@ -1,4 +1,182 @@
 /* 패키지 리뷰 */
+.package-review {
+  position: relative;
+  width: 100%;
+  min-height: 960px;
+  background-color: #aa9688;
+}
+.package-review-text-wrap {
+  position: relative;
+  display: block;
+}
+.package-review-title {
+  color: #887160;
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.package-review-text-wrap p {
+  font-size: 22px;
+  color: #887160;
+  margin-top: 30px;
+}
+.package-review-wrapper {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.package-review-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 480px;
+  background-size: cover;
+  transition: 1s ease-in-out;
+}
+.package-review-wrap-text-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.package-review-wrap-title {
+  font-size: 22px;
+  padding: 13px 18px;
+  background-color: #aa9688a1;
+  border-radius: 50px;
+  color: #ffffff;
+}
+.package-review-wrap-title span {
+  font-weight: 500;
+  font-size: 28px;
+}
+.review-wrap1 {
+  background: url("../images/package_review1-1.png") no-repeat center;
+  background-size: cover;
+}
+.review-wrap2 {
+  background: url("../images/package_review2-1.png") no-repeat center;
+  background-size: cover;
+}
+.review-wrap3 {
+  background: url("../images/package_review3-1.png") no-repeat center;
+  background-size: cover;
+}
+.review-wrap4 {
+  background: url("../images/package_review4-1.png") no-repeat center;
+  background-size: cover;
+}
+/* 모달창 */
+.package-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  display: none;
+  z-index: 999;
+}
+#modalImage1 {
+  position: absolute;
+  left: -650px;
+  top: 5px;
+}
+#modalImage2 {
+  position: absolute;
+  left: -650px;
+  top: 230px;
+}
+.package-close {
+  cursor: pointer;
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* 어둡게 만들 배경 색상 */
+  z-index: 998; /* 모달보다 아래에 위치하도록 설정 */
+}
+.package-close {
+  position: absolute;
+  font-size: 38px;
+  color: #ffffff;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -50px;
+}
+.package-close:hover {
+  color: #887160;
+}
+.pk-review-more {
+  position: absolute;
+  top: 680px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Noto Serif KR", serif;
+  font-size: 22px;
+  padding: 5px 15px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  cursor: pointer;
+  background: none;
+  transition: 0.15s ease-in-out;
+}
+.pk-review-more:hover {
+  background-color: #aa9688;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: 0.15s ease-in-out;
+}
+
+@media all and (max-width: 1280px) {
+  .package-review {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .package-review-wrap {
+    width: 280px;
+    height: 440px;
+    background-size: cover;
+    transition: 1s ease-in-out;
+  }
+  .package-review-wrap-title {
+    font-size: 20px;
+  }
+  .package-review-wrap-title span {
+    font-size: 24px;
+  }
+  #modalImage {
+    width: 450px;
+  }
+  #modalImage1 {
+    width: 450px;
+    left: 200px;
+    right: 0;
+  }
+  .pk-review-more {
+    top: 560px;
+  }
+}
+@media all and (max-width: 1180px) {
+  .package-review {
+    margin: 0 auto;
+    width: 95%;
+  }
+  .package-review-wrap {
+    width: 280px;
+    height: 440px;
+    background-size: cover;
+    transition: 1s ease-in-out;
+  }
+}
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
