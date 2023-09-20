@@ -41,7 +41,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap3")
-        .css("background-image", "url('../images/package_review_3.jpg')");
+        .css("background-image", "url('../images/studio20-1.jpg')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -59,7 +59,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap4")
-        .css("background-image", "url('../images/package_review_4.jpg')");
+        .css("background-image", "url('../images/../images/studio23-1.jpg')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -96,7 +96,7 @@ $(document).ready(function () {
   $(".package-review-wrapper-inner3").click(function () {
     // 모달 이미지 열기
     $("#modalImage").attr("src", "../images/package_review3-1.png");
-    $("#modalImage1").attr("src", "../images/pk_review_main3.jpg");
+    $("#modalImage1").attr("src", "../images/../images/studio20-1.jpg");
     $("#PackagemyModal").css("display", "block").css("position", "fixed");
     $(".header").css("display", "none");
     //백그라운드 어둡게 하기
@@ -106,7 +106,7 @@ $(document).ready(function () {
   $(".package-review-wrapper-inner4").click(function () {
     // 모달 이미지 열기
     $("#modalImage").attr("src", "../images/package_review4-1.png");
-    $("#modalImage1").attr("src", "../images/pk_review_main2.jpg");
+    $("#modalImage1").attr("src", "../images/studio23-1.jpg");
     $("#PackagemyModal").css("display", "block").css("position", "fixed");
     $(".header").css("display", "none");
     //백그라운드 어둡게 하기
