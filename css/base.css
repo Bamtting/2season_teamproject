@@ -26,14 +26,19 @@ html {
   height: 100%;
 }
 body {
-  font-family: 'Noto Serif KR', serif;
+  font-family: "Noto Serif KR", serif;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0px;
   color: #191919;
   word-break: keep-all;
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: 360px;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -43,14 +48,14 @@ body {
   border-radius: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F0E5;
+  background: #f8f0e5;
 }
-::selection{
+::selection {
   background-color: #baa693;
   color: #fff;
 }
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #F8F0E5 inset;
+  -webkit-box-shadow: 0 0 0 1000px #f8f0e5 inset;
 }
 .clearfix::after {
   position: relative;
