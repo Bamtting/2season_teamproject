@@ -126,7 +126,7 @@ $(document).ready(function () {
   });
 
   //스와이퍼 슬라이드
-  var slide = new Swiper(".swiper", {
+  var slide = new Swiper(".pk-review-swiper", {
     slidesPerView: "1", // 한 슬라이드에 보여줄 갯수
     spaceBetween: 10, // 슬라이드 사이 여백
     loop: true, // 슬라이드 반복 여부

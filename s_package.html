@@ -143,7 +143,7 @@
     </style>
   </head>
 <body>
- <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFH6CXG7"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
@@ -194,10 +194,21 @@
         </nav>
       </div>
     </header>
+    <!-- 헤더 반응형 햄버거 바 -->
+    <div class="hamburger-menu">
+      <ul class="hamburger-menu-contents">
+          <li><a href="s_package.html">PACKAGE</a></li>
+          <li><a href="s_about.html">ABOUT</a></li>
+          <li><a href="s_weddinghall.html">WEDDING HALL</a></li>
+          <li><a href="s_sdm.html">S.D.M</a></li>
+          <li><a href="s_notice.html">Q&A</a></li>
+          <li><a href="s_review.html">REVIEW</a></li>
+      </ul>
+    </div>
     <!-- package-visual -->
     <div class="package-visual clearfix">
       <!-- Swiper -->
-      <div class="swiper visual-mySwiper">
+      <div class="swiper pk-visual-mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
               <div class="pk-list1">
@@ -216,11 +227,18 @@
               </div>
               <div class="pk-list3">
                 <div class="pk-text-wrap">
-                  <h2>best pakage 1</h2>
+                  <div class="pk-title">
+                    <h2>best pakage 1</h2>
                   <span>#밝은 #사랑스러운</span>
-                  <p>평소에 잘 웃고 밝은 이미지로 <br>
+                  </div>
+                  <div class="pk-text">
+                    <p>평소에 잘 웃고 밝은 이미지로 <br>
                   귀여운 느낌을 줄 수 있는 구성 패키지</p>
-                  <p>01 / 04</p>
+                  </div>
+                  <div class="pk-next">
+                    <h2>01 / 04</h2>
+                    <button class="pk-next-btn" id="pkNextBtn">next</button>
+                  </div>
                 </div>
                 <img src="images/pk_studio_1.png" alt="pk_studio_1">
               </div>
@@ -242,13 +260,20 @@
               </div>
               <div class="pk-list3">
                 <div class="pk-text-wrap">
-                  <h2>best pakage 2</h2>
+                  <div class="pk-title">
+                    <h2>best pakage 2</h2>
                   <span>#온화한 #분위기있는</span>
-                  <p>영화같은 분위기를 좋아하는 분들에게<br>
-                    추천하는 노을같은 패키지 </p>
-                  <p>02 / 04</p>
+                  </div>
+                  <div class="pk-text">
+                    <p>영화같은 분위기를 좋아하는 분들에게<br>
+                      추천하는 노을같은 패키지 </p>
+                  </div>
+                  <div class="pk-next">
+                    <h2>02 / 04</h2>
+                    <button class="pk-next-btn" id="pkNextBtn">next</button>
+                  </div>
                 </div>
-                <img src="images/pk_studio_2.png" alt="pk_studio_2">
+                <img src="images/pk_studio_1.png" alt="pk_studio_1">
               </div>
           </div>
           <div class="swiper-slide">
@@ -268,13 +293,20 @@
               </div>
               <div class="pk-list3">
                 <div class="pk-text-wrap">
-                  <h2>best pakage 3</h2>
+                  <div class="pk-title">
+                    <h2>best pakage 3</h2>
                   <span>#저렴한 #가성비웨딩</span>
-                  <p>제휴된 업체들만 모아 할인이<br> 
-                    아낌없이 들어간 알뜰한 패키지</p>
-                  <p>03 / 04</p>
+                  </div>
+                  <div class="pk-text">
+                    <p>제휴된 업체들만 모아 할인이<br> 
+                      아낌없이 들어간 알뜰한 패키지</p>
+                  </div>
+                  <div class="pk-next">
+                    <h2>03 / 04</h2>
+                    <button class="pk-next-btn" id="pkNextBtn">next</button>
+                  </div>
                 </div>
-                <img src="images/pk_studio_3.png" alt="pk_studio_3">
+                <img src="images/pk_studio_1.png" alt="pk_studio_1">
               </div>
           </div>
           <div class="swiper-slide">
@@ -294,33 +326,31 @@
               </div>
               <div class="pk-list3">
                 <div class="pk-text-wrap">
-                  <h2>best pakage 4</h2>
-                  <span>#밝은 #사랑스러운</span>
-                  <p>평소에 잘 웃고 밝은 이미지로
-                  귀여운 느낌을 줄 수 있는 구성 패키지</p>
-                  <p>04 / 04</p>
+                  <div class="pk-title">
+                    <h2>best pakage 4</h2>
+                  <span>#몽환적인 #빈티지</span>
+                  </div>
+                  <div class="pk-text">
+                    <p>평소에 잘 웃고 밝은 이미지로
+                      귀여운 느낌을 줄 수 있는 구성 패키지</p>
+                  </div>
+                  <div class="pk-next">
+                    <h2>04 / 04</h2>
+                    <button class="pk-next-btn" id="pkNextBtn">next</button>
+                  </div>
                 </div>
-                <img src="images/pk_studio_4.png" alt="pk_studio_4">
+                <img src="images/pk_studio_1.png" alt="pk_studio_1">
               </div>
           </div>
         </div>
         <!-- pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
         <div class="video-playbox">
           <i class="fa-solid fa-play active"></i>
           <i class="fa-solid fa-pause"></i>
         </div>
+        
       </div>
-    </div>
-    <div class="hamburger-menu">
-      <ul class="hamburger-menu-contents">
-          <li><a href="s_package.html">PACKAGE</a></li>
-          <li><a href="s_about.html">ABOUT</a></li>
-          <li><a href="s_weddinghall.html">WEDDING HALL</a></li>
-          <li><a href="s_sdm.html">S.D.M</a></li>
-          <li><a href="s_notice.html">Q&A</a></li>
-          <li><a href="s_review.html">REVIEW</a></li>
-      </ul>
     </div>
   </div>
 
