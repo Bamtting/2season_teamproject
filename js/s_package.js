@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var visualswiper = new Swiper(".visual-mySwiper", {
+  var visualswiper = new Swiper(".pk-visual-mySwiper", {
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
@@ -8,43 +8,27 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
+    loop: true,
+    navigation: {
+      // 버튼 사용자 지정
+      nextEl: ".pk-next-btn",
+    },
     // autoplay: {
     //   delay: 2500,
 
     //   disableOnInteraction: true,
     // },
   });
-  // 스크롤 시 상단으로 이동
-  $(function () {
-    // 보이기 | 숨기기
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 1000) {
-        $(".modal-top").fadeIn();
-        $(".modal").fadeIn();
-      } else {
-        $(".modal-top").fadeOut();
-        $(".modal").fadeOut();
-      }
+  //스와이프 될 때 색상 변경
+  $(".swiper-slide")
+    // 스와이프 제어 버튼
+    .$(".fa-play")
+    .on("click", function () {
+      $(".fa-pause").removeClass("active");
+      $(this).addClass("active");
+      visualswiper.autoplay.start();
+      return false;
     });
-    // 버튼 클릭시
-    $(".modal-top").click(function () {
-      $("html, body").animate(
-        {
-          scrollTop: 0, // 0 까지 animation 이동합니다.
-        },
-        400
-      ); // 속도 400 return false;
-    });
-  });
-
-  // 스와이프 제어 버튼
-  $(".fa-play").on("click", function () {
-    $(".fa-pause").removeClass("active");
-    $(this).addClass("active");
-    visualswiper.autoplay.start();
-    return false;
-  });
   $(".fa-pause").on("click", function () {
     $(".fa-play").removeClass("active");
     $(this).addClass("active");

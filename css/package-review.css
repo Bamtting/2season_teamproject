@@ -154,17 +154,17 @@
 }
 
 @media all and (max-width: 1470px) {
-  .package-review {
+  /* .package-review {
     margin: 0 auto;
     min-width: 1470px;
   }
   .package-review-wrapper {
     width: auto;
     height: auto;
-  }
+  } */
 }
 @media all and (max-width: 1280px) {
-  .package-review {
+  /* .package-review {
     margin: 0 auto;
     min-width: 1280px;
   }
@@ -187,13 +187,13 @@
     width: 450px;
     left: 200px;
     right: 0;
-  }
+  } */
 }
 @media all and (max-width: 1180px) {
-  .package-review {
+  /* .package-review {
     margin: 0 auto;
     min-width: 1180px;
-  }
+  } */
   /* .package-review-wrap {
     width: 280px;
     height: 440px;
