@@ -809,7 +809,7 @@ $(document).ready(function () {
     // 다른 웨딩홀 데이터를 추가할 수 있습니다.
   ];
 
-  // 웨딩홀 정보를 동적으로 생성하고 페이지에 추가하는 함수
+  // 선택한 메뉴를 동적으로 생성하고 페이지에 추가하는 함수
   function createWeddingHallElements(data) {
     const weddingHallsList = $("#weddingHallsList");
 
@@ -863,6 +863,6 @@ $(document).ready(function () {
     });
   }
 
-  // 페이지 로드 시 웨딩홀 정보 생성
+  // 페이지 로드 시 메뉴얼 정보 생성
   createWeddingHallElements(weddingHallData);
 });
