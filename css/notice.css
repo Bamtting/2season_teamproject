@@ -1,5 +1,48 @@
 /* 고객문의 */
-
+.notice .inner{
+    display: flex;
+    gap: 2vw;
+}
+.qna{
+    width: calc(50% - 1vw);
+    height: 500px;
+    max-width: calc(720px - 1vw);
+    /* background-color: #ce5959; */
+}
+.main-review{
+    width: calc(50% - 1vw);
+    height: 500px;
+    max-width: calc(720px - 1vw);
+    background-color: rgb(119, 73, 161);
+}
+.notice h2{
+    font-size: 50px;
+    /* text-align: center; */
+    color: #887160;
+    /* margin-top: 2%; */
+    padding: 5%;
+    font-family: "Noto Serif KR", serif;
+    font-weight: 600;
+    user-select: none;
+    text-transform: uppercase;
+}
+.notice .inner .qna li{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    color: #555;
+    padding: 3% 4%;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.notice .inner .qna li:nth-child(2n-1){
+    background-color: #F8F0E5;
+}
+.notice .inner .qna li p{
+    display: inline;
+}
+.notice .inner .qna li p:hover{
+    cursor: pointer;
+}
 
 @media all and (max-width: 1024px) {
 }

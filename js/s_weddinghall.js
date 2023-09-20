@@ -1,22 +1,113 @@
 $(document).ready(function () {
-  // 상위 홀 선택 버튼 클릭시 필터링
-  $(".hall-list button").click(function () {
-    $(".hall-list button").removeClass("active");
-    $(this).addClass("active");
-    var selector = $(this).attr("data-filter");
-    $(".mix-wrapper").isotope({
-      filter: selector,
-    });
-  });
-  // 셀렉트 박스 내 선택시 필터링
-  $("#selcity").change(function () {
-    var selcity = $(this).val(); // 선택된 옵션의 값 가져오기
-    var filterValue = selcity === "all" ? "*" : "." + selcity;
+  // 초기 필터값 설정
+  var hallFilter = "*"; // 홀 버튼에 대한 필터값
+  var locationFilter = "*"; // 지역(시/도) 셀렉트 박스에 대한 필터값
+  var guarantorFilter = "*"; // 보증인원 필터값
+  var mealRangeFilter = "*"; // 식대 필터값
+  var mealMenuFilter = "*"; // 식사메뉴 필터값
+  var ceremonyFilter = "*"; // 예식형태 필터값
 
-    $(".mix-wrapper").isotope({
-      filter: filterValue,
-    });
+  // 홀 버튼 클릭 시 필터링
+  $(".hall-list button, .hall-list2 button").click(function () {
+    $(".hall-list button, .hall-list2 button").removeClass("active");
+    $(this).addClass("active");
+    var hallSelector = $(this).attr("data-filter");
+
+    // 선택한 홀 종류를 홀 필터에 반영
+    hallFilter = hallSelector;
+
+    // 최종 필터값 업데이트
+    updateFilter();
   });
+
+  // "지역(시/도)" 셀렉트 박스 변경 이벤트 핸들러
+  $("#selcity").change(function () {
+    var selectedCity = $(this).val();
+
+    // 선택한 지역(시/도)를 지역(시/도) 필터에 반영
+    locationFilter = selectedCity === "all" ? "*" : "." + selectedCity;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // "지역(시군구)" 셀렉트 박스 변경 이벤트 핸들러
+  $("#city").change(function () {
+    var selectedDistrict = $(this).val();
+
+    // 선택한 지역(시군구)를 지역(시군구) 필터에 반영
+    locationFilter = selectedDistrict === "all" ? "*" : "." + selectedDistrict;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 보증인원 필터링
+  $("#guarantors").change(function () {
+    var selectedGuarantor = $(this).val(); // 선택된 보증인원 가져오기
+
+    // 선택된 보증인원 값에 따라 필터 적용
+    guarantorFilter = "." + selectedGuarantor;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 식대 필터링
+  $("#meals").change(function () {
+    var selectedMealRange = $(this).val(); // 선택된 식대 범위 가져오기
+
+    // 선택된 식대 값에 따라 필터 적용
+    mealRangeFilter = "." + selectedMealRange;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // "식사메뉴" 필터링
+  $("#mealmenu").change(function () {
+    var selectedMenu = $(this).val(); // 선택된 식사메뉴 범위 가져오기
+
+    // 선택된 식사메뉴 값에 따라 필터 적용
+
+    mealMenuFilter = "." + selectedMenu;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 예식형태 필터링
+  $("#ceremony").change(function () {
+    var selectedCeremony = $(this).val();
+
+    // 선택한 예식 형태를 예식형태 필터에 반영
+    ceremonyFilter = "." + selectedCeremony;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 최종 필터값 업데이트하는 함수
+  function updateFilter() {
+    // 모든 필터 값을 결합하여 최종 필터값 설정
+    var filter =
+      hallFilter +
+      locationFilter +
+      guarantorFilter +
+      mealRangeFilter +
+      mealMenuFilter +
+      ceremonyFilter;
+
+    // 필터링 적용
+    filterWeddingHalls(filter);
+  }
+
+  // 필터링 함수 정의
+  function filterWeddingHalls(filter) {
+    $(".mix-wrapper").isotope({
+      filter: filter,
+    });
+  }
 
   // "지역(시/도)" 셀렉트 박스 변경 이벤트 핸들러
   $("#selcity").change(function () {
@@ -42,9 +133,9 @@ $(document).ready(function () {
     switch (selectedCity) {
       case "seoul":
         cityOptions =
-          '<option value="all" data-filter=".sall" >전체</option>' +
+          '<option value="seoul" data-filter=".sall" >전체</option>' +
           '<option value="gangnam" data-filter=".gangnam" >강남구</option>' +
-          '<option value="Seocho" data-filter=".seocho">서초</option>' +
+          '<option value="seocho" data-filter=".seocho">서초</option>' +
           '<option value="gangseo" data-filter=".gangseo">강서/양천</option>' +
           '<option value="songpa" data-filter=".songpa">송파/잠실</option>' +
           '<option value="sindorim" data-filter=".sindorim">신도림/구로/영등포</option>' +
@@ -58,7 +149,7 @@ $(document).ready(function () {
         break;
       case "gyeonggi":
         cityOptions =
-          '<option value="all-gyeonggi" data-filter=".gall">전체</option>' +
+          '<option value="gyeonggi" data-filter=".gall">전체</option>' +
           '<option value="seongnam" data-filter=".seongnam">성남/분당</option>' +
           '<option value="suwon" data-filter=".suwon">수원</option>' +
           '<option value="yongin" data-filter=".yongin">용인</option>' +
@@ -71,53 +162,51 @@ $(document).ready(function () {
         break;
       case "gangwon":
         cityOptions =
-          '<option value="all-gangwon" data-filter=".gwall">전체</option>';
+          '<option value="gangwon" data-filter=".gwall">전체</option>';
         break;
       case "gyeongnam":
         cityOptions =
-          '<option value="all-gyeongnam" data-filter=".gnall">전체</option>';
+          '<option value="gyeongnam" data-filter=".gnall">전체</option>';
         break;
       case "gwangju":
         cityOptions =
-          '<option value="all-gwangju" data-filter=".gjall">전체</option>';
+          '<option value="gwangju" data-filter=".gjall">전체</option>';
         break;
       case "daejeon":
         cityOptions =
-          '<option value="all-daejeon" data-filter=".djall">전체</option>';
+          '<option value="daejeon" data-filter=".djall">전체</option>';
         break;
       case "daegu":
         cityOptions =
-          '<option value="all-daegu" data-filter=".dgall">전체</option>';
+          '<option value="daegu" data-filter=".dgall">전체</option>';
         break;
       case "busan":
         cityOptions =
-          '<option value="all-busan" data-filter=".bsall">전체</option>';
+          '<option value="busan" data-filter=".bsall">전체</option>';
         break;
       case "ulsan":
         cityOptions =
-          '<option value="all-ulsan" data-filter=".usall">전체</option>';
+          '<option value="ulsan" data-filter=".usall">전체</option>';
         break;
       case "incheon":
         cityOptions =
-          '<option value="all-incheon" data-filter=".icall">전체</option>';
+          '<option value="incheon" data-filter=".icall">전체</option>';
         break;
       case "jeonbuk":
         cityOptions =
-          '<option value="all-jeonbuk" data-filter=".jball">전체</option>';
+          '<option value="jeonbuk" data-filter=".jball">전체</option>';
         break;
       case "chungnam":
         cityOptions =
-          '<option value="all-chungnam" data-filter=".cnall">전체</option>';
+          '<option value="chungnam" data-filter=".cnall">전체</option>';
         break;
       case "chungbuk":
         cityOptions =
-          '<option value="all-gyeonggi" data-filter=".cball">전체</option>';
+          '<option value="chungbuk" data-filter=".cball">전체</option>';
         break;
-      case "Jeju":
-        cityOptions =
-          '<option value="all-Jeju" data-filter=".jjall">전체</option>';
+      case "jeju":
+        cityOptions = '<option value="jeju" data-filter=".jjall">전체</option>';
         break;
-      // 다른 시/도에 대한 경우 추가
     }
 
     return cityOptions;
@@ -169,7 +258,7 @@ $(document).ready(function () {
       imageSrc: "images/wd5.jpg",
       location: "서울 강남구",
       name: "토브헤세드",
-      hallType: "하우스",
+      hallType: "야외/하우스",
       menuType: "뷔페",
       mealCost: "78,000원",
       capacity: "최대 300명",
@@ -213,7 +302,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "60,000원",
       capacity: "최대 1500명",
-      id: "all seoul sall gangnam nomal chapel bf 300 79won sc",
+      id: "all seoul sall gangnam nomal bf 300 79won sc",
     },
     {
       imageSrc: "images/wd10.jpg",
@@ -243,7 +332,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최대 600명",
-      id: "all seoul sall sindorim nomal convention bf 300 79won sc",
+      id: "all seoul sall sindorim nomal chapel bf 300 79won sc",
     },
     {
       imageSrc: "images/wd13.jpg",
@@ -253,7 +342,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최대 400명",
-      id: "all seoul sall sindorim convention fs 300 99won mc",
+      id: "all seoul sall sindorim nomal chapel fs 300 99won mc",
     },
     {
       imageSrc: "images/wd14.jpg",
@@ -413,7 +502,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최소 350명",
-      id: "all seoul sall songpa hotel bf 300 79won sc",
+      id: "all seoul sall songpa nomal bf 300 79won sc",
     },
     {
       imageSrc: "images/wd30.jpg",
@@ -803,7 +892,847 @@ $(document).ready(function () {
       menuType: "한식,양식",
       mealCost: "68,000원",
       capacity: "최소 250명",
-      id: "all gyeonggi gall suwon hotel fs 200 79won mc",
+      id: "all gyeonggi gall suwon hotel ko wt 200 79won mc",
+    },
+    {
+      imageSrc: "images/wd69.jpg",
+      location: "경기 용인시",
+      name: "벨라마리에",
+      hallType: "일반,야외/하우스",
+      menuType: "뷔페,양식",
+      mealCost: "68,000원",
+      capacity: "최소 50명",
+      id: "all gyeonggi gall yongin nomal out wt bf 50 79won sc mc",
+    },
+    {
+      imageSrc: "images/wd70.jpg",
+      location: "경기 용인시",
+      name: "용인아이티컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "56,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall yongin nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd71.jpg",
+      location: "경기 용인시",
+      name: "라비다하우스",
+      hallType: "일반,야외/하우스",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 50명",
+      id: "all gyeonggi gall yongin nomal out bf 50 79won sc mc",
+    },
+    {
+      imageSrc: "images/wd72.jpg",
+      location: "경기 용인시",
+      name: "페이지웨딩&파티",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 100명",
+      id: "all gyeonggi gall yongin out bf 100 79won sc",
+    },
+    {
+      imageSrc: "images/wd73.jpg",
+      location: "경기 용인시",
+      name: "ICT밸리컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "58,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall yongin nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd74.jpg",
+      location: "경기 안양시",
+      name: "안양더그레이스켈리",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall anyang nomal bf 300 59won mc sc",
+    },
+    {
+      imageSrc: "images/wd75.jpg",
+      location: "경기 안양시",
+      name: "안양트리니티컨벤션",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "67,000원",
+      capacity: "최소 150명",
+      id: "all gyeonggi gall anyang out bf 100 79won sc",
+    },
+    {
+      imageSrc: "images/wd76.jpg",
+      location: "경기 안양시",
+      name: "아르떼채플&컨벤션",
+      hallType: "일반",
+      menuType: "한식",
+      mealCost: "53,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall anyang nomal ko 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd77.jpg",
+      location: "경기 안양시",
+      name: "웨딩그룹위더스",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "68,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall anyang nomal bf 300 79won sc",
+    },
+    {
+      imageSrc: "images/wd78.jpg",
+      location: "경기 안양시",
+      name: "파티오벨라",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "66,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall anyang nomal bf 200 79won sc",
+    },
+    {
+      imageSrc: "images/wd79.jpg",
+      location: "경기 안산시",
+      name: "안산AW컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "62,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall ansan nomal bf 200 79won sc",
+    },
+    {
+      imageSrc: "images/wd80.jpg",
+      location: "경기 안산시",
+      name: "발라드지디 안산",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "62,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall ansan nomal bf 200 79won sc",
+    },
+    {
+      imageSrc: "images/wd81.jpg",
+      location: "경기 안산시",
+      name: "더파티움 안산",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall ansan nomal bf 200 79won sc",
+    },
+    {
+      imageSrc: "images/wd82.jpg",
+      location: "경기 안산시",
+      name: "안산더루체웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "57,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall ansan nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd83.jpg",
+      location: "경기 안산시",
+      name: "호텔스퀘어안산",
+      hallType: "호텔,컨벤션",
+      menuType: "뷔페",
+      mealCost: "62,000원",
+      capacity: "최소 150명",
+      id: "all gyeonggi gall ansan nomal bf 100 79won mc sc",
+    },
+    {
+      imageSrc: "images/wd84.jpg",
+      location: "경기 부천시",
+      name: "부천MJ컨벤션",
+      hallType: "호텔,컨벤션",
+      menuType: "뷔페",
+      mealCost: "58,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall bucheon nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd85.jpg",
+      location: "경기 부천시",
+      name: "부천라비에벨",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "68,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall bucheon nomal bf 200 79won sc",
+    },
+    {
+      imageSrc: "images/wd86.jpg",
+      location: "경기 부천시",
+      name: "부천소풍컨벤션웨딩뷔페",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "59,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall bucheon nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd87.jpg",
+      location: "경기 부천시",
+      name: "부천채림웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "52,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall bucheon nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd88.jpg",
+      location: "경기 부천시",
+      name: "부천고려호텔",
+      hallType: "호텔",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 100명",
+      id: "all gyeonggi gall bucheon hotel bf 100 59won mc sc",
+    },
+    {
+      imageSrc: "images/wd89.jpg",
+      location: "경기 일산시",
+      name: "소노캄",
+      hallType: "일반,호텔",
+      menuType: "양식,퓨전",
+      mealCost: "80,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall ilsan nomal hotel wt fs 200 99won mc",
+    },
+    {
+      imageSrc: "images/wd90.jpg",
+      location: "경기 일산시",
+      name: "일산더테라스웨딩앤파티",
+      hallType: "호텔",
+      menuType: "뷔페",
+      mealCost: "52,000원",
+      capacity: "최소 100명",
+      id: "all gyeonggi gall ilsan nomal bf 100 59won mc sc",
+    },
+    {
+      imageSrc: "images/wd91.jpg",
+      location: "경기 일산시",
+      name: "킨텍스신세계그래머시",
+      hallType: "일반,컨벤션",
+      menuType: "양식",
+      mealCost: "69,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall ilsan nomal convention wt 200 79won mc",
+    },
+    {
+      imageSrc: "images/wd92.jpg",
+      location: "경기 일산시",
+      name: "일산웨스턴빌리프",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall ilsan nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd93.jpg",
+      location: "경기 일산시",
+      name: "엠시티웨딩컨벤션",
+      hallType: "일반",
+      menuType: "한식",
+      mealCost: "50,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall ilsan nomal ko 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd94.jpg",
+      location: "경기 평택시",
+      name: "평택SG웨딩컨벤션",
+      hallType: "일반,야외/하우스",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall pyeongtaek nomal out bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd95.jpg",
+      location: "경기 평택시",
+      name: "평택T웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "50,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall pyeongtaek nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd96.jpg",
+      location: "경기 평택시",
+      name: "평택웨딩아티움",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "48,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall pyeongtaek nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd97.jpg",
+      location: "경기 평택시",
+      name: "평택드마레컨벤션",
+      hallType: "야외/하우스,컨벤션",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall pyeongtaek out convention bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd98.jpg",
+      location: "경기 평택시",
+      name: "평택국제대학교웨딩컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 150명",
+      id: "all gyeonggi gall pyeongtaek nomal bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd99.jpg",
+      location: "경기 의정부시",
+      name: "웨딩더낙원",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall uijeongbu nomal bf 300 79won sc",
+    },
+    {
+      imageSrc: "images/wd100.jpg",
+      location: "경기 의정부시",
+      name: "경민컨벤션웨딩홀",
+      hallType: "일반,컨벤션",
+      menuType: "뷔페",
+      mealCost: "66,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall uijeongbu nomal convention bf 300 79won sc",
+    },
+    {
+      imageSrc: "images/wd101.jpg",
+      location: "경기 의정부시",
+      name: "의정부웨딩펠리스",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 500명",
+      id: "all gyeonggi gall uijeongbu nomal bf 500 79won sc",
+    },
+    {
+      imageSrc: "images/wd102.jpg",
+      location: "경기 의정부시",
+      name: "의정부신한컨벤션웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "50,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gall uijeongbu nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd103.jpg",
+      location: "경기 의정부시",
+      name: "플로렌스의정부점",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "35,000원",
+      capacity: "최소 30명",
+      id: "all gyeonggi gall uijeongbu out bf 0 39won mc",
+    },
+    {
+      imageSrc: "images/wd104.jpg",
+      location: "강원 원주시",
+      name: "빌라드아모르 원주",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all gyeonggi gwall  nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd105.jpg",
+      location: "강원 원주시",
+      name: "오크밸리",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 300명",
+      id: "all gangwon gwall out bf 300 59won mc",
+    },
+    {
+      imageSrc: "images/wd106.jpg",
+      location: "강원 강릉시",
+      name: "플로렌스의정부점",
+      hallType: "컨벤션",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all gangwon gwall convention bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd107.jpg",
+      location: "강원 춘천시",
+      name: "춘천미래컨벤션웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all gangwon gwall nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd108.jpg",
+      location: "강원 평창군",
+      name: "평창알펜시아리조트",
+      hallType: "야외/하우스,컨벤션",
+      menuType: "뷔페,한식,양식",
+      mealCost: "45,000원",
+      capacity: "최소 50명",
+      id: "all gangwon gwall out convention bf ko wt 50 49won sc mc",
+    },
+    {
+      imageSrc: "images/wd109.jpg",
+      location: "경남 김해시",
+      name: "김해아이스퀘어호텔",
+      hallType: "일반,호텔",
+      menuType: "뷔페",
+      mealCost: "43,000원",
+      capacity: "최소 200명",
+      id: "all gyeongnam gnall nomal hotel bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd110.jpg",
+      location: "경남 창원시",
+      name: "창원리베라컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "42,000원",
+      capacity: "최소 250명",
+      id: "all gyeongnam gnall nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd111.jpg",
+      location: "경남 창원시",
+      name: "마산유로웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "38,000원",
+      capacity: "최소 80명",
+      id: "all gyeongnam gnall nomal bf 50 39won sc",
+    },
+    {
+      imageSrc: "images/wd112.jpg",
+      location: "경남 양산시",
+      name: "W웨딩양산점",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "38,000원",
+      capacity: "최소 150명",
+      id: "all gyeongnam gnall nomal bf 100 39won sc",
+    },
+    {
+      imageSrc: "images/wd113.jpg",
+      location: "경남 거제시",
+      name: "거제리베라호텔웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all gyeongnam gnall nomal bf 200 49won mc",
+    },
+    {
+      imageSrc: "images/wd114.jpg",
+      location: "광주 광산구",
+      name: "광주드메르웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 200명",
+      id: "all gwangju gjall nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd115.jpg",
+      location: "광주 서구",
+      name: "웨딩그룹위더스광주",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 300명",
+      id: "all gwangju gjall nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd116.jpg",
+      location: "광주 북구",
+      name: "광주까사디루체",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "51,000원",
+      capacity: "최소 300명",
+      id: "all gwangju gjall nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd117.jpg",
+      location: "광주 서구",
+      name: "광주웨딩시대",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 250명",
+      id: "all gwangju gjall nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd118.jpg",
+      location: "광주 광산구",
+      name: "광주무역센터웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "30,000원",
+      capacity: "최소 200명",
+      id: "all gwangju gjall nomal bf 300 39won sc",
+    },
+    {
+      imageSrc: "images/wd119.jpg",
+      location: "대전 유성구",
+      name: "대전호텔ICC",
+      hallType: "일반,호텔",
+      menuType: "뷔페",
+      mealCost: "50,000원",
+      capacity: "최소 400명",
+      id: "all daejeon djall nomal bf hotel 400 59won sc",
+    },
+    {
+      imageSrc: "images/wd120.jpg",
+      location: "대전 중구",
+      name: "대전BMK컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "53,000원",
+      capacity: "최소 300명",
+      id: "all daejeon djall nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd121.jpg",
+      location: "대전 유성구",
+      name: "루이비스컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "56,000원",
+      capacity: "최소 300명",
+      id: "all daejeon djall nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd122.jpg",
+      location: "대전 서구",
+      name: "대전S가든웨딩홀",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "52,000원",
+      capacity: "최소 200명",
+      id: "all daejeon djall out bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd123.jpg",
+      location: "대전 동구",
+      name: "대전쌍청웨딩홀",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "40,000원",
+      capacity: "최소 100명",
+      id: "all daejeon djall out bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd124.jpg",
+      location: "대구 동구",
+      name: "대구MH웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "48,000원",
+      capacity: "최소 200명",
+      id: "all daegu dgall nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd125.jpg",
+      location: "대구 수성구",
+      name: "대구라온제나호텔",
+      hallType: "호텔",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all daegu dgall hotel bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd126.jpg",
+      location: "대구 달서구",
+      name: "대구웨딩비엔나",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "42,000원",
+      capacity: "최소 200명",
+      id: "all daegu dgall nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd127.jpg",
+      location: "대구 북구",
+      name: "대구엘파소하우스웨딩",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 200명",
+      id: "all daegu dgall nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd128.jpg",
+      location: "대구 중구",
+      name: "노보텔앰배서더대구",
+      hallType: "일반",
+      menuType: "뷔페,양식",
+      mealCost: "42,000원",
+      capacity: "최소 200명",
+      id: "all daegu dgall nomal bf wt 200 49won mc",
+    },
+    {
+      imageSrc: "images/wd129.jpg",
+      location: "부산 해운대구",
+      name: "부산파라다이스호텔",
+      hallType: "일반,호텔",
+      menuType: "양식",
+      mealCost: "110,000원",
+      capacity: "최소 200명",
+      id: "all busan bsall nomal hotel wt 200 100won mc",
+    },
+    {
+      imageSrc: "images/wd130.jpg",
+      location: "부산 부산진구",
+      name: "부산W웨딩시티",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "38,000원",
+      capacity: "최소 100명",
+      id: "all busan bsall nomal bf 100 39won sc",
+    },
+    {
+      imageSrc: "images/wd131.jpg",
+      location: "부산 부산진구",
+      name: "부산헤리움웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "35,000원",
+      capacity: "최소 250명",
+      id: "all busan bsall nomal bf 200 39won sc",
+    },
+    {
+      imageSrc: "images/wd132.jpg",
+      location: "부산 부산진구",
+      name: "부산더펄웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "37,000원",
+      capacity: "최소 150명",
+      id: "all busan bsall nomal bf 100 39won sc",
+    },
+    {
+      imageSrc: "images/wd133.jpg",
+      location: "부산 해운대구",
+      name: "부산마리나컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "42,000원",
+      capacity: "최소 150명",
+      id: "all busan bsall nomal bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd134.jpg",
+      location: "울산 남구",
+      name: "울산문수컨벤션웨딩홀",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "44,000원",
+      capacity: "최소 200명",
+      id: "all ulsan usall nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd135.jpg",
+      location: "울산 남구",
+      name: "울산롯데호텔",
+      hallType: "일반",
+      menuType: "양식",
+      mealCost: "85,000원",
+      capacity: "최소 300명",
+      id: "all ulsan usall nomal wt 300 99won mc",
+    },
+    {
+      imageSrc: "images/wd136.jpg",
+      location: "울산 동구",
+      name: "호텔현대바이라한울산",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 150명",
+      id: "all ulsan usall nomal bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd137.jpg",
+      location: "울산 북구",
+      name: "울산오토밸리컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 150명",
+      id: "all ulsan usall nomal bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd138.jpg",
+      location: "울산 북구",
+      name: "울산W시티컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "42,000원",
+      capacity: "최소 150명",
+      id: "all ulsan usall nomal bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd139.jpg",
+      location: "인천 연수구",
+      name: "인천메리빌리아",
+      hallType: "일반,컨벤션",
+      menuType: "뷔페",
+      mealCost: "75,000원",
+      capacity: "최소 250명",
+      id: "all incheon icall nomal convention bf 200 79won sc",
+    },
+    {
+      imageSrc: "images/wd140.jpg",
+      location: "인천 중구",
+      name: "인천파라다이스시티호텔",
+      hallType: "야외/하우스,호텔",
+      menuType: "양식,퓨전",
+      mealCost: "88,000원",
+      capacity: "최소 60명",
+      id: "all incheon icall out hotel fs wt 50 99won sc",
+    },
+    {
+      imageSrc: "images/wd141.jpg",
+      location: "인천 중구",
+      name: "인천네스트호텔",
+      hallType: "야외/하우스,호텔",
+      menuType: "뷔페,양식",
+      mealCost: "66,000원",
+      capacity: "최소 100명",
+      id: "all incheon icall out hotel bf wt 100 79won sc",
+    },
+    {
+      imageSrc: "images/wd142.jpg",
+      location: "인천 부평구",
+      name: "부평에스칼라디움",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "53,000원",
+      capacity: "최소 250명",
+      id: "all incheon icall nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd143.jpg",
+      location: "인천 연수구",
+      name: "오라카이송도파크호텔",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "52,000원",
+      capacity: "최소 200명",
+      id: "all incheon icall nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd144.jpg",
+      location: "전북 전주시",
+      name: "전주더메이호텔",
+      hallType: "호텔",
+      menuType: "뷔페",
+      mealCost: "62,000원",
+      capacity: "최소 300명",
+      id: "all jeonbuk jball hotel bf 300 79won sc",
+    },
+    {
+      imageSrc: "images/wd145.jpg",
+      location: "전북 전주시",
+      name: "전북라한호텔",
+      hallType: "호텔",
+      menuType: "양식",
+      mealCost: "55,000원",
+      capacity: "최소 200명",
+      id: "all jeonbuk jball hotel wt 200 59won mc sc",
+    },
+    {
+      imageSrc: "images/wd146.jpg",
+      location: "전북 전주시",
+      name: "전주아름다운컨벤션웨딩",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "45,000원",
+      capacity: "최소 250명",
+      id: "all jeonbuk jball nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd147.jpg",
+      location: "전북 전주시",
+      name: "전주웨딩의전당",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "40,000원",
+      capacity: "최소 150명",
+      id: "all jeonbuk jball nomal bf 100 49won sc",
+    },
+    {
+      imageSrc: "images/wd148.jpg",
+      location: "전북 전주시",
+      name: "전주알펜시아웨딩컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "42,000원",
+      capacity: "최소 200명",
+      id: "all jeonbuk jball nomal bf 200 49won sc",
+    },
+    {
+      imageSrc: "images/wd149.jpg",
+      location: "제주 서귀포시",
+      name: "제주해비치호텔앤리조트",
+      hallType: "호텔",
+      menuType: "뷔페,한식,양식",
+      mealCost: "120,000원",
+      capacity: "최소 200명",
+      id: "all jeju jjall hotel bf 200 100won mc",
+    },
+    {
+      imageSrc: "images/wd150.jpg",
+      location: "제주 서귀포시",
+      name: "휘닉스제주섭지코지",
+      hallType: "일반,야외/하우스,호텔",
+      menuType: "양식",
+      mealCost: "77,000원",
+      capacity: "최소 15명",
+      id: "all jeju jjall nomal out hotel bf 0 79won mc",
+    },
+    {
+      imageSrc: "images/wd151.jpg",
+      location: "제주 제주시",
+      name: "엘리시안제주웨딩&파티",
+      hallType: "야외/하우스",
+      menuType: "뷔페,양식",
+      mealCost: "80,000원",
+      capacity: "최소 10명",
+      id: "all jeju jjall out bf wt 0 99won mc sc",
+    },
+    {
+      imageSrc: "images/wd152.jpg",
+      location: "제주 서귀포시",
+      name: "제주씨에스호텔",
+      hallType: "호텔",
+      menuType: "뷔페,양식",
+      mealCost: "100,000원",
+      capacity: "최소 15명",
+      id: "all jeju jjall hotel bf wt 0 100won mc sc",
     },
 
     // 다른 웨딩홀 데이터를 추가할 수 있습니다.
@@ -865,4 +1794,5 @@ $(document).ready(function () {
 
   // 페이지 로드 시 메뉴얼 정보 생성
   createWeddingHallElements(weddingHallData);
+  // 검색 버튼 클릭 이벤트 핸들러
 });
