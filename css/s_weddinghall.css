@@ -106,8 +106,9 @@
 }
 .select-box {
   display: flex;
-  margin: 10px 0;
-  justify-content: space-between;
+
+  margin: 20px 0;
+  justify-content: space-around;
 }
 
 .select-box form {
@@ -194,6 +195,7 @@
 .w-box-left {
   float: left;
 }
+
 .w-box-left p {
   color: #999;
   margin: 10px 0px;
@@ -203,11 +205,13 @@
 }
 .w-box-right p {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
   text-align: left;
 }
 .mix h3 {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .w-box-right span {
   width: 57px;
@@ -218,6 +222,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+#dataCount {
+  font-size: 20px;
+  font-weight: 600;
+  width: 100px;
+  padding: 10px 20px;
+  text-align: center;
 }
 @media all and (max-width: 1024px) {
 }
