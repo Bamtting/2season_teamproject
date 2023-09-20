@@ -28,6 +28,7 @@
   color: #fff;
   font-weight: bold;
 }
+
 .s_weddinghall .text-area {
   margin-top: 160px;
 }
@@ -98,11 +99,17 @@
   font-weight: 500;
   color: #fff;
 }
+.select-box-area {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
 .select-box {
   display: flex;
-  margin: 20px;
+  margin: 10px 0;
   justify-content: space-between;
 }
+
 .select-box form {
   width: 400px;
   text-align: end;
@@ -116,7 +123,7 @@
 #city {
   width: 257px;
   height: 45px;
-  padding-left: 5px;
+  padding: 5px;
   border: none;
 }
 #guarantors {
@@ -154,6 +161,8 @@
 }
 .w-search-area label {
   margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 .w-serach-btn {
   width: 257px;
@@ -235,6 +244,11 @@
   }
   .hall-list2 {
     display: flex;
+  }
+  .hall-list2 button.active {
+    background-color: #b99664;
+    color: #fff;
+    font-weight: bold;
   }
 }
 @media all and (max-width: 573px) {
