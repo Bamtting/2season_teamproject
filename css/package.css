@@ -60,12 +60,12 @@
 }
 .package-main-wrap img {
   position: absolute;
-  width: 450px;
+  width: 470px;
   right: 0;
 }
 .packimgwrap {
   margin-top: 72px;
-  width: 830px;
+  width: 850px;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -91,14 +91,15 @@
 }
 .packimgwrap li:first-child {
   position: relative;
-  width: 200px;
-  height: 300px;
-  background: url("../images/package-dress-1.jpg") no-repeat center;
+  width: 220px;
+  height: 330px;
+  background: url("../images/pk_weddinghall_2.webp") no-repeat center;
   background-size: cover;
   border-radius: 500px;
   transition: transform 0.3s;
 }
 .packimgwrap li:first-child img {
+  object-fit: cover;
   position: absolute;
   top: -30px;
   left: -30px;
@@ -109,14 +110,15 @@
 }
 .packimgwrap li:nth-child(2) {
   position: relative;
-  width: 200px;
-  height: 300px;
-  background: url("../images/package-makeup-1.jpg") no-repeat center;
+  width: 220px;
+  height: 330px;
+  background: url("../images/makeup7.jpg") no-repeat center;
   background-size: cover;
   border-radius: 500px;
   transition: transform 0.3s;
 }
 .packimgwrap li:nth-child(2) img {
+  object-fit: cover;
   position: absolute;
   top: -30px;
   left: -30px;
@@ -127,14 +129,15 @@
 }
 .packimgwrap li:nth-child(3) {
   position: relative;
-  width: 200px;
-  height: 300px;
-  background: url("../images/package-studio-1.jpg") no-repeat center;
+  width: 220px;
+  height: 330px;
+  background: url("../images/studio5.jpg") no-repeat center;
   background-size: cover;
   border-radius: 500px;
   transition: transform 0.3s;
 }
 .packimgwrap li:nth-child(3) img {
+  object-fit: cover;
   position: absolute;
   top: -30px;
   left: -30px;
@@ -144,62 +147,110 @@
   display: block;
 }
 /* 반응형 */
-@media all and (max-width: 1440px) {
-  
+@media all and (max-width: 1480px) {
+  .package-wrap {
+    width: 90vw;
+  }
+  .package-title {
+    font-size: 42px;
+  }
+  .package-text-wrap p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 50px;
+  }
+  .package-text-wrap p span {
+    font-size: 42px;
+  }
+  .packimgwrap {
+    width: 60%;
+  }
 }
-@media all and (max-width: 1240px) {
-
+@media all and (max-width: 1380px) {
+  .package-wrap {
+    width: 150vh;
+    padding: 0 50px;
+  }
+  .package-main-wrap img {
+    width: 420px;
+  }
+  .package-title {
+    font-size: 38px;
+  }
+  .package-text-wrap p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+  }
+  .package-text-wrap p span {
+    font-size: 38px;
+  }
+  .package-more-btn {
+    margin-top: 50px;
+    padding: 6px 16px;
+    font-size: 20px;
+  }
+  .packimgwrap li:first-child,
+  .packimgwrap li:nth-child(2),
+  .packimgwrap li:nth-child(3) {
+    width: 200px;
+    height: 300px;
+  }
+  .packimgwrap {
+    margin-top: 50px;
+  }
 }
-@media all and (max-width: 1140px) {
+@media all and (max-width: 1300px) {
+  .package-wrap {
+    width: 150vh;
+    padding: 0 60px;
+  }
+  .package-main-wrap img {
+    width: 400px;
+  }
+  .package-title {
+    font-size: 38px;
+  }
+  .package-text-wrap p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+  }
+  .package-text-wrap p span {
+    font-size: 38px;
+  }
+  .package-more-btn {
+    margin-top: 50px;
+    padding: 6px 16px;
+    font-size: 20px;
+  }
+  .packimgwrap li:first-child,
+  .packimgwrap li:nth-child(2),
+  .packimgwrap li:nth-child(3) {
+    width: 180px;
+    height: 280px;
+  }
+  .packimgwrap {
+    margin-top: 40px;
+  }
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1299px) {
+  .package-main-wrap img {
+    width: 30vw;
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+}
+@media all and (max-width: 836px) {
+  .package-main-wrap img {
+    opacity: 0;
+    transition: 0.2s;
+  }
 }
 @media all and (max-width: 768px) {
 }
 @media all and (max-width: 480px) {
 }
 @media all and (max-width: 360px) {
-  h2,
-  p {
-    text-align: center;
-  }
-  .packimgwrap li:nth-child(1) {
-    position: absolute;
-    display: none;
-    left: 90px;
-  }
-  .packimgwrap {
-    display: block;
-  }
-  .package-wrap {
-    display: block;
-    /* min-height: 400px; */
-  }
-  .packimgwrap li:nth-child(3),
-  .packimgwrap li:nth-child(2) {
-    display: none;
-  }
-  .package-title {
-    margin-top: 50px;
-  }
-  .package-text-wrap p {
-    line-height: 40px;
-    text-align: center;
-    font-size: 13px;
-  }
-  .package-more-btn {
-    position: absolute;
-    top: 700px;
-    font-size: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 40px;
-    text-align: center;
-  }
-  .package-main-wrap img {
-    position: absolute;
-    top: 200px;
-    right: 19px;
-    margin: 0;
-  }
 }
