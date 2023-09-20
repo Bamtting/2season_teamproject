@@ -24,6 +24,7 @@ img {
 html {
   font-size: 16px;
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   font-family: "Noto Serif KR", serif;
@@ -33,12 +34,7 @@ body {
   color: #191919;
   word-break: keep-all;
   overflow-x: hidden;
-  min-width: 360px;
-  overflow: hidden;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  min-width: 320px;
 }
 ::-webkit-scrollbar {
   width: 7px;
