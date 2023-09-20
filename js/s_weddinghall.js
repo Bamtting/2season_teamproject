@@ -1,22 +1,113 @@
 $(document).ready(function () {
-  // 상위 홀 선택 버튼 클릭시 필터링
-  $(".hall-list button").click(function () {
-    $(".hall-list button").removeClass("active");
-    $(this).addClass("active");
-    var selector = $(this).attr("data-filter");
-    $(".mix-wrapper").isotope({
-      filter: selector,
-    });
-  });
-  // 셀렉트 박스 내 선택시 필터링
-  $("#selcity").change(function () {
-    var selcity = $(this).val(); // 선택된 옵션의 값 가져오기
-    var filterValue = selcity === "all" ? "*" : "." + selcity;
+  // 초기 필터값 설정
+  var hallFilter = "*"; // 홀 버튼에 대한 필터값
+  var locationFilter = "*"; // 지역(시/도) 셀렉트 박스에 대한 필터값
+  var guarantorFilter = "*"; // 보증인원 필터값
+  var mealRangeFilter = "*"; // 식대 필터값
+  var mealMenuFilter = "*"; // 식사메뉴 필터값
+  var ceremonyFilter = "*"; // 예식형태 필터값
 
-    $(".mix-wrapper").isotope({
-      filter: filterValue,
-    });
+  // 홀 버튼 클릭 시 필터링
+  $(".hall-list button, .hall-list2 button").click(function () {
+    $(".hall-list button, .hall-list2 button").removeClass("active");
+    $(this).addClass("active");
+    var hallSelector = $(this).attr("data-filter");
+
+    // 선택한 홀 종류를 홀 필터에 반영
+    hallFilter = hallSelector;
+
+    // 최종 필터값 업데이트
+    updateFilter();
   });
+
+  // "지역(시/도)" 셀렉트 박스 변경 이벤트 핸들러
+  $("#selcity").change(function () {
+    var selectedCity = $(this).val();
+
+    // 선택한 지역(시/도)를 지역(시/도) 필터에 반영
+    locationFilter = selectedCity === "all" ? "*" : "." + selectedCity;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // "지역(시군구)" 셀렉트 박스 변경 이벤트 핸들러
+  $("#city").change(function () {
+    var selectedDistrict = $(this).val();
+
+    // 선택한 지역(시군구)를 지역(시군구) 필터에 반영
+    locationFilter = selectedDistrict === "all" ? "*" : "." + selectedDistrict;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 보증인원 필터링
+  $("#guarantors").change(function () {
+    var selectedGuarantor = $(this).val(); // 선택된 보증인원 가져오기
+
+    // 선택된 보증인원 값에 따라 필터 적용
+    guarantorFilter = "." + selectedGuarantor;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 식대 필터링
+  $("#meals").change(function () {
+    var selectedMealRange = $(this).val(); // 선택된 식대 범위 가져오기
+
+    // 선택된 식대 값에 따라 필터 적용
+    mealRangeFilter = "." + selectedMealRange;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // "식사메뉴" 필터링
+  $("#mealmenu").change(function () {
+    var selectedMenu = $(this).val(); // 선택된 식사메뉴 범위 가져오기
+
+    // 선택된 식사메뉴 값에 따라 필터 적용
+
+    mealMenuFilter = "." + selectedMenu;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 예식형태 필터링
+  $("#ceremony").change(function () {
+    var selectedCeremony = $(this).val();
+
+    // 선택한 예식 형태를 예식형태 필터에 반영
+    ceremonyFilter = "." + selectedCeremony;
+
+    // 최종 필터값 업데이트
+    updateFilter();
+  });
+
+  // 최종 필터값 업데이트하는 함수
+  function updateFilter() {
+    // 모든 필터 값을 결합하여 최종 필터값 설정
+    var filter =
+      hallFilter +
+      locationFilter +
+      guarantorFilter +
+      mealRangeFilter +
+      mealMenuFilter +
+      ceremonyFilter;
+
+    // 필터링 적용
+    filterWeddingHalls(filter);
+  }
+
+  // 필터링 함수 정의
+  function filterWeddingHalls(filter) {
+    $(".mix-wrapper").isotope({
+      filter: filter,
+    });
+  }
 
   // "지역(시/도)" 셀렉트 박스 변경 이벤트 핸들러
   $("#selcity").change(function () {
@@ -42,9 +133,9 @@ $(document).ready(function () {
     switch (selectedCity) {
       case "seoul":
         cityOptions =
-          '<option value="all" data-filter=".sall" >전체</option>' +
+          '<option value="seoul" data-filter=".sall" >전체</option>' +
           '<option value="gangnam" data-filter=".gangnam" >강남구</option>' +
-          '<option value="Seocho" data-filter=".seocho">서초</option>' +
+          '<option value="seocho" data-filter=".seocho">서초</option>' +
           '<option value="gangseo" data-filter=".gangseo">강서/양천</option>' +
           '<option value="songpa" data-filter=".songpa">송파/잠실</option>' +
           '<option value="sindorim" data-filter=".sindorim">신도림/구로/영등포</option>' +
@@ -58,7 +149,7 @@ $(document).ready(function () {
         break;
       case "gyeonggi":
         cityOptions =
-          '<option value="all-gyeonggi" data-filter=".gall">전체</option>' +
+          '<option value="gyeonggi" data-filter=".gall">전체</option>' +
           '<option value="seongnam" data-filter=".seongnam">성남/분당</option>' +
           '<option value="suwon" data-filter=".suwon">수원</option>' +
           '<option value="yongin" data-filter=".yongin">용인</option>' +
@@ -71,51 +162,50 @@ $(document).ready(function () {
         break;
       case "gangwon":
         cityOptions =
-          '<option value="all-gangwon" data-filter=".gwall">전체</option>';
+          '<option value="gangwon" data-filter=".gwall">전체</option>';
         break;
       case "gyeongnam":
         cityOptions =
-          '<option value="all-gyeongnam" data-filter=".gnall">전체</option>';
+          '<option value="gyeongnam" data-filter=".gnall">전체</option>';
         break;
       case "gwangju":
         cityOptions =
-          '<option value="all-gwangju" data-filter=".gjall">전체</option>';
+          '<option value="gwangju" data-filter=".gjall">전체</option>';
         break;
       case "daejeon":
         cityOptions =
-          '<option value="all-daejeon" data-filter=".djall">전체</option>';
+          '<option value="daejeon" data-filter=".djall">전체</option>';
         break;
       case "daegu":
         cityOptions =
-          '<option value="all-daegu" data-filter=".dgall">전체</option>';
+          '<option value="daegu" data-filter=".dgall">전체</option>';
         break;
       case "busan":
         cityOptions =
-          '<option value="all-busan" data-filter=".bsall">전체</option>';
+          '<option value="busan" data-filter=".bsall">전체</option>';
         break;
       case "ulsan":
         cityOptions =
-          '<option value="all-ulsan" data-filter=".usall">전체</option>';
+          '<option value="ulsan" data-filter=".usall">전체</option>';
         break;
       case "incheon":
         cityOptions =
-          '<option value="all-incheon" data-filter=".icall">전체</option>';
+          '<option value="incheon" data-filter=".icall">전체</option>';
         break;
       case "jeonbuk":
         cityOptions =
-          '<option value="all-jeonbuk" data-filter=".jball">전체</option>';
+          '<option value="jeonbuk" data-filter=".jball">전체</option>';
         break;
       case "chungnam":
         cityOptions =
-          '<option value="all-chungnam" data-filter=".cnall">전체</option>';
+          '<option value="chungnam" data-filter=".cnall">전체</option>';
         break;
       case "chungbuk":
         cityOptions =
-          '<option value="all-gyeonggi" data-filter=".cball">전체</option>';
+          '<option value="chungbuk" data-filter=".cball">전체</option>';
         break;
-      case "Jeju":
-        cityOptions =
-          '<option value="all-Jeju" data-filter=".jjall">전체</option>';
+      case "jeju":
+        cityOptions = '<option value="jeju" data-filter=".jjall">전체</option>';
         break;
       // 다른 시/도에 대한 경우 추가
     }
@@ -169,7 +259,7 @@ $(document).ready(function () {
       imageSrc: "images/wd5.jpg",
       location: "서울 강남구",
       name: "토브헤세드",
-      hallType: "하우스",
+      hallType: "야외/하우스",
       menuType: "뷔페",
       mealCost: "78,000원",
       capacity: "최대 300명",
@@ -213,7 +303,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "60,000원",
       capacity: "최대 1500명",
-      id: "all seoul sall gangnam nomal chapel bf 300 79won sc",
+      id: "all seoul sall gangnam nomal bf 300 79won sc",
     },
     {
       imageSrc: "images/wd10.jpg",
@@ -243,7 +333,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최대 600명",
-      id: "all seoul sall sindorim nomal convention bf 300 79won sc",
+      id: "all seoul sall sindorim nomal chapel bf 300 79won sc",
     },
     {
       imageSrc: "images/wd13.jpg",
@@ -253,7 +343,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최대 400명",
-      id: "all seoul sall sindorim convention fs 300 99won mc",
+      id: "all seoul sall sindorim nomal chapel fs 300 99won mc",
     },
     {
       imageSrc: "images/wd14.jpg",
@@ -413,7 +503,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최소 350명",
-      id: "all seoul sall songpa hotel bf 300 79won sc",
+      id: "all seoul sall songpa nomal bf 300 79won sc",
     },
     {
       imageSrc: "images/wd30.jpg",
@@ -803,7 +893,107 @@ $(document).ready(function () {
       menuType: "한식,양식",
       mealCost: "68,000원",
       capacity: "최소 250명",
-      id: "all gyeonggi gall suwon hotel fs 200 79won mc",
+      id: "all gyeonggi gall suwon hotel ko wt 200 79won mc",
+    },
+    {
+      imageSrc: "images/wd69.jpg",
+      location: "경기 용인시",
+      name: "벨라마리에",
+      hallType: "일반,야외/하우스",
+      menuType: "뷔페,양식",
+      mealCost: "68,000원",
+      capacity: "최소 50명",
+      id: "all gyeonggi gall yongin nomal out wt bf 50 79won sc mc",
+    },
+    {
+      imageSrc: "images/wd70.jpg",
+      location: "경기 용인시",
+      name: "용인아이티컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "56,000원",
+      capacity: "최소 250명",
+      id: "all gyeonggi gall yongin nomal bf 200 59won sc",
+    },
+    {
+      imageSrc: "images/wd71.jpg",
+      location: "경기 용인시",
+      name: "라비다하우스",
+      hallType: "일반,야외/하우스",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 50명",
+      id: "all gyeonggi gall yongin nomal out bf 50 79won sc mc",
+    },
+    {
+      imageSrc: "images/wd72.jpg",
+      location: "경기 용인시",
+      name: "페이지웨딩&파티",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "60,000원",
+      capacity: "최소 100명",
+      id: "all gyeonggi gall yongin out bf 100 79won sc",
+    },
+    {
+      imageSrc: "images/wd73.jpg",
+      location: "경기 용인시",
+      name: "ICT밸리컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "58,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall yongin nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd74.jpg",
+      location: "경기 안양시",
+      name: "안양더그레이스켈리",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "55,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall anyang nomal bf 300 59won mc sc",
+    },
+    {
+      imageSrc: "images/wd75.jpg",
+      location: "경기 안양시",
+      name: "안양트리니티컨벤션",
+      hallType: "야외/하우스",
+      menuType: "뷔페",
+      mealCost: "67,000원",
+      capacity: "최소 150명",
+      id: "all gyeonggi gall anyang out bf 100 79won sc",
+    },
+    {
+      imageSrc: "images/wd76.jpg",
+      location: "경기 안양시",
+      name: "아르떼채플&컨벤션",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "58,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall anyang nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd77.jpg",
+      location: "경기 안양시",
+      name: "웨딩그룹위더스",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "58,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall anyang nomal bf 300 59won sc",
+    },
+    {
+      imageSrc: "images/wd78.jpg",
+      location: "경기 안양시",
+      name: "파티오벨라",
+      hallType: "일반",
+      menuType: "뷔페",
+      mealCost: "58,000원",
+      capacity: "최소 300명",
+      id: "all gyeonggi gall anyang nomal bf 300 59won sc",
     },
 
     // 다른 웨딩홀 데이터를 추가할 수 있습니다.
@@ -865,4 +1055,5 @@ $(document).ready(function () {
 
   // 페이지 로드 시 웨딩홀 정보 생성
   createWeddingHallElements(weddingHallData);
+  // 검색 버튼 클릭 이벤트 핸들러
 });
