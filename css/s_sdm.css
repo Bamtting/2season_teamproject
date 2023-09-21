@@ -170,9 +170,14 @@
 /* studio */
 .sdm_studio {
   position: relative;
-  top: 5%;
+  top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .sdm_studio_title {
+  user-select: none;
   font-size: 78px;
   text-align: center;
   display: flex;
@@ -181,28 +186,32 @@
   align-items: center;
 }
 .sdm_studio_title h3 {
+  user-select: none;
+  font-weight: 500;
   font-family: "Noto Serif KR", serif;
   color: #887160;
   padding-bottom: 20px;
 }
-.sdm_studio_title button {
-  width: 130px;
-  height: 35px;
+.sdm_studio button {
+  width: 100px;
+  height: 40px;
   padding: 5px;
   border-radius: 50px;
   border: 2px solid #887160;
   background: none;
   color: #887160;
+  margin-top: 2%;
 }
-.sdm_studio_title button:hover {
+.sdm_studio button:hover {
   background-color: #887160;
   color: #fff;
   cursor: pointer;
 }
-.sdm_studio_title button p {
-  font-size: 13px;
+.sdm_studio button p {
+  font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
+  user-select: none;
 }
 #studio_nemo {
   position: relative;
@@ -210,9 +219,10 @@
   height: 300px;
   /* background-color: beige; */
   padding: 30px;
-  margin: 10px;
+  margin: 0px;
 }
 .sdm_studio_wrap {
+  margin-top: 2%;
   width: 100%;
   height: 705px;
   display: flex;
@@ -222,8 +232,9 @@
   /* background-color: aquamarine; */
 }
 .sdm_studio_wrap h3 {
+  user-select: none;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 700;
   padding-bottom: 20px;
   font-family: "Noto Serif KR", serif;
 }
@@ -239,7 +250,7 @@
   background: #887160;
   border: none;
   color: #fff;
-  width: 130px;
+  width: 100px;
   height: 35px;
 }
 .sdm_studio_wrap button:hover {
@@ -248,13 +259,18 @@
   border: 2px solid #887160;
   cursor: pointer;
 }
+.sdm_studio_wrap button:hover p {
+  font-weight: 600;
+}
 .sdm_studio_wrap button p {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 400;
+  user-select: none;
 }
 .studio_firstbox {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 .sdm_studio01 {
   background: url("../images/studio01.jpg") no-repeat;
@@ -284,16 +300,18 @@
 }
 .sdm_studio04 {
   background: url("../images/studio_some05.jpg") no-repeat;
-  opacity: rgba(0,0,0,0.2);
+  opacity: rgba(0, 0, 0, 0.2);
   background-position: center center;
   background-size: cover;
 }
 /* eight */
 .sdm_studio_eight {
-  position: relative;
-  margin: auto;
-  width: 1000px;
-  height: 500px;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
   /* background-color: aqua; */
 }
 #ss_eight {
@@ -302,66 +320,67 @@
 }
 .eight_first {
   position: relative;
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+.eight_two {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 .eight_1 {
   position: relative;
   background: url("../images/eight_01.png") no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 .eight_2 {
   position: relative;
-  background: url("../images/eight_02.png") no-repeat;
-  background-position: center;
+  background: url("../images/eight_02.jpg") no-repeat;
+  background-position: top center;
   background-size: cover;
 }
 .eight_3 {
   position: relative;
   background: url("../images/eight_03.png") no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 .eight_4 {
   position: relative;
   background: url("../images/eight_04.png") no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
-.eight_two {
-  position: relative;
-  width: 1000px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 .eight_5 {
   position: relative;
   background: url("../images/eight_05.png") no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 .eight_6 {
   position: relative;
-  background: url("../images/eight_06.png") no-repeat;
-  background-position: center;
+  background: url("../images/eight_07.png") no-repeat;
+  background-position: bottom center;
   background-size: cover;
 }
 .eight_7 {
   position: relative;
-  background: url("../images/eight_07.png") no-repeat;
-  background-position: center;
+  background: url("../images/eight_08.png") no-repeat;
+  background-position: bottom center;
   background-size: cover;
 }
 .eight_8 {
   position: relative;
-  background: url("../images/eight_08.png") no-repeat;
-  background-position: center;
+  background: url("../images/eight_08.jpg") no-repeat;
+  background-position: top center;
   background-size: cover;
 }
 /* 견적 */
@@ -372,34 +391,46 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 8%;
+  top: 5%;
   width: 100%;
-  height: 200px;
+  height: 250px;
   background-color: #ece8e4;
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
 }
 .sdm_reservation h3 {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 600;
-  padding-bottom: 10px;
+  padding-bottom: 18px;
   font-family: "Noto Sans KR", sans-serif;
+  user-select: none;
 }
 .sdm_reservation p {
   font-weight: 500;
   letter-spacing: 0.5px;
+  line-height: 16px;
+}
+.sdm_reservation b {
+  font-weight: 700;
 }
 .sdm_reservation button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
   margin-top: 15px;
   background: #887160;
   border: none;
   color: #fff;
-  width: 130px;
-  height: 35px;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
 }
 .sdm_reservation button p {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 14px;
+  user-select: none;
+  letter-spacing: -0.5px;
 }
 .sdm_reservation button:hover {
   background: none;
@@ -408,7 +439,7 @@
   border: 2px solid #887160;
   cursor: pointer;
 }
-.sdm_reservation button:hover .reservation_button {
+.sdm_reservation button:hover {
   font-weight: 600;
 }
 /* dress */
@@ -429,25 +460,30 @@
 .dress_title {
   width: 100%;
   height: 150px;
+  user-select: none;
 }
 .dress_title h3 {
   font-size: 78px;
+  font-weight: 500;
   text-align: center;
   font-family: "Noto Serif KR", serif;
   color: #887160;
 }
 .dress_more_button {
-  position: absolute;
+  position: relative;
   right: 0;
-  top: 20%;
+  top: 45%;
   padding: 5px;
+  margin: auto;
 }
 .dress_more_button p {
   font-weight: 500;
+  font-size: 14px;
+  user-select: none;
 }
 .dress_more_button button {
-  width: 130px;
-  height: 35px;
+  width: 100px;
+  height: 40px;
   padding: 5px;
   border-radius: 50px;
   border: 2px solid #887160;
@@ -466,7 +502,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 25%;
+  top: 17%;
 }
 .dl_01 {
   width: 300px;
@@ -505,6 +541,7 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 .dlo01_box h3 {
+  user-select: none;
   font-size: 22px;
   font-weight: 600;
   padding-bottom: 15px;
@@ -513,7 +550,7 @@
   position: relative;
   width: 100%;
   height: 500px;
-  top: 45%;
+  top: 48%;
 }
 #dress_img_first {
   width: 230px;
@@ -547,9 +584,19 @@
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.dress_underline {
+  width: 130px;
+  height: 1px;
+  background-color: #e4b899;
+  position: absolute;
+  display: block;
+  margin-top: 35px;
 }
 .dressimg_black {
+  position: relative;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -557,16 +604,22 @@
 }
 .dress_img_01 {
   background: url("../images/dress_01.jpg") no-repeat;
-  background-position: top center;
+  background-position: center center;
   background-size: cover;
 }
 #dress_img_first:hover .dressimg_black {
-  display: block;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s;
 }
 #dress_img_second:hover .dressimg_black {
-  display: block;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s;
 }
 .dress_img_02 {
   background: url("../images/dress_02.jpg") no-repeat;
@@ -604,6 +657,16 @@
   background-size: cover;
 }
 /* makeup */
+.makeup_wrap_wrap {
+  margin: auto;
+  height: 910px;
+  position: relative;
+  max-width: 1920px;
+  background: url("../images/makeupback_gra.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 21%;
+}
 .makeup_wrap {
   position: relative;
   max-width: 1000px;
@@ -612,14 +675,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 22%;
+  top: 15%;
   height: 700px;
 }
 .makeup_wrap_title {
   width: 100%;
+  user-select: none;
 }
 .makeup_wrap_title h3 {
   font-size: 78px;
+  font-weight: 500;
   text-align: center;
   font-family: "Noto Serif KR", serif;
   color: #887160;
@@ -650,11 +715,12 @@
 .makeup_box02_img {
   width: 100%;
   height: 60%;
-  background: url("../images/main_makeup.png") no-repeat;
+  background: url("../images/makeup_02.png") no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .makeup_box01_text {
+  user-select: none;
   padding-top: 5%;
   width: 75%;
   margin: auto;
@@ -673,32 +739,24 @@
 }
 .mbt_gold {
   width: 33%;
-  border: 2px solid #887160;
+  /* border: 2px solid #887160; */
   padding: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #887160;
+  /* color: #887160; */
 }
-.mbt_black {
-  width: 33%;
-  padding: 10px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mbt_gold:active {
+  background-color: #887160;
+  color: #fff;
+}
+.mbt_gold:active h4 {
+  color: #fff;
 }
 .mbt_gold:hover {
-  background-color: #887160;
-  color: #fff;
-}
-.mbt_black:hover {
-  background-color: #887160;
-  color: #fff;
-}
-.mbt_black:hover h4 {
-  font-weight: 400;
+  border: 2px solid #887160;
+  color: #887160;
 }
 .makeup_box01_text2 {
   padding-top: 18px;
@@ -718,16 +776,18 @@
   top: 80%;
 }
 .makeupbox_button button {
-  width: 80px;
+  width: 100px;
   padding: 8px;
   border: 2px solid #887160;
   background: none;
   border-radius: 50px;
+  user-select: none;
 }
 .makeupbox_button button p {
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   color: #887160;
+  user-select: none;
 }
 .makeupbox_button button:hover {
   background-color: #887160;
@@ -745,7 +805,7 @@
   justify-content: center;
   align-items: center;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
 }
 .makeupimg_black {
@@ -762,6 +822,201 @@
   display: block;
   cursor: pointer;
 }
+/* --------모달------------ */
+.sdm_studio02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.studio_container {
+  position: relative;
+  top: 5%;
+}
+.studio_container > .stu_btn {
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stu_modal_imgbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("../images/wonkyu_st_back.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+.stu_modal_imgbox2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("../images/somsom.png") no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+.stu_modal {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  top: 100%;
+  position: fixed;
+  left: 0;
+  text-align: left;
+}
+.stu_header {
+  text-align: center;
+  line-height: 65px;
+  width: 100%;
+  padding: 30px;
+  border-bottom: 1px solid #868686;
+  font-size: 45px;
+  font-weight: 700;
+  position: relative;
+  font-family: "Noto Serif KR", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top: 0; */
+}
+.stu_header b {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.stu_body {
+  width: 100%;
+  height: 70%;
+  padding: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  letter-spacing: 0.5px;
+}
+.stu_body p {
+  text-align: center;
+}
+.stu_body_first {
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  line-height: 22px;
+  font-size: 14px;
+  margin-top: -10%;
+  padding-bottom: 10%;
+}
+.stu_body_first_f {
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 16px;
+  margin-top: -10%;
+  width: 90%;
+  padding-bottom: 10%;
+}
+.s_b_f_f {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
+#stu_h_2 {
+  font-size: 58px;
+}
+#stu_line p:nth-child(2) {
+  font-size: 28px;
+  line-height: 32px;
+}
+.stu_body p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 19px;
+  width: 70%;
+  margin-top: -40px;
+}
+.stu_body p:nth-child(3) {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 60%;
+}
+.stu_body p:nth-child(4) {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 5%;
+  line-height: 19px;
+}
+.stu_body p:nth-child(5) {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+}
+/* .stub_body_foot {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10%;
+} */
+.stu_btn {
+  font-size: 12px;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  background: #887160;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  font-weight: 400;
+  top: 5%;
+}
+.stu_btn:hover {
+  background: none;
+  border: 2px solid #887160;
+  color: #887160;
+  font-weight: 600;
+}
+.studio_container.modal-open .stu_modal {
+  z-index: 9999999999999999;
+  top: 10%;
+}
+.stu_btn_padding {
+}
+/* ---- */
+.studio_container01 {
+  position: relative;
+  top: 5%;
+}
+.studio_container01 > .stu_btn01 {
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.studio_container01.modal-open .stu_modal {
+  z-index: 9999999999999999;
+  top: 10%;
+}
 /* ------------------------------- */
 /* ----------반응형----------- */
 @media all and (max-width: 1484px) {
@@ -774,6 +1029,11 @@
   .sdmmain_06 {
     left: 63%;
   }
+  .stu_body p:nth-child(2) {
+    margin-top: -14px;
+  }
+}
+@media all and (max-width: 1214px) {
 }
 @media all and (max-width: 1024px) {
   .sdmmain_01 {
@@ -797,6 +1057,12 @@
   .makeup_box01 h4 {
     font-size: 16px;
   }
+  .stu_modal_imgbox {
+    width: 70%;
+  }
+  .stu_modal_imgbox2 {
+    width: 70%;
+  }
 }
 @media all and (max-width: 888px) {
   .makeup_box01 h4 {
@@ -806,6 +1072,12 @@
 @media all and (max-width: 809px) {
   .makeup_box01_text {
     width: 90%;
+  }
+}
+@media all and (max-width: 778px) {
+  .stu_body_first {
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 @media all and (max-width: 768px) {
@@ -838,7 +1110,6 @@
     font-weight: 600;
   }
   .sdm_studio_wrap button {
-    width: 100px;
     background: none;
     color: #887160;
     border: 2px solid #887160;
@@ -853,6 +1124,9 @@
   .sdm_studio_wrap button p {
     font-size: 11px;
     font-weight: 600;
+  }
+  .sdm_studio button {
+    margin-top: 10%;
   }
   .dress_img {
     margin-top: -10%;
@@ -870,7 +1144,7 @@
     display: none;
   }
   .dress_more_button {
-    top: 24%;
+    top: 50%;
     z-index: 999;
   }
   .dl_01:first-child {
@@ -886,6 +1160,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .makeup_wrap_wrap {
+    height: 1500px;
+  }
+  .makeup_wrap {
+    margin-top: -25%;
   }
   .makeupbox_button {
     margin-top: 50%;
@@ -916,6 +1196,32 @@
   .makeup_wrap {
     height: 1020px;
   }
+  .stu_body p:nth-child(2) {
+    display: none;
+  }
+  .stu_body p:nth-child(3) {
+    display: none;
+  }
+  .stu_modal_imgbox {
+    width: 90%;
+  }
+  .stu_modal_imgbox2 {
+    width: 90%;
+  }
+}
+@media all and (max-width: 739px) {
+  .stu_body_first {
+    margin-top: -40%;
+    line-height: 19px;
+  }
+}
+@media all and (max-width: 714px) {
+  .stu_body p:nth-child(4) {
+    font-size: 20px;
+  }
+  .stu_body p:nth-child(5) {
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 650px) {
   .sdmmain_07 {
@@ -923,12 +1229,99 @@
   }
 }
 @media all and (max-width: 480px) {
-  .sdmmain_01 {
-    left: 2%;
+  .s_sdm .inner {
+    max-width: 480px;
   }
-  .sdmmain_07 {
-    left: 45%;
+  .sdmmain_01 {
+    left: 0;
+  }
+  .sdm_studio_wrap h3 {
+    font-size: 20px;
+  }
+  .sdm_studio_wrap p {
+    font-size: 10px;
+  }
+  .studio_firstbox {
+    width: 320px;
+  }
+  .studio_secondbox {
+    width: 320px;
+  }
+  .sdm_studio_eight {
+    left: 15%;
+  }
+  .sdm_studio_wrap button {
+    width: 80px;
+    height: 38px;
+  }
+  .sdm_studio_wrap button p {
+    font-size: 11px;
+  }
+  .sdm_reservation p {
+    width: 90%;
+  }
+  /* .eight_2 {
+    display: none;
+  } */
+  .eight_3 {
+    display: none;
+  }
+  .eight_4 {
+    display: none;
+  }
+  /* .eight_6 {
+    display: none;
+  } */
+  .eight_7 {
+    display: none;
+  }
+  .eight_8 {
+    display: none;
+  }
+  .sdm_studio_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #ss_eight {
+    width: 310px;
+    height: 310px;
+  }
+  #lafore {
+    display: none;
+  }
+  .dlo01_box {
+    margin-top: -12%;
+  }
+  .makeup_box01 {
+    width: 320px;
+  }
+  .dress_wrap {
+    margin-top: -15%;
+  }
+  .makeup_wrap_title {
+    width: 90%;
+  }
+  .makeup_wrap_wrap {
+    width: 100%;
+  }
+  .makeupbox_button {
+    top: 85%;
+  }
+  .s_sdm {
+    max-width: 480px;
+  }
+  .s_b_f_f {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .stu_body_first_f {
+    font-size: 14px;
   }
 }
 @media all and (max-width: 360px) {
+  #stu_h_2 {
+    font-size: 36px;
+  }
 }
