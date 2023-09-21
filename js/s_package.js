@@ -19,104 +19,373 @@ $(document).ready(function () {
       disableOnInteraction: true,
     },
   });
-  //스와이프 될 때 색상 변경
-  // $(".swiper-slide")
-  // 스와이프 제어 버튼
-  //   .$(".fa-play")
-  //   .on("click", function () {
-  //     $(".fa-pause").removeClass("active");
-  //     $(this).addClass("active");
-  //     visualswiper.autoplay.start();
-  //     return false;
-  //   });
-  // $(".fa-pause").on("click", function () {
-  //   $(".fa-play").removeClass("active");
-  //   $(this).addClass("active");
-  //   visualswiper.autoplay.stop();
-  //   return false;
-  // });
 
-  // 검색 필터링
-  // 상위 홀 선택 버튼 클릭시 필터링
+  
+
+  //초기 필터값  설정
+  // 상세목록1
+  var pkbtnFilter = "*"; // 메인 종류에 대한 필터값
+  var pkpriceMenuFilter = "*"; //상품종류에 대한 필터값
+  var pkpriceFilter = "*"; //금액대에 대한 필터값
+  var pkPakageMenuFilter = "*"; //상품구성에 대한 필터값
+  var pkbenefitFilter = "*"; //혜택에 대한 필터값
+  var pksbmstyleFilter = "*"; //스타일에 대한 필터값
+  var pkbargainsaleFilter = "*"; //특가에 대한 필터값
+  // 상세목록2
+  var pkstpricemenuFilter = "*"; //상품 종류에 대한 필터값
+  var pkstpriceFilter = "*"; //금액대에 대한 필터값
+  var pkstudiomenuFilter = "*"; //상품구성에 대한 필터값
+  var pksceneFilter = "*"; //씬종류에 대한 필터값
+  var ststyle = "*"; //스타일에 대한 필터값
+  var pkphotographerFilter = "*"; //촬영자 수에 대한 필터값
+  // 상품목록3
+  var pkdrpricemenuFilter = "*"; //행사에대한 필터값
+  var pkdrpriceFilter = "*"; //금액대에 대한 필터값
+  var pkdresspointFilter = "*"; //드레스 강점에 대한 필터값
+  var pkdresssizeFilter = "*"; //드레스사이즈에 대한 필터값
+  var pkdrmadeFilter = "*"; //제작 구분에 대한 필터값
+  var pkdrbuyFilter = "*"; //구매형태에 대한 필터값
+  // 상품목록4
+  var pkmkpricemenuFilter = "*"; //상품 종류에대한 필터값
+  var pkmkpriceFilter = "*"; //금액대에대한필터값
+  var pkeventFilter = "*"; //행사에대한필터값
+  var pktarget = "*"; //대상에 대한 필터값
+  var pkmksdmstyle = "*"; //메이크업 직급에 대한 필터값
+  var pkbargainsale = "*"; //메이크업 강점에 대한 필터값
+
+  //메인 종류 클릭시 필터링
   $(".main-list button").click(function () {
     $(".main-list button").removeClass("active");
     $(this).addClass("active");
-    var selector = $(this).attr("data-filter");
-    $(".mix-wrapper").isotope({
-      filter: selector,
-    });
+    var pkbtnSelector = $(this).attr("data-filter");
+
+    // 선택한 메인 종류를 메인종류 필터에 반영
+    pkbtnFilter = pkbtnSelector;
+
+    // 최종 필터값 업데이트
+
+    pkupdateFilter();
   });
-  // 셀렉트 박스 내 선택시 필터링
+
+  // 상품종류1 셀렉트 박스 변경 이벤트 핸들러
   $("#priceMenu").change(function () {
-    var priceMenu = $(this).val(); // 선택된 옵션의 값 가져오기
-    var filterValue = priceMenu === "all" ? "*" : "." + priceMenu;
+    var selectedpriceMenu = $(this).val();
 
-    $(".mix-wrapper").isotope({
-      filter: filterValue,
-    });
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkpriceMenuFilter =
+      selectedpriceMenu === "all" ? "*" : "." + selectedpriceMenu;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
   });
 
-  // "상품 종류" 셀렉트 박스 변경 이벤트 핸들러
+  // 금액대 1 셀렉트 박스 변경 이벤트 핸들러
+  $("#price").change(function () {
+    var selectedprice = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkpriceFilter = selectedprice === "all" ? "*" : "." + selectedprice;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 상품 구성 셀렉트 박스
   $("#pakageMenu").change(function () {
-    var selectedPakageMenu = $(this).val();
-    var pakageMenu = $("#pakageMenu");
+    var selectedpakageMenu = $(this).val();
 
-    // "전체"를 선택한 경우, "상품 구성" 셀렉트 박스 초기화
-    if (selectedPakageMenu === "all") {
-      pakageMenu.empty();
-      pakageMenu.append(
-        '<option value="all">상품 구성을 선택해주세요.</option>'
-      );
-    } else {
-      // 선택한 "상품 구성"에 따라 해당하는 구성 추가
-      var pakageMenu = getpakageMenu(selectedPakageMenu);
-      pakageMenu.html(pakageMenu);
-    }
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkPakageMenuFilter = "." + selectedpakageMenu;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
   });
 
-  // "상품 구성"에 따라 해당하는 동 이름을 가져오는 함수 (예시)
-  // function getpakageMenu(selectedPakageMenu) {
-  //   var pakageMenu = "";
+  // 혜택 셀렉트 박스
+  $("#benefit").change(function () {
+    var selectedbenefit = $(this).val();
 
-  //   // 선택한 "시/도"에 따라 동적으로 옵션 추가
-  //   switch (selectedPakageMenu) {
-  //     case "all":
-  //       priceMenu =
-  //         '<option value="sdm" data-filter=".sdm">스드메</option>' +
-  //         '<option value="dm" data-filter=".dm">드메</option>' +
-  //         '<option value="total-dm" data-filter=".total-dm">토탈 + 드메</option>' +
-  //         '<option value="snap-video" data-filter=".snap-video">스냅 + 영상</option>' +
-  //         '<option value="total-dm-snap-video" data-filter=".total-dm-snap-video">토탈 + 드메 + 스냅 + 영상</option>' +
-  //         '<option value="sdm-snap-video" data-filter=".sdm-snap-video">스드메 + 스냅 + 영상</option>';
-  //       break;
-  //     case "sdm":
-  //       pakageMenu = '<option value="sdm" data-filter=".sdm">스드메</option>';
-  //       break;
-  //     case "dm":
-  //       pakageMenu = '<option value="dm" data-filter=".dm">드메</option>';
-  //       break;
-  //     case "total-dm":
-  //       pakageMenu =
-  //         '<option value="total-dm" data-filter=".total-dm">토탈 + 드메</option>';
-  //       break;
-  //     case "snap-video":
-  //       pakageMenu =
-  //         '<option value="snap-video" data-filter=".snap-video">스냅 + 영상</option>';
-  //       break;
-  //     case "total-dm-snap-video":
-  //       pakageMenu =
-  //         '<option value="total-dm-snap-video" data-filter=".total-dm-snap-video">토탈 + 드메 + 스냅 + 영상</option>';
-  //       break;
-  //     case "sdm-snap-video":
-  //       pakageMenu =
-  //         '<option value="sdm-snap-video" data-filter=".sdm-snap-video">스드메 + 스냅 + 영상</option>';
-  //       break;
-  //   }
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkbenefitFilter = "." + selectedbenefit;
 
-  //   return pakageMenu;
-  // }
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
 
-  //전체
+  // 스타일 셀렉트 박스
+  $("#sdmstyle").change(function () {
+    var selectedsdmstyle = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pksdmstyleFilter = "." + selectedsdmstyle;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 특가 셀렉트 박스
+  $("#bargainsale").change(function () {
+    var selectedbargainsale = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkbargainsaleFilter = "." + selectedbargainsale;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 상품 종류2 셀렉트 박스
+  $("#stpricemenu").change(function () {
+    var selectedstpricemenu = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkstpricemenuFilter = "." + selectedstpricemenu;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 금액대2 셀렉트 박스
+  $("#stprice").change(function () {
+    var selectedstprice = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkstpriceFilter = "." + selectedstprice;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 상품구성2 셀렉트 박스
+  $("#studiomenu").change(function () {
+    var selectedstudiomenu = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkstudiomenuFilter = "." + selectedstudiomenu;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 씬 종류 셀렉트 박스
+  $("#scene").change(function () {
+    var selectedscene = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pksceneFilter = "." + selectedscene;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 스타일 셀렉트 박스
+  $("#ststyle").change(function () {
+    var selectedststyle = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkststyleFilter = "." + selectedststyle;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 촬영자 수 셀렉트 박스
+  $("#photographer").change(function () {
+    var selectedphotographer = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkphotographerFilter = "." + selectedphotographer;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 촬영자 수 셀렉트 박스
+  $("#photographer").change(function () {
+    var selectedphotographer = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkphotographerFilter = "." + selectedphotographer;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 행사 셀렉트 박스
+  $("#drpricemenu").change(function () {
+    var selecteddrpricemenu = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkdrpricemenuFilter = "." + selecteddrpricemenu;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 금액대 셀렉트 박스
+  $("#drprice").change(function () {
+    var selecteddrprice = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkdrpriceFilter = "." + selecteddrprice;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 드레스 강점 셀렉트 박스
+  $("#dresspoint").change(function () {
+    var selecteddresspoint = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkdresspointFilter = "." + selecteddresspoint;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 드레스 강점 셀렉트 박스
+  $("#dresssize").change(function () {
+    var selecteddresssize = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkdresssizeFilter = "." + selecteddresssize;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 제작 구분 셀렉트 박스
+  $("#drmade").change(function () {
+    var selecteddrmade = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkdrmadeFilter = "." + selecteddrmade;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 구매 형태 셀렉트 박스
+  $("#drbuy").change(function () {
+    var selecteddrbuy = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkdrbuyFilter = "." + selecteddrbuy;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 상품 종류 셀렉트 박스
+  $("#mkpricemenu").change(function () {
+    var selectedmkpricemenu = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkmkpricemenuFilter = "." + selectedmkpricemenu;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 금액대 셀렉트 박스
+  $("#mkprice").change(function () {
+    var selectedmkprice = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkmkpriceFilter = "." + selectedmkprice;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 행사 셀렉트 박스
+  $("#event").change(function () {
+    var selectedevent = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkeventFilter = "." + selectedevent;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 대상 셀렉트 박스
+  $("#target").change(function () {
+    var selectedtarget = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pktargetFilter = "." + selectedtarget;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 메이크업 직급 셀렉트 박스
+  $("#mksdmstyle").change(function () {
+    var selectedtarget = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkmksdmstyleFilter = "." + selectedmksdmstyle;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 메이크업 강점 셀렉트 박스
+  $("#bargainsale").change(function () {
+    var selectedtarget = $(this).val();
+
+    // 선택한 상품종류를 상품종류 필터에 반영
+    pkbargainsaleFilter = "." + selectedbargainsale;
+
+    // 최종 필터값 업데이트
+    pkupdateFilter();
+  });
+
+  // 최종 필터값 업데이트하는 함수
+  function pkupdateFilter() {
+    // 모든 필터 값을 결합하여 최종 필터값 설정
+    var filter =
+      pkbtnFilter + // 메인 종류에 대한 필터값
+      pkpriceMenuFilter + //상품종류에 대한 필터값
+      pkpriceFilter + //금액대에 대한 필터값
+      pkPakageMenuFilter + //상품구성에 대한 필터값
+      pkbenefitFilter + //혜택에 대한 필터값
+      pksbmstyleFilter + //스타일에 대한 필터값
+      pkbargainsaleFilter + //특가에 대한 필터값
+      // 상세목록2
+      pkstpricemenuFilter + //상품 종류에 대한 필터값
+      pkstpriceFilter + //금액대에 대한 필터값
+      pkstudiomenuFilter + //상품구성에 대한 필터값
+      pksceneFilter + //씬종류에 대한 필터값
+      ststyle + //스타일에 대한 필터값
+      pkphotographerFilter + //촬영자 수에 대한 필터값
+      // 상품목록3
+      pkdrpricemenuFilter + //행사에대한 필터값
+      pkdrpriceFilter + //금액대에 대한 필터값
+      pkdresspointFilter + //드레스 강점에 대한 필터값
+      pkdresssizeFilter + //드레스사이즈에 대한 필터값
+      pkdrmadeFilter + //제작 구분에 대한 필터값
+      pkdrbuyFilter + //구매형태에 대한 필터값
+      // 상품목록4
+      pkmkpricemenuFilter + //상품 종류에대한 필터값
+      pkmkpriceFilter + //금액대에대한필터값
+      pkeventFilter + //행사에대한필터값
+      pktarget + //대상에 대한 필터값
+      pkmksdmstyle + //메이크업 직급에 대한 필터값
+      pkbargainsale; //메이크업 강점에 대한 필터값
+
+    // 필터링 적용
+    filterPk(filter);
+  }
+
+  // 필터링 함수 정의
+  function filterPk(filter) {
+    $(".mix-wrapper").isotope({
+      filter: filter,
+    });
+  }
   // "상품 종류"에 따라 해당하는 상품 구성 목록을 가져오는 함수
   function updatePackageMenu(selectedPriceMenu) {
     var packageMenuSelect = document.getElementById("pakageMenu");
@@ -221,21 +490,6 @@ $(document).ready(function () {
     }
   }
 
-  // "상품 종류" 선택 변경 시 상품 구성 목록 업데이트
-  document.getElementById("priceMenu").addEventListener("change", function () {
-    var selectedPriceMenu = this.value;
-    updatePackageMenu(selectedPriceMenu);
-  });
-
-  // 초기 로딩 시 "상품 종류"에 따른 상품 구성 목록 업데이트
-  updatePackageMenu(document.getElementById("priceMenu").value);
-
-  // "상품 종류" 선택 변경 시 상품 구성 목록 업데이트
-  document.getElementById("priceMenu").addEventListener("change", function () {
-    var selectedPriceMenu = this.value;
-    updatePackageMenu(selectedPriceMenu);
-  });
-
   // 초기 로딩 시 "상품 종류"에 따른 상품 구성 목록 업데이트
   updatePackageMenu(document.getElementById("priceMenu").value);
 
@@ -247,7 +501,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 80P 2인촬영,대표)+인재스튜디오_영상(FHD 1인1캠)",
       price: "2,750,000원",
       dcPrice: "2,650,000원",
-      id: "mainall all snap-video",
+      id: "all sdm",
     },
     {
       imageSrc: "images/pk-search-all2.jpg",
