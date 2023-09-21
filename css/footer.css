@@ -1,4 +1,111 @@
 /* 푸터 */
+.footer{
+    background-color: #887160;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.footer > .inner{
+    display: flex;
+}
+.footer .footer1{
+    width: 20%;
+}
+.footer .footer2{
+    width: 50%;
+}
+.footer .footer3{
+    width: 30%;
+}
+/* .footer .footer1::after{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #baa693;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+} */
+.footer a{
+    text-decoration: underline;
+}
+.footer-logo{
+}
+.footer .footer1 .footer-logo img{
+    /* margin: 15px 0; */
+    width: 180px;
+}
+/* .footer .footer1-1 > p:first-child{
+    font-size: 20px;
+} */
+.footer .footer2 p{
+    display: inline-block;
+    margin: 5px 0;
+}
+.footer .footer3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.footer .footer3 a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer .footer3 h2{
+    text-transform: uppercase;
+    color: #baa693;
+    font-size: 40px;
+    text-align: center;
+    /* font-family: "Noto Sans KR", sans-serif; */
+}
+.footer .footer3 h2:hover{
+    cursor: pointer;
+    color: #191919;
+}
+.footer .footer3 h2:hover .enterimg1{
+    display: none;
+}
+.footer .footer3 h2:hover .enterimg2{
+    display: inline-block;
+}
+.footer .footer3 img{
+    width: 40px;
+    margin-top: -5px;
+}
+.footer .footer3 .enterimg2{
+    display: none;
+}
+.footer .footer3 .footer-email-form{
+    position: relative;
+}
+.footer .footer3 .footer-email-form h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    /* color: #887160; */
+}
+.footer .footer3 .footer-email-form input{
+    height: 30px;
+    width: 60%;
+    border: none;
+    border-radius: 3px;
+    background-color: #F8F0E5;
+}
+.footer .footer3 .footer-email-form button{
+    position: absolute;
+    bottom: 0;
+    width: 15%;
+    height: 30px;
+    border: none;
+    background-color: #baa693;
+    color: #F8F0E5;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+.footer .footer3 .footer-email-form button:hover{
+    color: #887160;
+}
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {

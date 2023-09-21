@@ -178,11 +178,16 @@
                 <li><a href="#">my page</a></li>
               </ul>
             </div>
+            <button class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
           <nav class="header-2">
             <ul>
               <li>
-                <a href="s_about.html">about</a>
+                <a href="s_package.html">package</a>
               </li>
               <li>
                 <a href="s_weddinghall.html">wedding hall</a>
@@ -196,14 +201,20 @@
               <li>
                 <a href="#">review</a>
               </li>
-              <li>
-                <a href="s_package.html">package</a>
-              </li>
             </ul>
           </nav>
         </div>
       </header>
-      <!-- 패키지 리뷰 모달창 배경 -->
+      <div class="hamburger-menu">
+        <ul class="hamburger-menu-contents">
+          <li><a href="s_package.html">PACKAGE</a></li>
+          <li><a href="s_about.html">ABOUT</a></li>
+          <li><a href="s_weddinghall.html">WEDDING HALL</a></li>
+          <li><a href="s_sdm.html">S.D.M</a></li>
+          <li><a href="s_notice.html">Q&A</a></li>
+          <li><a href="s_review.html">REVIEW</a></li>
+        </ul>
+      </div>
       <div class="modal-overlay"></div>
       <!-- visual -->
       <div class="visual clearfix">
@@ -227,6 +238,7 @@
               </div>
               <!-- slidertext -->
               <div class="textContainer">
+
                 <div class="visual_text">
                   웨딩박람회, 웨딩플래너 없이 준비하려니 막연하실 수 있어요. 하지만 어렵지 않아요. 지금 바로 패키지 웨딩포유의 패키지 상품을 만나보세요.
                   <div class="visual_button_detail">
@@ -251,6 +263,7 @@
                   <div class="visual_button_detail">
                     <button><a href="s_notice.html"><p>MORE INFO</p></a></button>
                   </div>
+
                 </div>
               </div>
               <!-- Slider Images -->
@@ -268,10 +281,7 @@
         <div class="inner">
           <div class="package-wrap">
             <div class="package-main-wrap">
-              <img
-                src="images/package-weddinghall-1.png"
-                alt="weddinghall-main"
-              />
+              <img src="images/pk_dress_2.png" alt="weddinghall-main" />
             </div>
             <div class="package-text-wrap">
               <h2 class="package-title">best package</h2>
@@ -285,14 +295,17 @@
               <ul class="packimgwrap">
                 <li class="packimgli1">
                   <a href="s_package.html">
+                    <!-- <img src="images/package-dress-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
                 <li class="packimgli2">
                   <a href="s_package.html">
+                    <!-- <img src="images/package-makeup-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
                 <li class="packimgli3">
                   <a href="s_package.html">
+                    <!-- <img src="images/package-studio-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
               </ul>
@@ -303,53 +316,71 @@
       <!-- package-review -->
       <div class="package-review clearfix">
         <!-- 모달 창 -->
-<div id="PackagemyModal" class="package-modal">
-  <span class="package-close">&times;</span>
-    <img class="modal-content" id="modalImage">
-    <img class="modal-content" id="modalImage1">
-    <button class="pk-review-more" id="PackageMoreBtn">MORE</button>
-</div>
+        <div id="PackagemyModal" class="package-modal">
+          <div class="modal-wraper">
+            <div class="modal-wrap-btn">
+              <img class="modal-content" id="modalImage" />
+              <button class="pk-review-more" id="PackageMoreBtn">MORE</button>
+            </div>
+            <div class="modal-wrap-close">
+              <img class="modal-content" id="modalImage1" />
+              <span class="package-close">&times;</span>
+            </div>
+          </div>
+        </div>
         <div class="inner">
           <div class="package-review-text-wrap">
             <h2 class="package-review-title">package review</h2>
             <p>추천 패키지를 이용해 보신 고객분들의 생생한 후기</p>
           </div>
           <div class="package-review-wrapper">
-            <div class="package-review-wrapper-inner1">
-              <div class="package-review-wrap review-wrap1">
-              <div class="package-review-thumbnail"></div>
-              <div class="package-review-wrap-text-wrap">
-                <h2 class="package-review-wrap-title"><span>고 * 아</span> 님</h2>
-                <!-- <button class="package-review-wrap-button" id="packageReviewBtn">view</button> -->
+            <div class="swiper pk-review-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="package-review-wrapper-inner1">
+                    <div class="package-review-wrap review-wrap1">
+                      <div class="package-review-wrap-text-wrap">
+                        <h2 class="package-review-wrap-title">
+                          <span>고 * 아</span> 님
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="package-review-wrapper-inner2">
+                    <div class="package-review-wrap review-wrap2">
+                      <div class="package-review-wrap-text-wrap">
+                        <h2 class="package-review-wrap-title">
+                          <span>김 * 화</span> 님
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="package-review-wrapper-inner3">
+                    <div class="package-review-wrap review-wrap3">
+                      <div class="package-review-wrap-text-wrap">
+                        <h2 class="package-review-wrap-title">
+                          <span>김 * 아</span> 님
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="package-review-wrapper-inner4">
+                    <div class="package-review-wrap review-wrap4">
+                      <div class="package-review-wrap-text-wrap">
+                        <h2 class="package-review-wrap-title">
+                          <span>박 * 정</span> 님
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
-            <div class="package-review-wrapper-inner2">
-              <div class="package-review-wrap review-wrap2">
-              <div class="package-review-thumbnail"></div>
-              <div class="package-review-wrap-text-wrap">
-                <h2 class="package-review-wrap-title"><span>김 * 화</span> 님</h2>
-                <!-- <button class="package-review-wrap-button" id="packageReviewBtn2">view</button> -->
-              </div>
-            </div>
-            </div>
-            <div class="package-review-wrapper-inner3">
-              <div class="package-review-wrap review-wrap3">
-              <div class="package-review-thumbnail"></div>
-              <div class="package-review-wrap-text-wrap">
-                <h2 class="package-review-wrap-title"><span>김 * 아</span> 님</h2>
-                <!-- <button class="package-review-wrap-button" id="packageReviewBtn3">view</button> -->
-              </div>
-            </div>
-            </div>
-            <div class="package-review-wrapper-inner4">
-              <div class="package-review-wrap review-wrap4">
-              <div class="package-review-thumbnail"></div>
-              <div class="package-review-wrap-text-wrap">
-                <h2 class="package-review-wrap-title"><span>박 * 정</span> 님</h2>
-                <!-- <button class="package-review-wrap-button" id="packageReviewBtn4">view</button> -->
-              </div>
-            </div>
             </div>
           </div>
         </div>
@@ -391,19 +422,19 @@
                 <div class="w-tbox">
                   <img src="images/채플.jpg" alt="채플 홀" />
                   <p>채플 홀</p>
-                  <span>#화려함 #편안한 장소선택</span>
+                  <span>#성스러움 #종교적 이벤트</span>
                 </div>
               </div>
               <div class="w-sbox2">
                 <div class="w-tbox">
                   <img src="images/하우스야외.jpg" alt="하우스/야외 홀" />
                   <p>야외/하우스 홀</p>
-                  <span>#화려함 #편안한 장소선택</span>
+                  <span>#여러가지 테마 #다양한 스타일</span>
                 </div>
                 <div class="w-tbox">
                   <img src="images/호텔.jpg" alt="호텔 홀" />
                   <p>호텔 홀</p>
-                  <span>#화려함 #편안한 장소선택</span>
+                  <span>#고급스러운 환경 #편리한 교통</span>
                 </div>
               </div>
             </div>
@@ -424,7 +455,7 @@
               </div>
               <div class="sdm_box_name">
                 <h3>원규 스튜디오</h3>
-                <p>STUDIO</p>
+                <p>서울시 강남구</p>
               </div>
               <div class="sdm_box_review">
                 <div class="review_1">
@@ -474,7 +505,7 @@
               </div>
               <div class="sdm_box_name">
                 <h3>모니카 블랑쉬</h3>
-                <p>DRESS</p>
+                <p>서울시 강남구</p>
               </div>
               <div class="sdm_box_review">
                 <div class="review_1">
@@ -521,7 +552,7 @@
               </div>
               <div class="sdm_box_name">
                 <h3>에이 바이 봄</h3>
-                <p>MAKE_UP</p>
+                <p>서울시 강남구</p>
               </div>
               <div class="sdm_box_review">
                 <div class="review_1">
@@ -565,6 +596,7 @@
               </div>
             </div>
           </div>
+
           <div class="sdm_box_reactive">
             <!-- <div class="sdm_studio" id="sdm_subtitle">studio</div> -->
             <div class="sdm_reactiove_1">
@@ -646,26 +678,83 @@
               </div>          
             </div>
           </div>
+
         </div>
-      </div>
-      <!-- review -->
-      <div class="review clearfix">
-        <div class="inner"></div>
       </div>
       <!-- looking -->
       <div class="looking clearfix">
         <div class="inner"></div>
       </div>
+      <!-- review -->
+      <div class="review clearfix">
+        <div class="inner"></div>
+      </div>
       <!-- notice -->
       <div class="notice clearfix">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="qna">
+            <h2>자주 묻는 질문</h2>
+            <ul>
+              <li><p>Q1. wedding for you에 입점하고 싶습니다</p></li>
+              <li><p>Q2. 예약한 날짜와 시간을 확인하고 싶습니다</p></li>
+              <li>
+                <p>Q3. 해외거주중이라 휴대폰 인증이 어려워 예약이 어렵습니다</p>
+              </li>
+              <li><p>Q4. 아이디와 패스워드가 기억나지 않습니다</p></li>
+              <li><p>Q5. 환불절차 및 수수료 비용이 궁금합니다</p></li>
+            </ul>
+          </div>
+          <div class="main-review">
+            <h2>review</h2>
+          </div>
+        </div>
       </div>
       <!-- footer -->
       <footer class="footer clearfix">
-        <div class="inner"></div>
+        <div class="inner">
+          <div class="footer1">
+            <div class="footer-logo"></div>
+            <div class="footer1-1">
+              <p>Wedding for your</p>
+              <p>
+                대표자: 실뱅 꼴라델 / 서울시 강남구 영동대로 517, 35층(삼성동,
+                아셈타워) / 사업자등록번호: 120-81-79834
+              </p>
+              <p>
+                통신판매업 신고번호 제 2015-서울강남-00052 호 (<a
+                  href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1208179834&apv_perm_no=null"
+                  >사업자 정보 확인</a
+                >)
+              </p>
+              <p>
+                개인정보보호책임자: 한소희 / 호스팅 서비스: Rackspace Hosting
+              </p>
+              <p>
+                클라이언트서비스센터 02-3452-1921 메일 문의
+                <a href="">clientservice.kr@gucci.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="footer3">
+            <a href="s_about.html">
+              <h2>
+                about
+                <img src="images/enter.png" alt="about" class="enterimg1" />
+                <img
+                  src="images/enter_black.png"
+                  alt="about"
+                  class="enterimg2"
+                /></h2
+            ></a>
+            <!-- <div class="footer-email-form">
+              <h3>뉴스레터신청</h3>
+              <form action=""></form>
+              <input type="email">
+              <button>신청</button>
+            </div> -->
+          </div>
+        </div>
       </footer>
     </div>
-  </div>
-</div>
   </body>
 </html>
