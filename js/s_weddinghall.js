@@ -1795,19 +1795,4 @@ $(document).ready(function () {
   // 페이지 로드 시 메뉴얼 정보 생성
   createWeddingHallElements(weddingHallData);
   // 검색 버튼 클릭 이벤트 핸들러
-
-  // 필터링 함수 정의
-  function filterWeddingHalls(filter) {
-    // Isotope 플러그인을 사용하여 필터링 적용
-    $(".mix-wrapper").isotope({
-      filter: filter,
-    });
-
-    // 필터링된 요소의 개수를 세어서 표시
-    var filteredItems = $(".mix-wrapper .mix:visible").length;
-    $("#results #dataCount").text("총 " + filteredItems);
-  }
-
-  // 페이지 로드 시 초기 필터링 적용
-  updateFilter();
 });

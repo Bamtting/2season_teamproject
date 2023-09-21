@@ -266,7 +266,7 @@
   height: 100%;
   background-color: #887160;
 }
-.mix {
+/* .mix {
   width: 450px;
   height: 450px;
   padding: 20px;
@@ -276,7 +276,7 @@
   width: 420px;
   height: 300px;
   object-fit: cover;
-}
+} */
 .w-box-left {
   float: left;
 }
