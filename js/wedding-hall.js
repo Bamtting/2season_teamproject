@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var swiper = new Swiper(".w-swiper", {
+  var swiper = new Swiper(".wSwiper", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {

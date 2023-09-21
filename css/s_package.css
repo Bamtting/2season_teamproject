@@ -266,29 +266,7 @@
   height: 100%;
 }
 
-.w-box-left {
-  float: left;
-}
-.w-box-left p {
-  color: #999;
-  margin: 10px 0px;
-}
-.w-box-right {
-  float: right;
-}
-.w-box-right p {
-  margin: 10px 0;
-  font-size: 16px;
-  text-align: left;
-}
-.mix h3 {
-  font-size: 14px;
-}
-.w-box-right span {
-  width: 57px;
-  font-size: 12px;
-  color: #999;
-}
+
 #pkMenuList {
   display: flex;
   flex-wrap: wrap;
