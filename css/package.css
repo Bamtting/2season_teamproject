@@ -247,10 +247,116 @@
     opacity: 0;
     transition: 0.2s;
   }
+  .package-wrap {
+    max-width: 836px;
+    min-height: 800px;
+    /* justify-content: center;
+    align-items: center; */
+    padding: 0;
+  }
+  .package-main-wrap img {
+    opacity: 0;
+    transition: 0.2s;
+  }
+  .package-text-wrap {
+    /* top: 0;
+    left: 0;
+    position: absolute; */
+    margin: 0;
+  }
+  .package-img-wrap {
+    width: 836px;
+  }
+  .packimgwrap {
+    margin: 0 auto;
+  }
+  .packimgwrap li {
+    margin: -50px;
+  }
+}
+@media all and (max-width: 777px) {
+  .packimgwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-right: 50px; */
+  }
+  .package-wrap {
+    max-width: 777px;
+    min-height: 1600px;
+  }
+  .package-text-wrap {
+    /* margin-top: 50px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-right: 523px; */
+  }
+  .package-text-wrap p {
+    text-align: center;
+  }
+  .packimgwrap li:first-child,
+  .packimgwrap li:nth-child(2),
+  .packimgwrap li:nth-child(3) {
+    width: 250px;
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  .package-more-btn {
+    position: absolute;
+    top: 1380px;
+    margin-top: 0;
+    padding: 8px 18px;
+    font-size: 20px;
+  }
 }
 @media all and (max-width: 768px) {
 }
 @media all and (max-width: 480px) {
 }
-@media all and (max-width: 360px) {
+@media all and (max-width: 320px) {
+  .package-wrap {
+    max-width: 320px;
+    min-height: 1000px;
+    padding: 0;
+  }
+  .package-text-wrap {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-right: 1000px; */
+  }
+  .package-text-wrap h2 {
+    font-size: 23px;
+  }
+  .package-text-wrap p span {
+    font-size: 18px;
+  }
+  .package-text-wrap p {
+    font-size: 10px;
+    text-align: center;
+  }
+  .packimgwrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .packimgwrap li:first-child,
+  .packimgwrap li:nth-child(2),
+  .packimgwrap li:nth-child(3) {
+    width: 180px;
+    height: 270px;
+    margin-bottom: 40px;
+  }
+  .package-more-btn {
+    position: absolute;
+    top: 1380px;
+    margin-top: 0;
+    padding: 8px 18px;
+    font-size: 20px;
+  }
 }
