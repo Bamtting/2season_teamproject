@@ -146,6 +146,190 @@
 .packimgwrap li:nth-child(3):hover img {
   display: block;
 }
+/* 모달창 */
+.pk-modal {
+  width: 650px;
+  height: 800px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 999;
+}
+.pk-modal-list1 {
+  display: flex;
+  flex-direction: column;
+}
+.pk-modal-map img {
+  width: 287px;
+  height: 196px;
+}
+.pk-modal-text {
+  margin-top: 15px;
+}
+#pkModalTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #887160;
+  margin-bottom: 10px;
+}
+#pkModalPlace {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.pk-modal-wraper2 {
+  width: 620px;
+  height: 770px;
+  border: 8px solid #887160;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.pk-modal-wrap-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pk-modal-wrap-close {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row-reverse;
+}
+.pk-modal-img {
+  width: 50%;
+  height: 35%;
+  padding: 15px;
+  margin: 0 !important;
+  float: left;
+}
+#pkModalImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.modal-wraper {
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+.pk-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  font-size: 33px;
+  color: #ffffff;
+  background-color: #887160;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+}
+.pk-close:hover {
+  color: #000000;
+}
+.pk-modal-list2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+}
+.pk-modal-list2 h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.pk-modal-list2 p {
+  line-height: 20px;
+}
+.hall-notice-modal {
+  margin-top: 35px;
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.hall-notice-modal div {
+  width: 150px;
+  height: 170px;
+  background-color: #e7ded7;
+}
+.hall-notice-modal2 div {
+  width: 150px;
+  height: 170px;
+  background-color: #e7ded7;
+}
+.hall-notice-modal2 {
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mo-notice-text-wrap {
+  line-height: 30px;
+}
+.pk-modal-list01,
+.pk-modal-list02,
+.pk-modal-list03 {
+  display: none;
+}
+/* pk-modal-list02 */
+#pkModalTitle2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.pk-make-modal-list2 h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.pk-modal-text p {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #868686;
+}
+.pk-modal-text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.pk-modal-text h3 span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d82a56;
+}
+.make-text-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.make-map-text p {
+  margin-top: 15px;
+}
+.make-text-wrap {
+  text-align: left;
+  height: 50%;
+}
+.make-text-wrap-list1 h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.make-text-wrap-list2 h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
 /* 반응형 */
 @media all and (max-width: 1480px) {
   .package-wrap {

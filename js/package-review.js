@@ -5,7 +5,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".package-review-wrap")
-        .css("background-image", "url('../images/package_review_1.jpg')");
+        .css("background-image", "url('../images/package_review1-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -13,7 +13,7 @@ $(document).ready(function () {
       // 이미지 초기화 (원래 이미지로 바꿔주세요)
       $(this)
         .find(".package-review-wrap")
-        .css("background-image", "url('../images/package_review1-1.png')");
+        .css("background-image", "url('../images/package_review_1.jpg')");
       $(this).find(".package-review-wrap-title").css("display", "block");
     }
   );
@@ -23,7 +23,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap2")
-        .css("background-image", "url('../images/package_review_2.jpg')");
+        .css("background-image", "url('../images/package_review2-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -31,7 +31,7 @@ $(document).ready(function () {
       // 이미지 초기화 (원래 이미지로 바꿔주세요)
       $(this)
         .find(".review-wrap2")
-        .css("background-image", "url('../images/package_review2-1.png')");
+        .css("background-image", "url('../images/package_review_2.jpg')");
       $(this).find(".package-review-wrap-title").css("display", "block");
     }
   );
@@ -41,7 +41,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap3")
-        .css("background-image", "url('../images/studio20-1.jpg')");
+        .css("background-image", "url('../images/package_review3-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -49,7 +49,7 @@ $(document).ready(function () {
       // 이미지 초기화 (원래 이미지로 바꿔주세요)
       $(this)
         .find(".review-wrap3")
-        .css("background-image", "url('../images/package_review3-1.png')");
+        .css("background-image", "url('../images/studio20-1.jpg')");
       $(this).find(".package-review-wrap-title").css("display", "block");
     }
   );
@@ -59,7 +59,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap4")
-        .css("background-image", "url('../images/../images/studio23-1.jpg')");
+        .css("background-image", "url('../images/package_review4-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -67,7 +67,7 @@ $(document).ready(function () {
       // 이미지 초기화 (원래 이미지로 바꿔주세요)
       $(this)
         .find(".review-wrap4")
-        .css("background-image", "url('../images/package_review4-1.png')");
+        .css("background-image", "url('../images/studio23-1.jpg')");
       $(this).find(".package-review-wrap-title").css("display", "block");
     }
   );

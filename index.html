@@ -221,63 +221,267 @@
         <div class="inner">
           <div class="visual_inner">
             <div class="main">
-            <div class="center">
-              <!-- Slider indicator -->
-              <div class="lines">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-              </div>
-              <!-- sliderHeading -->
-              <div class="heading">
-                <h1>PACKAGE</h1>
-                <h1>WEDDING HALL</h1>
-                <h1>S.D.M</h1>
-                <h1>REVIEW</h1>
-              </div>
-              <!-- slidertext -->
-              <div class="textContainer">
-
-                <div class="visual_text">
-                  웨딩박람회, 웨딩플래너 없이 준비하려니 막연하실 수 있어요. 하지만 어렵지 않아요. 지금 바로 패키지 웨딩포유의 패키지 상품을 만나보세요.
-                  <div class="visual_button_detail">
-                    <button><a href="s_package.html"><p>MORE INFO</p></a></button>
+              <div class="center">
+                <!-- Slider indicator -->
+                <div class="lines">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <!-- sliderHeading -->
+                <div class="heading">
+                  <h1>PACKAGE</h1>
+                  <h1>WEDDING HALL</h1>
+                  <h1>S.D.M</h1>
+                  <h1>REVIEW</h1>
+                </div>
+                <!-- slidertext -->
+                <div class="textContainer">
+                  <div class="visual_text">
+                    웨딩박람회, 웨딩플래너 없이 준비하려니 막연하실 수 있어요.
+                    하지만 어렵지 않아요. 지금 바로 패키지 웨딩포유의 패키지
+                    상품을 만나보세요.
+                    <div class="visual_button_detail">
+                      <button>
+                        <a href="s_package.html"><p>MORE INFO</p></a>
+                      </button>
+                    </div>
                   </div>
-                </div>                
-                <div class="visual_text">
-                  웨딩홀을 쉽게 탐색하실 수 있는 방법을 제공해드립니다. 이제 직접 웨딩홀에 상담예약 후 상담 받고 할인까지 챙기세요.
-                  <div class="visual_button_detail">
-                    <button><a href="s_weddinghall.html"><p>MORE INFO</p></a></button>
+                  <div class="visual_text">
+                    웨딩홀을 쉽게 탐색하실 수 있는 방법을 제공해드립니다. 이제
+                    직접 웨딩홀에 상담예약 후 상담 받고 할인까지 챙기세요.
+                    <div class="visual_button_detail">
+                      <button>
+                        <a href="s_weddinghall.html"><p>MORE INFO</p></a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="visual_text">
+                    직접 원하시는 구성으로 스/드/메 견적서를 생성해보세요.
+                    <div class="visual_button_detail">
+                      <button>
+                        <a href="s_sdm.html"><p>MORE INFO</p></a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="visual_text">
+                    당신의 경험을 살려 '전문 웨딩 리뷰 크리에이터'에
+                    도전해보세요. 많은 사람들이 당신의 리뷰를 보고 상품을
+                    구매하면 할 수록 높은 수익을 달성 하실 수 있습니다.
+                    <div class="visual_button_detail">
+                      <button>
+                        <a href="s_notice.html"><p>MORE INFO</p></a>
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div class="visual_text">
-                  직접 원하시는 구성으로 스/드/메 견적서를 생성해보세요.
-                  <div class="visual_button_detail">
-                    <button><a href="s_sdm.html"><p>MORE INFO</p></a></button>
-                  </div>
-                </div>
-                <div class="visual_text">
-                  당신의 경험을 살려 '전문 웨딩 리뷰 크리에이터'에 도전해보세요.
-                  많은 사람들이 당신의 리뷰를 보고 상품을 구매하면 할 수록 높은 수익을 달성 하실 수 있습니다.
-                  <div class="visual_button_detail">
-                    <button><a href="s_notice.html"><p>MORE INFO</p></a></button>
-                  </div>
-
-                </div>
+                <!-- Slider Images -->
+                <div class="imgContainer" id="visual_back1"></div>
+                <div class="imgContainer" id="visual_back2"></div>
+                <div class="imgContainer" id="visual_back3"></div>
+                <div class="imgContainer" id="visual_back4"></div>
               </div>
-              <!-- Slider Images -->
-              <div class="imgContainer" id="visual_back1"></div>
-              <div class="imgContainer" id="visual_back2"></div>
-              <div class="imgContainer" id="visual_back3"></div>
-              <div class="imgContainer" id="visual_back4"></div>
-            </div>
             </div>
           </div>
         </div>
       </div>
       <!-- Package -->
       <div class="package clearfix">
+        <!-- 모달창 -->
+        <div id="PkmyModal" class="pk-modal">
+          <div class="pk-modal-wraper">
+            <div class="pk-modal-wraper2">
+              <div class="pk-modal-img">
+                <img class="pk-modal-content" id="pkModalImage" />
+              </div>
+              <div class="pk-modal-list01">
+                <div class="pk-modal-list1">
+                  <div class="pk-modal-text">
+                    <h2 id="pkModalTitle">"벨라비타컨벤션"</h2>
+                    <h4 id="pkModalPlace">
+                      서울 강남구 역삼동 680 <br />
+                      : SK리스뷰 1F
+                    </h4>
+                  </div>
+                  <div class="pk-modal-map">
+                    <img src="images/wedding_map1.png" alt="wedding_map" />
+                  </div>
+                </div>
+                <div class="pk-modal-list2">
+                  <div class="hall-notice-modal">
+                    <div class="mo-notice-text-wrap">
+                      <h2>
+                        홀 타입 <br />
+                        예식 형태 / 간격
+                      </h2>
+                      <p>
+                        채플홀 <br />
+                        분리예식 / 90분
+                      </p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>수용인원</h2>
+                      <p>
+                        최소 250명 <br />
+                        착석 180명 <br />
+                        최대 680명
+                      </p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>메뉴 /식대</h2>
+                      <p>
+                        뷔페 <br />
+                        55,000원
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hall-notice-modal2">
+                    <div class="mo-notice-text-wrap">
+                      <h2>
+                        대관료 <br />
+                        연출료
+                      </h2>
+                      <p>
+                        대관료 있음<br />
+                        5,200,000원 부터<br />
+                        5,020,000원 까지
+                      </p>
+                      <p>연출료 없음</p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>꽃장식</h2>
+                      <p>
+                        생화 <br />
+                        대관료 포함
+                      </p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>음주류</h2>
+                      <p>식대 포함</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pk-modal-list02">
+                <div class="pk-modal-list1">
+                  <div class="pk-modal-text">
+                    <h2 id="pkModalTitle">"헤움"</h2>
+                    <h2 id="pkModalTitle2">
+                      [촬영 + 본식] 신부신랑 헤어메이크업(실장)
+                    </h2>
+                    <p>웨딩포유 판매가</p>
+                    <h3>550,000원 <span>56%</span></h3>
+                    <p>정상가 : 1,200,000원</p>
+                  </div>
+                  <div class="pk-modal-map">
+                    <img src="images/makeup7-1.jpg" alt="wedding_map" />
+                  </div>
+                </div>
+                <div class="pk-make-modal-list2">
+                  <div class="make-notice-modal">
+                    <div class="make-text-wrap">
+                      <div class="make-map-text">
+                        <h2>오시는 길</h2>
+                        <p id="pkModalPlace">
+                          서울 강남구 언주로 <br />
+                          159길 3, 5층
+                        </p>
+                      </div>
+                      <div class="make-main-text-wrap">
+                        <div class="make-title-wrap">
+                          <h2>상품 기본 정보</h2>
+                        </div>
+                        <div class="make-text-wrap-list">
+                          <div class="make-text-wrap-list1">
+                            <h3>상품 구성</h3>
+                            <p>촬영 1회 + 본식 1회 헤어메이크업</p>
+                          </div>
+                          <div class="make-text-wrap-list2">
+                            <h3>시술자 직급</h3>
+                            <p>메이크업 : 실장 / 헤어 : 상담 후 결정</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pk-modal-list03">
+                <div class="pk-modal-list1">
+                  <div class="pk-modal-text">
+                    <h2 id="pkModalTitle">"비비엔다 스튜디오"</h2>
+                    <h4 id="pkModalPlace">
+                      서울 강남구 역삼동 680 <br />
+                      : SK리스뷰 1F
+                    </h4>
+                  </div>
+                  <div class="pk-modal-map">
+                    <img src="images/wedding_map3.png" alt="wedding_map" />
+                  </div>
+                </div>
+                <div class="pk-modal-list2">
+                  <div class="hall-notice-modal">
+                    <div class="mo-notice-text-wrap">
+                      <h2>
+                        홀 타입 <br />
+                        예식 형태 / 간격
+                      </h2>
+                      <p>
+                        채플홀 <br />
+                        분리예식 / 90분
+                      </p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>수용인원</h2>
+                      <p>
+                        최소 250명 <br />
+                        착석 180명 <br />
+                        최대 680명
+                      </p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>메뉴 /식대</h2>
+                      <p>
+                        뷔페 <br />
+                        55,000원
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hall-notice-modal2">
+                    <div class="mo-notice-text-wrap">
+                      <h2>
+                        대관료 <br />
+                        연출료
+                      </h2>
+                      <p>
+                        대관료 있음<br />
+                        5,200,000원 부터<br />
+                        5,020,000원 까지
+                      </p>
+                      <p>연출료 없음</p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>꽃장식</h2>
+                      <p>
+                        생화 <br />
+                        대관료 포함
+                      </p>
+                    </div>
+                    <div class="mo-notice-text-wrap">
+                      <h2>음주류</h2>
+                      <p>식대 포함</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pk-modal-wrap-close">
+            <span class="pk-close">&times;</span>
+          </div>
+        </div>
+        <!-- inner -->
         <div class="inner">
           <div class="package-wrap">
             <div class="package-main-wrap">
@@ -294,17 +498,17 @@
             <div class="package-img-wrap">
               <ul class="packimgwrap">
                 <li class="packimgli1">
-                  <a href="s_package.html">
+                  <a href="#">
                     <!-- <img src="images/package-dress-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
                 <li class="packimgli2">
-                  <a href="s_package.html">
+                  <a href="#">
                     <!-- <img src="images/package-makeup-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
                 <li class="packimgli3">
-                  <a href="s_package.html">
+                  <a href="#">
                     <!-- <img src="images/package-studio-1.jpg" alt="package-dress1"> -->
                   </a>
                 </li>
@@ -331,7 +535,10 @@
         <div class="inner">
           <div class="package-review-text-wrap">
             <h2 class="package-review-title">package review</h2>
-            <p>추천 패키지를 이용해 보신 고객분들의 생생한 후기</p>
+            <p>
+              추천 패키지를 이용해 보신 고객분들의 생생한 후기<br />
+              아래 사진들을 <span>"click"</span>하여 리뷰를 확인해 보세요
+            </p>
           </div>
           <div class="package-review-wrapper">
             <div class="swiper pk-review-swiper">
@@ -446,7 +653,10 @@
       <div class="sdm clearfix">
         <div class="inner">
           <div class="sdm_title" data-aos="zoom-in">
-            <h2>S.D.M <b>OF</b><br> THE MONTH</h2>
+            <h2>
+              S.D.M <b>OF</b><br />
+              THE MONTH
+            </h2>
           </div>
           <div class="sdm_wrap">
             <div class="sdm_box">
@@ -603,7 +813,7 @@
             <div class="sdm_reactiove_1">
               <div class="sdm_imgbox" id="studio_box">
                 <div class="imgbox_hover">40%</div>
-              </div>             
+              </div>
               <div class="sdm_box_name_hover">
                 <div class="review_1">
                   <h4>Studio Wonkyu</h4>
@@ -618,18 +828,18 @@
                   </div>
                   <div class="review_2_2">
                     <p>리뷰 192개</p>
-                    <div class="review_tting"><p>i</p></div>                   
-                  </div>                  
-                </div> 
+                    <div class="review_tting"><p>i</p></div>
+                  </div>
+                </div>
                 <button class="review_button2">
                   <a href="s_sdm.html"><p class="button_a2">MORE INFO</p></a>
-                </button>           
-              </div>             
+                </button>
+              </div>
             </div>
             <div class="sdm_reactiove_2">
               <div class="sdm_imgbox" id="drees_box">
                 <div class="imgbox_hover">30%</div>
-              </div>              
+              </div>
               <div class="sdm_box_name_hover">
                 <div class="review_1">
                   <h4>Monica Blanche</h4>
@@ -650,12 +860,12 @@
                 <button class="review_button2">
                   <a href="s_sdm.html"><p class="button_a2">MORE INFO</p></a>
                 </button>
-              </div>              
+              </div>
             </div>
             <div class="sdm_reactiove_3">
               <div class="sdm_imgbox" id="makeup_box">
                 <div class="imgbox_hover">50%</div>
-              </div>               
+              </div>
               <div class="sdm_box_name_hover">
                 <div class="review_1">
                   <h4>A BY BOM</h4>
@@ -676,10 +886,9 @@
                 <button class="review_button2">
                   <a href="s_sdm.html"><p class="button_a2">MORE INFO</p></a>
                 </button>
-              </div>          
+              </div>
             </div>
           </div>
-
         </div>
       </div>
       <!-- looking -->

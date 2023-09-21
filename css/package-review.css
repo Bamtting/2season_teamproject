@@ -19,6 +19,11 @@
   font-size: 22px;
   color: #887160;
   margin-top: 30px;
+  line-height: 40px;
+}
+.package-review-text-wrap p span {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .package-review-wrapper {
   margin-top: 100px;
@@ -46,7 +51,7 @@
 .package-review-wrap-title {
   font-size: 22px;
   padding: 13px 18px;
-  background-color: #aa9688a1;
+  background-color: #877060b0;
   border-radius: 50px;
   color: #ffffff;
 }
@@ -55,19 +60,19 @@
   font-size: 28px;
 }
 .review-wrap1 {
-  background: url("../images/package_review1-1.png") no-repeat center;
+  background: url("../images/package_review_1.jpg") no-repeat center;
   background-size: cover;
 }
 .review-wrap2 {
-  background: url("../images/package_review2-1.png") no-repeat center;
+  background: url("../images/package_review_2.jpg") no-repeat center;
   background-size: cover;
 }
 .review-wrap3 {
-  background: url("../images/package_review3-1.png") no-repeat center;
+  background: url("../images/studio20-1.jpg") no-repeat center;
   background-size: cover;
 }
 .review-wrap4 {
-  background: url("../images/package_review4-1.png") no-repeat center;
+  background: url("../images/studio23-1.jpg") no-repeat center;
   background-size: cover;
 }
 /* 모달창 */
@@ -106,9 +111,6 @@
   align-items: center;
   justify-content: center;
 }
-.package-close {
-  cursor: pointer;
-}
 .modal-overlay {
   display: none;
   position: fixed;
@@ -128,6 +130,7 @@
   width: 35px;
   height: 35px;
   line-height: 30px;
+  cursor: pointer;
 }
 .package-close:hover {
   color: #000000;
