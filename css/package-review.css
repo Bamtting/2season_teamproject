@@ -2,7 +2,7 @@
 .package-review {
   position: relative;
   width: 100%;
-  min-height: 960px;
+  padding: 100px 0;
 }
 .package-review-text-wrap {
   position: relative;
@@ -16,6 +16,7 @@
   margin-top: 50px;
 }
 .package-review-text-wrap p {
+  font-family: "Noto Sans", "serif";
   font-size: 22px;
   color: #887160;
   margin-top: 30px;
@@ -24,6 +25,7 @@
 .package-review-text-wrap p span {
   font-weight: bold;
   text-transform: uppercase;
+  font-family: "Noto Serif KR";
 }
 .package-review-wrapper {
   margin-top: 100px;
@@ -49,6 +51,7 @@
   width: 50%;
 }
 .package-review-wrap-title {
+  font-family: "Noto Sans", "serif";
   font-size: 22px;
   padding: 13px 18px;
   background-color: #877060b0;
@@ -77,6 +80,7 @@
 }
 /* 모달창 */
 .package-modal {
+  width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -139,7 +143,7 @@
   position: absolute;
   top: 630px;
   font-family: "Noto Serif KR", serif;
-  font-size: 22px;
+  font-size: 14px;
   padding: 5px 15px;
   border-radius: 50px;
   text-transform: uppercase;
@@ -147,6 +151,7 @@
   cursor: pointer;
   background: none;
   transition: 0.15s ease-in-out;
+  font-family: "Noto Sans", "serif";
 }
 .pk-review-more:hover {
   background-color: #aa9688;
@@ -156,52 +161,13 @@
 }
 
 @media all and (max-width: 1470px) {
-  /* .package-review {
-    margin: 0 auto;
-    min-width: 1470px;
-  }
-  .package-review-wrapper {
-    width: auto;
-    height: auto;
-  } */
 }
 @media all and (max-width: 1280px) {
-  /* .package-review {
-    margin: 0 auto;
-    min-width: 1280px;
-  }
-  .package-review-wrap {
-    width: 280px;
-    height: 440px;
-    background-size: cover;
-    transition: 1s ease-in-out;
-  }
-  .package-review-wrap-title {
-    font-size: 20px;
-  }
-  .package-review-wrap-title span {
-    font-size: 24px;
-  }
-  #modalImage {
-    width: 450px;
-  }
-  #modalImage1 {
-    width: 450px;
-    left: 200px;
-    right: 0;
-  } */
 }
-@media all and (max-width: 1180px) {
-  /* .package-review {
-    margin: 0 auto;
-    min-width: 1180px;
-  } */
-  /* .package-review-wrap {
-    width: 280px;
-    height: 440px;
-    background-size: cover;
-    transition: 1s ease-in-out;
-  } */
+@media all and (max-width: 1080px) {
+  .package-modal {
+    width: 50%;
+  }
 }
 @media all and (max-width: 1024px) {
 }
@@ -209,5 +175,15 @@
 }
 @media all and (max-width: 480px) {
 }
-@media all and (max-width: 360px) {
+@media all and (max-width: 320px) {
+  .package-review-text-wrap {
+    text-align: center;
+  }
+  .package-review-title {
+    font-size: 30px;
+  }
+  .package-review-text-wrap p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

@@ -2,13 +2,13 @@
 /* ------------visual---------- */
 .visual .inner {
   max-width: 1920px;
-  background: url("../images/visual02.jpg") no-repeat;
+  background: url("../images/real_back_06.jpg") no-repeat;
   background-position: top center;
   background-size: cover;
 }
 .visual_inner {
   max-width: 1920px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 .main {
   height: 100vh;
@@ -29,24 +29,24 @@
   height: 100%;
 }
 #visual_back1 {
-  background: url("../images/visual_main2.jpg") no-repeat;
+  background: url("../images/real_back_02.jpg") no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: top center;
 }
 #visual_back2 {
-  background: url("../images/vs_07.jpg") no-repeat;
+  background: url("../images/real_back_05.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
 }
 #visual_back3 {
-  background: url("../images/vs_10.jpg") no-repeat;
+  background: url("../images/real_back_03.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
 }
 #visual_back4 {
-  background: url("../images/visual02.jpg") no-repeat center;
+  background: url("../images/real_back_06.jpg") no-repeat center;
   background-size: cover;
-  background-position: top center;
+  background-position: bottom center;
 }
 .heading {
   overflow: hidden;
@@ -62,10 +62,11 @@
   font-size: 5rem;
   top: 100px;
   font-family: "Noto Serif KR", serif;
-  font-weight: 500;
+  font-weight: 400;
   user-select: none;
-  color: #946c4d;
-  text-shadow: 4px 6px 4px rgba(15, 15, 15, 0.5);
+  /* color: #946c4d; */
+  color: #f0f0f0;
+  /* text-shadow: 2px 6px 2px rgba(15, 15, 15, 0.3); */
 }
 .lines {
   height: 100%;
@@ -80,12 +81,12 @@
 }
 .line {
   height: 80px;
-  width: 2px;
+  width: 3px;
   background-color: #d3d3d3;
 }
 
 .line.active {
-  background-color: #946c4d;
+  background-color: #333333;
 }
 
 .textContainer {
@@ -96,20 +97,20 @@
   top: 61%;
   left: 10%;
   z-index: 3;
-  margin-top: 10px;
+  margin-top: -10px;
 }
 .visual_text {
   text-align: left;
   position: absolute;
   top: -100%;
-  color: #4e4e4e;
+  color: #d8d8d8;
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   letter-spacing: -0.5px;
   user-select: none;
-  text-shadow: 1px 2px 1px rgba(212, 212, 212, 0.3);
+  /* text-shadow: 1px 2px 1px rgba(212, 212, 212, 0.3); */
 }
 .imgContainer::before {
   position: absolute;
@@ -117,30 +118,31 @@
   width: 100%;
   height: 100%;
   top: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 .visual_button_detail {
   padding-top: 2%;
 }
 .visual_button_detail button {
   border: none;
-  background: #946c4d;
+  background: none;
+  border: 2px solid #c7c7c7;
   padding: 7px;
   width: 120px;
   height: 40px;
 }
 .visual_button_detail button a {
   font-weight: 500;
-  color: #fff;
+  color: #c7c7c7;
 }
 .visual_button_detail button:hover {
-  background: rgba(255, 255, 255, 0.4);
-  border: 2px solid #946c4d;
+  background: rgba(255, 255, 255, 0.2);
+  /* border: 2px solid #4e4e4e; */
   cursor: pointer;
 }
 .visual_button_detail button:hover a {
   font-weight: 600;
-  color: #946c4d;
+  color: #b6b6b6;
 }
 /* ------------반응형----------- */
 @media all and (max-width: 1440px) {
@@ -153,7 +155,7 @@
   }
   .textContainer {
     width: 58%;
-    margin-top: 5px;
+    margin-top: -11px;
   }
   .visual_text {
     font-size: 16px;
@@ -176,7 +178,7 @@
   }
   .textContainer {
     width: 70%;
-    margin-top: -10px;
+    margin-top: -30px;
   }
   .visual_text {
     font-size: 12px;
@@ -188,22 +190,20 @@
   .visual_button_detail button p {
     font-weight: 300;
   }
-  .visual_button_detail button:hover {
-    border: 1px solid #946c4d;
-  }
 }
 @media all and (max-width: 480px) {
   .heading h1 {
     font-size: 59px;
   }
   .textContainer {
-    width: 285px;
-    margin-top: 7px;
+    width: 350px;
+    margin-top: -5px;
   }
   .visual_text {
     line-height: 16px;
     font-size: 14px;
     letter-spacing: 0.5px;
+    margin-top: 5px;
   }
   .visual_button_detail {
     margin-top: 5px;
