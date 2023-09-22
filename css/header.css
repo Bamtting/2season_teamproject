@@ -50,8 +50,8 @@ html.active {
 .s-menu ul li {
   margin: 10px 10px;
 }
-.header-2 ul li:first-child{
-  background-image: url(../images/decoLine.png);
+.header-2 ul li:first-child {
+  background-image: url("../images/decoLine.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -137,7 +137,6 @@ html.active {
   color: #555;
 }
 
-
 .header-2 {
   height: 60px;
   /* background-color: palegoldenrod; */
@@ -192,36 +191,36 @@ html.active {
   }
 }
 @media all and (max-width: 700px) {
-.s-menu {
-  width: 140px;
-}
-.s-menu ul li {
-  margin: 10px 5px;
-}
+  .s-menu {
+    width: 140px;
+  }
+  .s-menu ul li {
+    margin: 10px 5px;
+  }
 }
 @media all and (max-width: 550px) {
-  .header .inner{
+  .header .inner {
     width: 90vw;
   }
-  .header-1{
+  .header-1 {
     height: 60px;
   }
-  .header-1 .logo{
+  .header-1 .logo {
     width: 120px;
     height: 40px;
   }
-  .header-1 .logo img{
+  .header-1 .logo img {
     width: 120px;
     height: 40px;
   }
   .s-menu,
-  .header-2 ul{
+  .header-2 ul {
     display: none;
   }
-  .header-2{
+  .header-2 {
     height: 20px;
   }
-  .hamburger{
+  .hamburger {
     display: block;
   }
 }
