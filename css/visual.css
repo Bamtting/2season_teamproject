@@ -3,7 +3,7 @@
 .visual .inner {
   max-width: 1920px;
   background: url("../images/real_back_06.jpg") no-repeat;
-  background-position: top center;
+  background-position: bottom center;
   background-size: cover;
 }
 .visual_inner {
@@ -84,11 +84,9 @@
   width: 3px;
   background-color: #d3d3d3;
 }
-
 .line.active {
   background-color: #333333;
 }
-
 .textContainer {
   position: absolute;
   width: 700px;
@@ -114,7 +112,7 @@
 }
 .imgContainer::before {
   position: absolute;
-  content: " ";
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
