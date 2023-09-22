@@ -20,11 +20,14 @@
   transition: all 0.5s;
 }
 #makeup_box {
-  background: url("../images/makeup_hover.png");
+  background: url("../images/change_makeup.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
   transition: all 0.5s;
 }
 #makeup_box:hover {
-  background: url("../images/makeup222.png") no-repeat center;
+  background: url("../images/cm_make.png") no-repeat;
+  background-position: top center;
   background-size: cover;
   transition: all 0.5s;
 }
@@ -99,8 +102,9 @@
 }
 .sdm_box_name h3 {
   font-size: 24px;
-  font-family: "Noto Serif KR", serif;
-  font-weight: 700;
+  /* font-family: "Noto Serif KR", serif; */
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
 }
 .sdm_box_name p {
   font-size: 13px;
@@ -233,6 +237,7 @@
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   padding-top: 3px;
+  color: #5e5e5e;
 }
 .review_3_text2 {
   width: 90%;
@@ -243,9 +248,10 @@
   font-size: 13px;
   font-family: "Noto Sans KR", sans-serif;
   padding: 5px;
+  padding-top: 10px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  line-height: 15px;
+  line-height: 17px;
 }
 .review_3_text3 {
   width: 88%;
