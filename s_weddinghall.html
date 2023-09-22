@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -205,40 +204,15 @@
       <div class="s_weddinghall">
         <div class="text-area">
           <img src="images/s_wedding_info1.jpg" alt="소개 배경" />
-          <p class="text-area-sub">
-            모든 로맨틱한 이야기는 특별한 장소에서 시작합니다. <br />
-            최고의 웨딩홀을 선택하여 여러분의 이야기를 시작하세요. <br />
-            화려함과 아름다움, 편안함을 함께하는 곳에서 완벽한 결혼식을
-            계획하세요.
-          </p>
+          <div class="text-area-sub">
+            <span>WEDDING HALL</span>
+            <p>
+              모든 로맨틱한 이야기는 특별한 장소에서 시작합니다. <br />
+              최고의 웨딩홀을 선택하여 여러분의 이야기를 시작하세요.
+            </p>
+          </div>
         </div>
         <div class="inner">
-          <div class="hall-list">
-            <button class="hall-btn active" data-filter=".all">전체</button>
-            <button class="hall-btn-1" data-filter=".nomal">일반 홀</button>
-            <button class="hall-btn-2" data-filter=".convention">
-              컨벤션 홀
-            </button>
-            <button class="hall-btn-3" data-filter=".out">
-              야외/하우스 홀
-            </button>
-            <button class="hall-btn-4" data-filter=".chapel">채플 홀</button>
-            <button class="hall-btn-5" data-filter=".hotel">호텔 홀</button>
-          </div>
-          <div class="hall-list2">
-            <button class="hall2-btn active" data-filter=".all">전체</button>
-            <button class="hall2-btn-1" data-filter=".nomal">일반 홀</button>
-            <button class="hall2-btn-2" data-filter=".convention">
-              컨벤션 홀
-            </button>
-          </div>
-          <div class="hall-list2 active">
-            <button class="hall2-btn-3" data-filter=".out">
-              야외/하우스 홀
-            </button>
-            <button class="hall2-btn-4" data-filter=".chapel">채플 홀</button>
-            <button class="hall2-btn-5" data-filter=".hotel">호텔 홀</button>
-          </div>
           <!-- 검색 영역 -->
           <div class="w-search-area">
             <p class="w-search-text">웨딩 홀 상세 검색</p>
@@ -340,12 +314,40 @@
               </div>
             </div>
           </div>
+          <!-- 홀 버튼 -->
+          <div class="hall-list">
+            <button class="hall-btn active" data-filter=".all">전체</button>
+            <button class="hall-btn-1" data-filter=".nomal">일반 홀</button>
+            <button class="hall-btn-2" data-filter=".convention">
+              컨벤션 홀
+            </button>
+            <button class="hall-btn-3" data-filter=".out">
+              야외/하우스 홀
+            </button>
+            <button class="hall-btn-4" data-filter=".chapel">채플 홀</button>
+            <button class="hall-btn-5" data-filter=".hotel">호텔 홀</button>
+          </div>
+          <div class="hall-list2">
+            <button class="hall2-btn active" data-filter=".all">전체</button>
+            <button class="hall2-btn-1" data-filter=".nomal">일반 홀</button>
+            <button class="hall2-btn-2" data-filter=".convention">
+              컨벤션 홀
+            </button>
+          </div>
+          <div class="hall-list2 active">
+            <button class="hall2-btn-3" data-filter=".out">
+              야외/하우스 홀
+            </button>
+            <button class="hall2-btn-4" data-filter=".chapel">채플 홀</button>
+            <button class="hall2-btn-5" data-filter=".hotel">호텔 홀</button>
+          </div>
           <div class="information-area">
             <div id="results">
               <div id="weddingHallsList" class="mix-wrapper">
                 <!-- 데이터 출력 공간 -->
               </div>
-              <button class="more-button" type="button">목록 더보기</button>
+              <!-- 모달을 표시할 요소 -->
+              <div id="modalContainer"></div>
             </div>
           </div>
         </div>
