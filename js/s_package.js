@@ -4,23 +4,32 @@ $(document).ready(function () {
       el: ".swiper-pagination",
       type: "progressbar",
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     loop: true,
     navigation: {
       // 버튼 사용자 지정
+      prevEl: ".pk-prev-btn",
       nextEl: ".pk-next-btn",
     },
     autoplay: {
-      delay: 3000,
+      delay: 4000,
 
       disableOnInteraction: true,
     },
+    speed: 1500,
+    breakpoints: {
+      //반응형
+      // 화면의 넓이가 320px 이상일 때
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      // 화면의 넓이가 640px 이상일 때
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
   });
-
-  
 
   //초기 필터값  설정
   // 상세목록1

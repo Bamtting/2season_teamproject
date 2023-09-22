@@ -145,11 +145,19 @@ $(document).ready(function () {
       //반응형
       // 화면의 넓이가 320px 이상일 때
       320: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 40,
       },
       // 화면의 넓이가 640px 이상일 때
       640: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
         slidesPerView: 4,
         spaceBetween: 40,
       },
