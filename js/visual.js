@@ -11,8 +11,8 @@ $(document).ready(function () {
     {
       ease: Expo.easeInOut,
       width: "100%",
-      duration: 4,
-      stagger: 4,
+      duration: 2,
+      stagger: 2,
     },
     "flag"
   )
@@ -20,28 +20,28 @@ $(document).ready(function () {
       ".heading h1",
       {
         ease: Expo.easeInOut,
-        stagger: 4,
-        duration: 4,
+        stagger: 2,
+        duration: 2,
         top: 0,
       },
       "flag"
     )
     .to(
-      ".visual_text",
+      ".text",
       {
         ease: Expo.easeInOut,
-        stagger: 4,
-        duration: 4,
+        stagger: 2,
+        duration: 2,
         top: "0%",
       },
       "flag"
     )
     .to(
-      ".visual_text",
+      ".text",
       {
-        delay: 4,
+        delay: 2,
         ease: Expo.easeInOut,
-        stagger: 4,
+        stagger: 2,
         duration: 1,
         opacity: 0,
       },
@@ -50,14 +50,15 @@ $(document).ready(function () {
     .to(
       ".heading h1",
       {
-        delay: 4,
+        delay: 2,
         ease: Expo.easeInOut,
-        stagger: 4,
+        stagger: 2,
         duration: 2,
         top: "-200%",
       },
       "flag"
     );
+
   tl.eventCallback("onUpdate", () => {
     const progress = tl.progress();
     lines.forEach((dot, index) => {
