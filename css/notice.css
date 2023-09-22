@@ -1,19 +1,45 @@
 /* 고객문의 */
 .notice .inner{
     display: flex;
-    gap: 2vw;
+    flex-direction: column;
 }
 .qna{
+    display: flex;
+}
+.qna-content{
     width: calc(50% - 1vw);
     height: 500px;
     max-width: calc(720px - 1vw);
     /* background-color: #ce5959; */
 }
-.main-review{
+.qna-title{
     width: calc(50% - 1vw);
     height: 500px;
     max-width: calc(720px - 1vw);
-    background-color: rgb(119, 73, 161);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: powderblue; */
+}
+.main-review{
+    display: flex;
+}
+.main-review-title{
+    width: calc(50% - 1vw);
+    height: 500px;
+    max-width: calc(720px - 1vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: palegoldenrod; */
+}
+.main-review-content{
+    width: calc(50% - 1vw);
+    height: 500px;
+    max-width: calc(720px - 1vw);
+    /* background-color: rgb(119, 73, 161); */
 }
 .notice h2{
     font-size: 50px;
