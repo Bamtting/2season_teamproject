@@ -1,4 +1,8 @@
 /* 서브 스드메 */
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+.jejumyeongjo * {
+  font-family: "Jeju Myeongjo", serif;
+}
 /* main */
 .s_sdm {
   display: flex;
@@ -193,25 +197,27 @@
   padding-bottom: 20px;
 }
 .sdm_studio button {
-  width: 100px;
+  width: 160px;
   height: 40px;
   padding: 5px;
   border-radius: 50px;
   border: 2px solid #887160;
   background: none;
-  color: #887160;
   margin-top: 2%;
 }
 .sdm_studio button:hover {
   background-color: #887160;
-  color: #fff;
   cursor: pointer;
 }
-.sdm_studio button p {
+.sdm_studio button:hover a {
+  color: #fff;
+}
+.sdm_studio button a {
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   user-select: none;
+  color: #887160;
 }
 #studio_nemo {
   position: relative;
@@ -476,24 +482,27 @@
   padding: 5px;
   margin: auto;
 }
-.dress_more_button p {
+.dress_more_button a {
   font-weight: 500;
   font-size: 14px;
   user-select: none;
+  color: #887160;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .dress_more_button button {
-  width: 100px;
+  width: 160px;
   height: 40px;
   padding: 5px;
   border-radius: 50px;
   border: 2px solid #887160;
   background: none;
-  color: #887160;
 }
 .dress_more_button button:hover {
   background-color: #887160;
-  color: #fff;
   cursor: pointer;
+}
+.dress_more_button button:hover a {
+  color: #fff;
 }
 .dress_logo {
   width: 100%;
@@ -606,6 +615,9 @@
   background: url("../images/dress_01.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
+}
+.dress_img_01:hover {
+  transition: all 0.3s;
 }
 #dress_img_first:hover .dressimg_black {
   display: flex;
@@ -739,13 +751,13 @@
 }
 .mbt_gold {
   width: 33%;
-  /* border: 2px solid #887160; */
+  border: 2px solid transparent;
+  /* color: #887160; */
   padding: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: #887160; */
 }
 .mbt_gold:active {
   background-color: #887160;
@@ -776,18 +788,19 @@
   top: 80%;
 }
 .makeupbox_button button {
-  width: 100px;
+  width: 160px;
   padding: 8px;
   border: 2px solid #887160;
   background: none;
   border-radius: 50px;
   user-select: none;
 }
-.makeupbox_button button p {
+.makeupbox_button button a {
   font-size: 14px;
   font-family: "Noto Sans KR", sans-serif;
   color: #887160;
   user-select: none;
+  font-weight: 500;
 }
 .makeupbox_button button:hover {
   background-color: #887160;
@@ -882,7 +895,7 @@
   line-height: 65px;
   width: 100%;
   padding: 30px;
-  border-bottom: 1px solid #868686;
+  /* border-bottom: 1px solid #868686; */
   font-size: 45px;
   font-weight: 700;
   position: relative;
@@ -914,16 +927,22 @@
 .stu_body_first {
   position: relative;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 22px;
   font-size: 14px;
   margin-top: -10%;
   padding-bottom: 10%;
+  font-family: "Noto Serif KR", serif;
+}
+.stu_block b {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 10px;
 }
 .stu_body_first_f {
   position: relative;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
   font-size: 16px;
   margin-top: -10%;
@@ -977,30 +996,37 @@
   text-align: center;
   width: 100px;
   height: 40px;
-  background: #887160;
+  background: none;
   font-family: "Noto Sans KR", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid #887160;
   border-radius: 25px;
-  color: #fff;
+  color: #887160;
   position: relative;
   cursor: pointer;
   padding: 5px;
-  font-weight: 400;
+  font-weight: 600;
   top: 5%;
 }
 .stu_btn:hover {
-  background: none;
-  border: 2px solid #887160;
-  color: #887160;
-  font-weight: 600;
+  background: #887160;
+  color: #fff;
 }
 .studio_container.modal-open .stu_modal {
   z-index: 9999999999999999;
   top: 10%;
 }
 .stu_btn_padding {
+  font-weight: 600;
+  border: 2px solid #333;
+  color: #333;
+}
+.stu_btn_padding:hover {
+  border: 2px solid #333;
+  background: #333;
+  color: #fff;
 }
 /* ---- */
 .studio_container01 {
@@ -1014,8 +1040,19 @@
   align-items: center;
 }
 .studio_container01.modal-open .stu_modal {
-  z-index: 9999999999999999;
+  z-index: 99999999999999999999;
   top: 10%;
+}
+#stu_header_wonkyu {
+  display: none;
+  font-family: "Jeju Myeongjo", serif;
+  border: none;
+  line-height: 38px;
+  font-weight: 700;
+}
+#stu_header_wonkyu01 {
+  font-family: "Jeju Myeongjo", serif;
+  font-weight: 700;
 }
 /* ------------------------------- */
 /* ----------반응형----------- */
@@ -1085,13 +1122,19 @@
     display: none;
   }
   .sdmmain_04 {
-    display: none;
+    left: 5%;
   }
   .sdmmain_06 {
     display: none;
   }
   .sdmmain_07 {
     left: 65%;
+  }
+  .s_b_f_f {
+    margin-top: -30%;
+  }
+  .stu_body_first {
+    margin-top: -30%;
   }
   #studio_nemo {
     position: relative;
@@ -1228,12 +1271,27 @@
     left: 56%;
   }
 }
+@media all and (max-width: 524px) {
+  #stu_header_wonkyu {
+    display: block;
+  }
+  #stu_header_wonkyu01 {
+    display: none;
+  }
+}
 @media all and (max-width: 480px) {
   .s_sdm .inner {
     max-width: 480px;
   }
   .sdmmain_01 {
     left: 0;
+  }
+  .sdmmain_04 {
+    left: 0;
+    width: 240px;
+  }
+  .sdmmain_07 {
+    left: 45%;
   }
   .sdm_studio_wrap h3 {
     font-size: 20px;
@@ -1313,13 +1371,33 @@
     max-width: 480px;
   }
   .s_b_f_f {
-    font-weight: 600;
-    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -65%;
+  }
+  .stu_body_first {
+    margin-top: -100px;
   }
   .stu_body_first_f {
     font-size: 14px;
+    line-height: 18px;
+  }
+  .stu_modal_imgbox {
+    height: 100%;
+  }
+  #stu_h_2 {
+    font-size: 38px;
+  }
+  .stu_body p:nth-child(4) {
+    font-size: 18px;
+  }
+  .stu_body p:nth-child(5) {
+    font-size: 12px;
   }
 }
+
 @media all and (max-width: 360px) {
   #stu_h_2 {
     font-size: 36px;

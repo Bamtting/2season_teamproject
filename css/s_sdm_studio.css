@@ -1,1 +1,30 @@
 /* 스드메 스튜디오 */
+.s_sdm_studio .inner {
+  max-width: 1920px;
+}
+.s_sdm_studio_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  width: 100%;
+  height: 100%;
+}
+.s_sdm_studio_back img {
+  width: 100%;
+  height: 100%;
+}
+@media all and (max-width: 1024px) {
+  .s_sdm_studio_back {
+    padding-top: 18%;
+  }
+}
+@media all and (max-width: 768px) {
+  .s_sdm_studio_back {
+    padding-top: 25%;
+  }
+}
+@media all and (max-width: 480px) {
+  .s_sdm_studio_back {
+  }
+}
