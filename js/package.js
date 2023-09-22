@@ -21,7 +21,11 @@ $(document).ready(function () {
   });
   $(".packimgli2").click(function () {
     // 모달 이미지 열기
-    $("#pkModalImage").attr("src", "../images/makeup7.jpg");
+    $("#pkModalImage").attr("src", "../images/makeup7.jpg").css({
+      "background-position": "center",
+      "background-repeat": "no-repeat",
+      "background-size": "cover",
+    });
     $("#PkmyModal").css("display", "block").css("position", "fixed");
     $(".pk-modal-list01").css("display", "none");
     $(".pk-modal-list03").css("display", "none");
@@ -32,7 +36,11 @@ $(document).ready(function () {
   });
   $(".packimgli3").click(function () {
     // 모달 이미지 열기
-    $("#pkModalImage").attr("src", "../images/studio5.jpg");
+    $("#pkModalImage").attr("src", "../images/studio5-1.jpg").css({
+      "background-position": "center",
+      "background-repeat": "no-repeat",
+      "background-size": "cover",
+    });
     $("#PkmyModal").css("display", "block").css("position", "fixed");
     $(".pk-modal-list01").css("display", "none");
     $(".pk-modal-list02").css("display", "none");

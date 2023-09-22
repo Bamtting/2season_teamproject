@@ -149,7 +149,7 @@
 /* 모달창 */
 .pk-modal {
   width: 650px;
-  height: 800px;
+  height: 780px;
   background-color: #fff;
   position: absolute;
   top: 50%;
@@ -182,7 +182,7 @@
 }
 .pk-modal-wraper2 {
   width: 620px;
-  height: 770px;
+  height: 750px;
   border: 8px solid #887160;
   margin: 0 auto;
   margin-top: 15px;
@@ -247,6 +247,7 @@
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
+  color: #887160;
 }
 .pk-modal-list2 p {
   line-height: 20px;
@@ -291,9 +292,19 @@
   font-weight: 500;
   margin-bottom: 10px;
 }
+.pk-modal-list02 {
+  height: 100%;
+}
+.pk-make-modal-list2 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50%;
+}
 .pk-make-modal-list2 h2 {
   font-size: 22px;
   font-weight: bold;
+  color: #887160;
 }
 .pk-modal-text p {
   font-size: 12px;
@@ -310,25 +321,92 @@
   font-weight: bold;
   color: #d82a56;
 }
+.make-title-wrap h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
 .make-text-wrap {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
 }
+.make-main-text-wrap {
+  display: inline-block;
+  float: left;
+  margin-left: 15px;
+}
+.make-map-text h2 {
+  margin-top: 50px;
+}
 .make-map-text p {
   margin-top: 15px;
+  margin-left: 20px;
 }
 .make-text-wrap {
   text-align: left;
   height: 50%;
 }
+.make-text-wrap-list {
+  margin-left: 20px;
+}
 .make-text-wrap-list1 h3 {
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 10px;
+}
+.make-text-wrap-list1 p {
+  margin-bottom: 10px;
 }
 .make-text-wrap-list2 h3 {
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 10px;
+}
+.make-notice-modal {
+  width: 300px;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+.make-img-list {
+  position: absolute;
+  width: 287px;
+  height: 300px;
+  background: url("../images/makeup7-2.jpg") no-repeat center;
+  background-size: cover;
+  top: 50px;
+  right: -289px;
+}
+/* pk-modal-list03 */
+.studio-text-wrap-list1 h3,
+.studio-text-wrap-list2 h3,
+.studio-text-wrap-list3 h3,
+.studio-text-wrap-list4 h3,
+.studio-text-wrap-list5 h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.studio-text-wrap-list4 span,
+.studio-text-wrap-list5 span {
+  color: #9f9f9f;
+}
+.studio-text-wrap-list {
+  padding: 5px;
+  padding-bottom: 8px;
+  margin-right: 15px;
+  /* background-color: #e7ded7; */
+}
+.pk-studio-modal-list2 {
+  margin-top: 10px;
+}
+.studio-img-list {
+  width: 95%;
+  height: 300px;
+  margin: 0 auto;
+  background: url("../images/studio5.jpg") no-repeat top;
+  background-size: cover;
 }
 /* 반응형 */
 @media all and (max-width: 1480px) {
@@ -434,19 +512,24 @@
   .package-wrap {
     max-width: 836px;
     min-height: 800px;
-    /* justify-content: center;
-    align-items: center; */
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   .package-main-wrap img {
     opacity: 0;
     transition: 0.2s;
   }
   .package-text-wrap {
-    /* top: 0;
-    left: 0;
-    position: absolute; */
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .package-text-wrap h2,
+  .package-text-wrap p,
+  .package-text-wrap p span {
+    text-align: center;
   }
   .package-img-wrap {
     width: 836px;
@@ -456,6 +539,9 @@
   }
   .packimgwrap li {
     margin: -50px;
+  }
+  .package-more-btn {
+    margin-bottom: 50px;
   }
 }
 @media all and (max-width: 777px) {
@@ -470,12 +556,10 @@
     min-height: 1600px;
   }
   .package-text-wrap {
-    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding-right: 523px; */
   }
   .package-text-wrap p {
     text-align: center;
