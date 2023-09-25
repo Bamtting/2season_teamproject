@@ -10,21 +10,16 @@ $(document).ready(function () {
       prevEl: ".pk-prev-btn",
       nextEl: ".pk-next-btn",
     },
-    autoplay: {
-      delay: 4000,
+    // autoplay: {
+    //   delay: 4000,
 
-      disableOnInteraction: true,
-    },
+    //   disableOnInteraction: true,
+    // },
     speed: 1500,
     breakpoints: {
       //반응형
       // 화면의 넓이가 320px 이상일 때
       320: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-      // 화면의 넓이가 640px 이상일 때
-      640: {
         slidesPerView: 1,
         spaceBetween: 0,
       },
