@@ -1,4 +1,87 @@
 /* signup2 */
+.formlist > div{
+  height: 50px;
+  width: 35vw;
+  /* background-color: antiquewhite; */
+  border: 1px solid #dfdfdf;
+}
+.formlist input{
+  width: 85%;
+}
+.formlist-1{
+  margin: 14px 0;
+}
+.formlist i{
+  font-size: 16px;
+}
+.formlist .id-box {
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  /* background-color: red; */
+}
+.formlist .id-box i{
+  width: 50px;
+  text-align: center;
+}
+.formlist .password-box{
+  display: flex;
+  align-items: center;
+}
+.formlist .password-box i{
+  width: 50px;
+  text-align: center;
+}
+.formlist .email-box{
+  display: flex;
+  align-items: center;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.formlist .email-box i{
+  width: 50px;
+  text-align: center;
+}
+.formlist .name-box{
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.formlist .name-box i{
+  width: 50px;
+  text-align: center;
+}
+.formlist .birthday-box{
+  display: flex;
+  align-items: center;
+}
+.formlist .birthday-box i{
+  width: 50px;
+  text-align: center;
+}
+.gender-box .genderlist{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.gender-box .genderlist .genderlistitem{
+  width: 33%;
+  text-align: center;
+}
+.formlist .phoneNum-box{
+  display: flex;
+  align-items: center;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.formlist .phoneNum-box i{
+  width: 50px;
+  text-align: center;
+}
 @media screen and (max-width: 480px) {
     
   }

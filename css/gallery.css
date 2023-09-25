@@ -1,0 +1,63 @@
+/* 고객문의 */
+.gallery-title{
+    color: #887160;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.gallery {
+    width: 100%;
+    height: 700px;
+    padding: 50px 20px;
+}
+.gallery .slide {
+    width: 30%;
+    margin-right: 3%;
+    transform: translateX(30px);
+    transition: transform 0.9s ease-in-out;
+}
+.gallery .slide img {
+    display: block;
+    max-width: 500px;
+    height: auto;
+}
+.gallery .slide.is-previous {
+    transform: translateX(0);
+}
+.gallery .slide.is-selected {
+    transform: translateX(0);
+}
+.gallery .slide.is-next {
+    /* transform: translateX(120px); */
+}
+.gallery .slide.slide-1 {
+    margin-top: 80px;
+    /* width: 20%; */
+    /* margin-right: 10%; */
+    margin-left: 20px;
+}
+.gallery .slide.slide-2 {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.gallery .slide.slide-3 {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.gallery .slide.slide-4 {
+    transform: translateX(-10%);
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.gallery button{
+    display: none;
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 768px) {
+}
+@media all and (max-width: 480px) {
+}
+@media all and (max-width: 360px) {
+}
