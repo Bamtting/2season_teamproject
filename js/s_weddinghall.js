@@ -1,11 +1,4 @@
 $(document).ready(function () {
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
-  document.addEventListener("dragstart", function (e) {
-    e.preventDefault();
-  });
-
   // 초기 필터값 설정
   var hallFilter = "*"; // 홀 버튼에 대한 필터값
   var locationFilter = "*"; // 지역(시/도) 셀렉트 박스에 대한 필터값
@@ -349,7 +342,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최대 400명",
-      id: "all seoul sall sindorim nomal chapel fs 300 99won mc",
+      id: "all seoul sall sindorim nomal chapel bf 300 99won mc",
     },
     {
       imageSrc: "images/wd14.jpg",
@@ -709,7 +702,7 @@ $(document).ready(function () {
       menuType: "한식",
       mealCost: "55,000원",
       capacity: "최소 250명",
-      id: "all seoul sall gwanak nomal bf 200 59won sc",
+      id: "all seoul sall gwanak nomal ko 200 59won sc",
     },
     {
       imageSrc: "images/wd50.jpg",
@@ -1760,32 +1753,46 @@ $(document).ready(function () {
 
       const leftContainer = $("<div>").addClass("w-box-left");
       // 위치 정보 추가
-      const name = $("<h3>").text(hall.name);
-      leftContainer.append(name);
       const location = $("<p>").text(hall.location);
       leftContainer.append(location);
+
+      const name = $("<h3>").text(hall.name);
+      leftContainer.append(name);
 
       hallContainer.append(leftContainer);
 
       const rightContainer = $("<div>").addClass("w-box-right");
 
       // 홀 종류 추가
-      const hallType = $("<p>").html(`<span>홀 종류 </span>${hall.hallType}`);
+      const hallType = $("<p>").html(`<span>홀 종류: </span>${hall.hallType}`);
       rightContainer.append(hallType);
 
       // 메뉴 종류 추가
-      const menuType = $("<p>").html(`<span>메뉴 종류 </span>${hall.menuType}`);
+      const menuType = $("<p>").html(
+        `<span>메뉴 종류: </span>${hall.menuType}`
+      );
       rightContainer.append(menuType);
 
       // 식사 비용 추가
-      const mealCost = $("<p>").html(`<span>식사 비용 </span>${hall.mealCost}`);
+      const mealCost = $("<p>").html(
+        `<span>식사 비용: </span>${hall.mealCost}`
+      );
       rightContainer.append(mealCost);
 
       // 보증 인원 추가
-      const capacity = $("<p>").html(`<span>보증 인원 </span>${hall.capacity}`);
+      const capacity = $("<p>").html(
+        `<span>보증 인원: </span>${hall.capacity}`
+      );
       rightContainer.append(capacity);
 
       hallContainer.append(rightContainer);
+
+      // 상품 문의 버튼 추가
+      const inquiryButton = $("<button>")
+        .addClass("inquiry-button")
+        .text("상품 문의");
+
+      hallContainer.append(inquiryButton);
 
       // 페이지에 추가
       weddingHallsList.append(hallContainer);
@@ -1794,44 +1801,5 @@ $(document).ready(function () {
 
   // 페이지 로드 시 메뉴얼 정보 생성
   createWeddingHallElements(weddingHallData);
-
-  // 모달을 표시하는 함수
-  function showModal(hall) {
-    // 모달 컨테이너를 찾거나 생성합니다.
-    let modalContainer = $("#modalContainer");
-    if (modalContainer.length === 0) {
-      modalContainer = $("<div>").attr("id", "modalContainer");
-      $("body").append(modalContainer);
-    }
-
-    // 모달 내용을 생성합니다.
-    const modalContent = $("<div>").addClass("modal-content");
-    modalContent.append($("<h2>").text(hall.name));
-    modalContent.append($("<p>").text("위치: " + hall.location));
-    modalContent.append($("<p>").text("홀 종류: " + hall.hallType));
-    modalContent.append($("<p>").text("메뉴 종류: " + hall.menuType));
-    modalContent.append($("<p>").text("식사 비용: " + hall.mealCost));
-    modalContent.append($("<p>").text("보증 인원: " + hall.capacity));
-
-    // 모달을 생성하고 내용을 추가합니다.
-    const modal = $("<div>")
-      .addClass("modal")
-      .append(modalContent)
-      .appendTo(modalContainer);
-
-    // 모달을 표시합니다. (예: Bootstrap Modal 사용)
-    // 여기에서 모달을 열어주는 코드를 추가해야 합니다.
-    // 예를 들어, Bootstrap Modal을 사용하면 다음과 같이 열 수 있습니다.
-    // modal.modal("show");
-  }
-
-  // 예약하기 버튼을 클릭할 때 모달을 열도록 이벤트 핸들러를 추가합니다.
-  $(".wedding-halls").on("click", ".view-details-button", function () {
-    const hallId = $(this).data("hall-id");
-    const selectedHall = weddingHallData.find((hall) => hall.id === hallId);
-
-    if (selectedHall) {
-      showModal(selectedHall);
-    }
-  });
+  // 검색 버튼 클릭 이벤트 핸들러
 });

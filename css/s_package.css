@@ -183,11 +183,7 @@
   font-weight: bold;
 }
 /* 메인 버튼1 */
-.main-btn,
-.main-btn-1,
-.main-btn-2,
-.main-btn-3,
-.main-btn-4 {
+.main-list button {
   display: block;
   width: 240px;
   height: 60px;
@@ -198,21 +194,7 @@
   font-weight: 500;
   cursor: pointer;
 }
-/* 메인 버튼 2 */
-.main2-btn,
-.main2-btn-1,
-.main2-btn-2,
-.main2-btn-3,
-.main2-btn-4 {
-  display: block;
-  width: 240px;
-  height: 60px;
-  line-height: 60px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  font-size: 18px;
-  font-weight: 500;
-}
+
 .pk-search-text-wrap {
   text-align: center;
   line-height: 50px;
@@ -241,48 +223,19 @@
 }
 .select-box {
   display: flex;
-  margin: 20px;
+  margin-bottom: 20px;
   justify-content: space-between;
 }
 .select-box form {
   width: 400px;
   text-align: end;
 }
-#priceMenu {
-  width: 257px;
+.select-box select {
+  width: 100%;
   height: 45px;
-  padding-left: 5px;
+  padding: 5px;
   border: none;
-}
-#price {
-  width: 257px;
-  height: 45px;
-  padding-left: 5px;
-  border: none;
-}
-#pakageMenu {
-  width: 257px;
-  height: 45px;
-  padding-left: 5px;
-  border: none;
-}
-#benefit {
-  width: 257px;
-  height: 45px;
-  padding-left: 5px;
-  border: none;
-}
-#sdmStyle {
-  width: 257px;
-  height: 45px;
-  padding-left: 5px;
-  border: none;
-}
-#bargainSale {
-  width: 257px;
-  height: 45px;
-  padding-left: 5px;
-  border: none;
+  cursor: pointer;
 }
 
 .search-container {
