@@ -127,6 +127,10 @@ input[type="checkbox"],
   float: right;
   margin-right: 20px;
   color: #ccc;
+  cursor: pointer;
+}
+.signup-more:hover{
+  color: #191919;
 }
 #submit{
   position: absolute;
