@@ -142,53 +142,59 @@
             method="get"
           >
             <div class="formlist formlist-1">
-              <div class="id-box" id="id">
+              <div class="id-box formlist-box" id="id">
                 <i class="fa-solid fa-user" style="color: #887160;"></i>
-                <input type="text">
+                <input type="text" placeholder="아이디" id="idInput" onblur="validateID()">
               </div>
-              <div class="password-box" id="password">
+              <div class="password-box formlist-box" id="password">
                 <i class="fa-solid fa-lock" style="color: #887160;"></i>
-                <input type="text">
+                <input type="password" placeholder="비밀번호">
               </div>
-              <div class="email-box" id="email">
+              <!-- <div class="email-box" id="email">
                 <i class="fa-solid fa-envelope" style="color: #887160;"></i>
-                <input type="text">
-              </div>
+                <input type="email" placeholder="[선택] 비밀번호 분실 시 확인용 이메일">
+              </div> -->
             </div>
             <div class="formlist">
               <div class="name-box" id="name">
                 <i class="fa-solid fa-user" style="color: #887160;"></i>
-                <input type="text">
+                <input type="text" placeholder="이름" id="nameInput" onblur="validateName()">
               </div>
               <div class="birthday-box" id="birthday">
                 <i class="fa-solid fa-calendar" style="color: #887160;"></i>
-                <input type="text">
+                <input type="text" placeholder="생년월일 8자리" id="birthInput" onblur="validateBirth()">
               </div>
               <div class="gender-box" id="gender">
-                <ul class="genderlist">
-                  <li class="genderlistitem">
-                    <input type="radio" id="gender1" name="gender" value="M" />
+                <div class="gender-check-box">
+                  <input type="radio" id="gender1" name="gender" value="M" />
                     <label for="gender1">남자</label>
-                  </li>
-                  <li class="genderlistitem">
-                    <input type="radio" id="gender2" name="gender" value="F" />
-                    <label for="gender2">여자</label>
-                  </li>
-                  <li class="genderlistitem">
-                    <input type="radio" id="gender3" name="gender" value="O" />
+                </div>
+                <div class="gender-check-box">
+                  <input type="radio" id="gender2" name="gender" value="F" />
+                    <label for="gender2">여자</label> 
+                </div>
+                <div class="gender-check-box">
+                  <input type="radio" id="gender3" name="gender" value="O" />
                     <label for="gender3">선택안함</label>
-                  </li>
-                </ul>
+                </div>
               </div>
               <div class="phoneNum-box" id="phoneNum">
                 <i class="fa-solid fa-mobile" style="color: #887160;"></i>
-                <input type="text">
+                <input type="text" placeholder="휴대전화번호" id="phoneNumInput" onblur="validatePhoneNum()">
+              </div>
+              <div class="verification-code-box" id="">
+                <input type="text" placeholder="인증번호" id="veriInput" onblur="validateVeri()">
+                <div class="timer">
+                  <div id="timeLimit">03:00</div>
+              </div>
+              <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
               </div>
             </div>
             <div class="formlist"></div>
           </form>
 
           <button class="submit" id="submit" disabled>인증요청</button>
+          <button class="last-submit" id="lastSubmit" disabled>가입하기</button>
         </div>
       </div>
     </div>
