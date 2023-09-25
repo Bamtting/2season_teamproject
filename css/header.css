@@ -59,6 +59,9 @@ html.active {
   margin: 0;
   padding: 20px 10px 0;
 }
+.header-2 ul li a {
+  font-family: "Noto Serif KR", "serif";
+}
 .hamburger {
   position: absolute;
   display: none;
@@ -127,6 +130,7 @@ html.active {
   line-height: 67px;
 }
 .hamburger-menu-contents li a {
+  font-family: "Noto Serif KR", "serif";
   display: block;
   padding: 0 40px;
   font-size: 24px;
