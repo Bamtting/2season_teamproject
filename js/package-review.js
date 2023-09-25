@@ -174,6 +174,10 @@ $(document).ready(function () {
         slidesPerView: 3,
         spaceBetween: 40,
       },
+      1440: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
       1880: {
         slidesPerView: 4,
         spaceBetween: 40,
