@@ -151,10 +151,17 @@
     <script src="js/sdm.js"></script>
     <script src="js/review.js"></script>
     <script src="js/looking.js"></script>
-    <script src="js/notice.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/footer.js"></script>
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Flickity 스타일시트 가져오기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+    <!-- Flickity 및 classie 스크립트 가져오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+   
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -167,9 +174,11 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="wrap">
+    <div class="wrap" id="wrap">
+      <!-- top button -->
+      <a href="#wrap"><div class="top-button">top</div></a>
       <!-- header -->
-      <header class="header clearfix">
+      <header class="header clearfix" id="header">
         <div class="inner">
           <div class="header-1">
             <div class="logo">
@@ -904,6 +913,24 @@
       <div class="review clearfix">
         <div class="inner"></div>
       </div>
+
+      <!-- gallery -->
+      <div class="inner">
+        <h2 class="gallery-title">gallery</h2>
+      </div>
+      <div class="gallery clearfix">
+        <div class="slide slide-1">
+          <img src="images/wedding1.jpg">
+        </div>
+        <div class="slide slide-2">
+          <img src="images/wedding2.jpg">
+        </div>
+        <div class="slide slide-3">
+           <img src="images/wedding3.jpg">
+        </div>
+        <div class="slide slide-4">
+           <img src="images/wedding4.jpg">
+
       <!-- notice -->
       <div class="notice clearfix">
         <div class="inner">
@@ -931,6 +958,7 @@
             </div>
             <div class="main-review-content"></div>
           </div>
+
         </div>
       </div>
       <!-- footer -->
@@ -954,26 +982,52 @@
               </ul>
             </div>
             <div class="footer2 footer-middle-content">
+              <a href="s_package.html"><h3>wedding hall</h3></a>
+              <ul>
+                <a href="#"><li>일반 홀</li></a>
+                <a href="#"><li>컨벤션 홀</li></a>
+                <a href="#"><li>야외/하우스 홀</li></a>
+                <a href="#"><li>채플 홀</li></a>
+                <a href="#"><li>호텔 홀</li></a>
+              </ul>            
+            </div>
+            <div class="footer3 footer-middle-content">
               <a href="s_sdm.html"><h3>sdm</h3></a>
               <ul>
-                <a href="#"><li>스튜디오</li></a>
+                <a href="s_sdm.html#sdm_studio"><li>스튜디오</li></a>
                 <a href="#"><li>드레스</li></a>
                 <a href="#"><li>메이크업</li></a>
               </ul>
             </div>
-            <div class="footer3 footer-middle-content">
+            <div class="footer4 footer-middle-content">
               <a href="s_notice.html"><h3>q&a</h3></a>
               <ul>
                 <a href="#"><li>자주 묻는 질문</li></a>
                 <a href="#"><li>질문하기</li></a>
               </ul>
             </div>
-            <div class="footer4 footer-middle-content">
+            <div class="footer5 footer-middle-content">
               <a href="s_review.html"><h3>review</h3></a>
               <ul>
                 <a href="#"><li>패키지 리뷰</li></a>
                 <a href="#"><li>고객 리뷰</li></a>
               </ul>
+            </div>
+            <div class="footer-middle-mobile-content">
+              <a href="#"><h4>package</h4></a>
+              <a href="#"><h4>wedding hall</h4></a>
+              <a href="#"><h4>sdm</h4></a>
+              <a href="#"><h4>q&a</h4></a>
+              <a href="#"><h4>review</h4></a>
+            </div>
+            <div class="footer-middle-mobile-content-contact">
+              <a href="#">
+                <div class="footer-contact">
+                  <p>contact</p>
+                  <img src="images/enter_887160.png" alt="contact">
+                  <img src="images/enter_black.png" alt="contact">
+                </div>
+              </a>
             </div>
           </div>
           <div class="footer-bottom">

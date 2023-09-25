@@ -11,14 +11,13 @@
   height: 100vh;
   padding: 20px;
 }
-
 .form-box {
   display: flex;
   flex-direction: column;
   /* justify-content: space-around; */
   align-items: center;
-  width: 50vw;
-  min-width: 500px;
+  width: 40vw;
+  min-width: 400px;
   height: 40vw;
   min-height: 750px;
   padding: 30px 20px;

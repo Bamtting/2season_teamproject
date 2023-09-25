@@ -28,7 +28,7 @@ html {
 }
 body {
   width: 100%;
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0px;
@@ -65,4 +65,25 @@ input:-webkit-autofill {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.top-button{
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* font-size: 50px; */
+  background-color: #baa693;
+  z-index: 999999999;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  -webkit-scroll-snap-type: y mandatory;
+}
+.top-button:hover{
+  background-color: #887160;
 }
