@@ -5,7 +5,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".package-review-wrap")
-        .css("background-image", "url('../images/package_review1-1.png')");
+        .css("background-image", "url('../images/main-pk-review1-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -23,7 +23,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap2")
-        .css("background-image", "url('../images/package_review2-1.png')");
+        .css("background-image", "url('../images/main-pk-review2-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -41,7 +41,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap3")
-        .css("background-image", "url('../images/package_review3-1.png')");
+        .css("background-image", "url('../images/main-pk-review3-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -59,7 +59,7 @@ $(document).ready(function () {
       // 이미지 변경 (원하는 이미지 경로로 바꿔주세요)
       $(this)
         .find(".review-wrap4")
-        .css("background-image", "url('../images/package_review4-1.png')");
+        .css("background-image", "url('../images/main-pk-review4-1.png')");
       $(this).find(".package-review-wrap-title").css("display", "none");
     },
     function () {
@@ -75,7 +75,7 @@ $(document).ready(function () {
   //   리뷰 클릭 시 모달창 띄우기
   $(".package-review-wrapper-inner1").click(function () {
     // 모달 이미지 열기
-    $("#modalImage").attr("src", "../images/package_review1-1.png");
+    $("#modalImage").attr("src", "../images/main-pk-review1.png");
     $("#modalImage1").attr("src", "../images/pk_review_main4.jpg");
     $("#PackagemyModal").css("display", "block").css("position", "fixed");
     $(".header").css("display", "none");
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
   $(".package-review-wrapper-inner2").click(function () {
     // 모달 이미지 열기
-    $("#modalImage").attr("src", "../images/package_review2-1.png");
+    $("#modalImage").attr("src", "../images/main-pk-review2.png");
     $("#modalImage1").attr("src", "../images/pk_review_main1.jpg");
     $("#PackagemyModal").css("display", "block").css("position", "fixed");
     $(".header").css("display", "none");
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
   $(".package-review-wrapper-inner3").click(function () {
     // 모달 이미지 열기
-    $("#modalImage").attr("src", "../images/package_review3-1.png");
+    $("#modalImage").attr("src", "../images/main-pk-review3.png");
     $("#modalImage1").attr("src", "../images/../images/studio20-1.jpg");
     $("#PackagemyModal").css("display", "block").css("position", "fixed");
     $(".header").css("display", "none");
@@ -105,7 +105,7 @@ $(document).ready(function () {
 
   $(".package-review-wrapper-inner4").click(function () {
     // 모달 이미지 열기
-    $("#modalImage").attr("src", "../images/package_review4-1.png");
+    $("#modalImage").attr("src", "../images/main-pk-review4.png");
     $("#modalImage1").attr("src", "../images/studio23-1.jpg");
     $("#PackagemyModal").css("display", "block").css("position", "fixed");
     $(".header").css("display", "none");
@@ -146,7 +146,7 @@ $(document).ready(function () {
       // 화면의 넓이가 320px 이상일 때
       320: {
         slidesPerView: 1,
-        spaceBetween: 40,
+        spaceBetween: 100,
       },
       // 화면의 넓이가 640px 이상일 때
       640: {
@@ -154,10 +154,18 @@ $(document).ready(function () {
         spaceBetween: 40,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      736: {
+        slidesPerView: 2,
         spaceBetween: 40,
       },
       1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1880: {
         slidesPerView: 4,
         spaceBetween: 40,
       },

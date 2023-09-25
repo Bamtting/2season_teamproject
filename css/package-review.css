@@ -10,7 +10,7 @@
 }
 .package-review-title {
   color: #887160;
-  font-size: 42px;
+  font-size: 56px;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 50px;
@@ -20,7 +20,7 @@
   font-size: 22px;
   color: #887160;
   margin-top: 30px;
-  line-height: 40px;
+  line-height: 30px;
 }
 .package-review-text-wrap p span {
   font-weight: bold;
@@ -141,7 +141,7 @@
 }
 .pk-review-more {
   position: absolute;
-  top: 630px;
+  top: 610px;
   font-family: "Noto Serif KR", serif;
   font-size: 14px;
   padding: 5px 15px;
@@ -160,22 +160,43 @@
   transition: 0.15s ease-in-out;
 }
 
-@media all and (max-width: 1470px) {
-}
-@media all and (max-width: 1280px) {
-}
-@media all and (max-width: 1080px) {
+@media all and (max-width: 1090px) {
   .package-modal {
-    width: 50%;
+    width: 80%;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+  .modal-wraper img{
+    width: 500px;
   }
 }
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
+  .package-review-text-wrap {
+    text-align: center;
+  }
 }
 @media all and (max-width: 480px) {
+  .package {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .package-review-text-wrap {
+    width: 100%;
+    text-align: center;
+  }
+  .package-review-title {
+    font-size: 36px;
+  }
+  .package-review-text-wrap p {
+    font-size: 16px;
+  }
 }
 @media all and (max-width: 320px) {
+  .package-review-wrapper {
+    padding: 0 10px;
+  }
   .package-review-text-wrap {
     text-align: center;
   }
@@ -183,7 +204,7 @@
     font-size: 30px;
   }
   .package-review-text-wrap p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 20px;
   }
 }
