@@ -18,6 +18,13 @@
   display: flex;
 }
 .mySlide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: url("../images/pk-visual-bg.png") no-repeat center;
 }
 .pk-list1 {

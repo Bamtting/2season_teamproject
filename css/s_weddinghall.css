@@ -162,10 +162,9 @@
   width: 100%;
   max-width: 450px;
   height: 530px;
-  padding: 10px;
+  padding: 10px 50px;
   font-family: "notoSans";
   margin: 10px auto;
-  border: 1px solid #887160;
 }
 .mix img {
   width: 100%;
@@ -245,7 +244,11 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
+@media all and (max-width: 1024px) {
+  .mix {
+    padding: 10px;
+  }
+}
 @media all and (max-width: 865px) {
   .select-box label {
     font-size: 16px;
