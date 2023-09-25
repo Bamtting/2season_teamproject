@@ -151,10 +151,17 @@
     <script src="js/sdm.js"></script>
     <script src="js/review.js"></script>
     <script src="js/looking.js"></script>
-    <script src="js/notice.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/footer.js"></script>
     <!-- css 불러오기 -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Flickity 스타일시트 가져오기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+    <!-- Flickity 및 classie 스크립트 가져오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+   
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -901,10 +908,19 @@
       <div class="review clearfix">
         <div class="inner"></div>
       </div>
-      <!-- notice -->
-      <div class="notice clearfix">
-        <div class="inner">
-          <div class="notice-gallery"></div>
+      <!-- gallery -->
+      <div class="gallery clearfix">
+        <div class="slide slide-1">
+          <img src="images/wedding1.jpg">
+        </div>
+        <div class="slide slide-2">
+          <img src="images/wedding2.jpg">
+        </div>
+        <div class="slide slide-3">
+           <img src="images/wedding3.jpg">
+        </div>
+        <div class="slide slide-4">
+           <img src="images/wedding4.jpg">
         </div>
       </div>
       <!-- footer -->
@@ -958,6 +974,15 @@
                 <a href="#"><li>패키지 리뷰</li></a>
                 <a href="#"><li>고객 리뷰</li></a>
               </ul>            
+            </div>
+            <div class="footer6 footer-middle-content">
+              <a href="#">
+                <div class="footer-contact">
+                  <h3>contact
+                  <img src="images/enter_887160.png" alt="contact">
+                  <img src="images/enter_black.png" alt="contact"></h3>
+                </div>
+              </a>
             </div>
           </div>
           <div class="footer-bottom">
