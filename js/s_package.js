@@ -889,12 +889,15 @@ $(document).ready(function () {
 
       pkContainer.append(rightContainer);
 
-      // 상품 문의 버튼 추가
-      const inquiryButton = $("<button>")
+      // 상품 문의 버튼을 포함할 <a> 태그를 생성합니다.
+      const inquiryButton = $("<a>")
         .addClass("inquiry-button2")
+        .attr("href", "https://weddingforyou.vercel.app/") // 이동할 페이지의 URL을 지정합니다.
         .text("상품 문의");
 
+      // <a> 태그를 hallContainer에 추가합니다.
       pkContainer.append(inquiryButton);
+
       // 페이지에 추가
       pkMenuList.append(pkContainer);
     });
