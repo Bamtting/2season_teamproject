@@ -1802,4 +1802,5 @@ $(document).ready(function () {
   // 페이지 로드 시 메뉴얼 정보 생성
   createWeddingHallElements(weddingHallData);
   // 검색 버튼 클릭 이벤트 핸들러
+  
 });
