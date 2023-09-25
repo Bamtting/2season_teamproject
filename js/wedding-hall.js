@@ -15,4 +15,14 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  $(".w-tbox img").on("click", function () {
+    // 클릭된 .w-tbox img의 src 속성 가져오기
+    const newImageSrc = $(this).attr("src");
+
+    // Swiper 슬라이드 내의 이미지 변경
+    const swiperSlide = $(this).closest(".swiper-slide");
+    const swiperImage = swiperSlide.find("img");
+    swiperImage.attr("src", newImageSrc);
+  });
 });

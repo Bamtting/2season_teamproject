@@ -342,7 +342,7 @@ $(document).ready(function () {
       menuType: "뷔페",
       mealCost: "80,000원",
       capacity: "최대 400명",
-      id: "all seoul sall sindorim nomal chapel fs 300 99won mc",
+      id: "all seoul sall sindorim nomal chapel bf 300 99won mc",
     },
     {
       imageSrc: "images/wd14.jpg",
@@ -702,7 +702,7 @@ $(document).ready(function () {
       menuType: "한식",
       mealCost: "55,000원",
       capacity: "최소 250명",
-      id: "all seoul sall gwanak nomal bf 200 59won sc",
+      id: "all seoul sall gwanak nomal ko 200 59won sc",
     },
     {
       imageSrc: "images/wd50.jpg",
@@ -1786,6 +1786,13 @@ $(document).ready(function () {
       rightContainer.append(capacity);
 
       hallContainer.append(rightContainer);
+
+      // 상품 문의 버튼 추가
+      const inquiryButton = $("<button>")
+        .addClass("inquiry-button")
+        .text("상품 문의");
+
+      hallContainer.append(inquiryButton);
 
       // 페이지에 추가
       weddingHallsList.append(hallContainer);
