@@ -220,10 +220,12 @@
   font-size: 12px;
   color: #999;
 }
-.inquiry-button {
+.inquiry-link {
   display: block;
   width: 100px;
   height: 30px;
+  line-height: 30px;
+  text-align: center;
   margin: 10px auto;
   border: none;
   border-radius: 20px;
