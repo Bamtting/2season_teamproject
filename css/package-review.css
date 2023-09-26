@@ -9,8 +9,9 @@
   display: block;
 }
 .package-review-title {
+  font-family: "Noto Serif KR", "serif";
   color: #887160;
-  font-size: 42px;
+  font-size: 56px;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 50px;
@@ -20,7 +21,7 @@
   font-size: 22px;
   color: #887160;
   margin-top: 30px;
-  line-height: 40px;
+  line-height: 30px;
 }
 .package-review-text-wrap p span {
   font-weight: bold;
@@ -63,19 +64,19 @@
   font-size: 28px;
 }
 .review-wrap1 {
-  background: url("../images/package_review_1.jpg") no-repeat center;
+  background: url("../images/pk-review-modalimg1.png") no-repeat center;
   background-size: cover;
 }
 .review-wrap2 {
-  background: url("../images/package_review_2.jpg") no-repeat center;
+  background: url("../images/pk-review-modalimg2.png") no-repeat center;
   background-size: cover;
 }
 .review-wrap3 {
-  background: url("../images/studio20-1.jpg") no-repeat center;
+  background: url("../images/pk-review-modalimg3.png") no-repeat center;
   background-size: cover;
 }
 .review-wrap4 {
-  background: url("../images/studio23-1.jpg") no-repeat center;
+  background: url("../images/pk-review-modalimg4.png") no-repeat center;
   background-size: cover;
 }
 /* 모달창 */
@@ -102,11 +103,12 @@
 #modalImage1 {
   background: no-repeat center;
   background-size: cover;
-  width: 500px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
 }
 #modalImage {
-  height: 700px;
+  width: 100%;
+  height: 100%;
 }
 .modal-wraper {
   display: flex;
@@ -141,8 +143,8 @@
 }
 .pk-review-more {
   position: absolute;
-  top: 630px;
-  font-family: "Noto Serif KR", serif;
+  top: 610px;
+  font-family: "Noto Sans KR", serif;
   font-size: 14px;
   padding: 5px 15px;
   border-radius: 50px;
@@ -160,22 +162,53 @@
   transition: 0.15s ease-in-out;
 }
 
-@media all and (max-width: 1470px) {
-}
-@media all and (max-width: 1280px) {
-}
-@media all and (max-width: 1080px) {
-  .package-modal {
-    width: 50%;
+@media all and (max-width: 1024px) {
+  .pk-review-more {
+    top: 590px;
   }
 }
-@media all and (max-width: 1024px) {
-}
 @media all and (max-width: 768px) {
+  .package-review-text-wrap {
+    text-align: center;
+  }
+  .pk-review-more {
+    top: 550px;
+  }
+  .modal-wraper {
+    padding: 0 10px;
+  }
 }
 @media all and (max-width: 480px) {
+  .package {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .package-review-text-wrap {
+    width: 100%;
+    text-align: center;
+  }
+  .package-review-title {
+    font-size: 36px;
+  }
+  .package-review-text-wrap p {
+    font-size: 16px;
+  }
+  .pk-review-more {
+    top: 465px;
+    font-size: 11px;
+    padding: 3px 12px;
+  }
+  .package-close {
+    line-height: 20px;
+    width: 25px;
+    height: 25px;
+    font-size: 22px;
+  }
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 420px) {
+  .package-review-wrapper {
+    padding: 0 10px;
+  }
   .package-review-text-wrap {
     text-align: center;
   }
@@ -183,7 +216,39 @@
     font-size: 30px;
   }
   .package-review-text-wrap p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 20px;
+  }
+  .pk-review-more {
+    top: 365px;
+    font-size: 10px;
+    color: #000;
+    padding: 2px 10px;
+  }
+  .package-close {
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 320px) {
+  .package-review-wrapper {
+    padding: 0 10px;
+  }
+  .package-review-text-wrap {
+    text-align: center;
+  }
+  .package-review-title {
+    font-size: 30px;
+  }
+  .package-review-text-wrap p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .pk-review-more {
+    top: 425px;
+    font-size: 10px;
+    padding: 2px 10px;
   }
 }

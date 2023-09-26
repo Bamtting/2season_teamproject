@@ -1,6 +1,6 @@
 /* 서브 문의 */
 .question{
-    width: 80vw;
+    width: 100%;
     margin: 0 auto;
     margin-top: 140px;
     padding: 20px;
@@ -44,17 +44,111 @@
 .faq  li > div{
     display: none;
 }
-.question2{
-    width: 80vw;
+.board-wrap{
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
-.question2 h2{
+.board-wrap h2{
     font-size: 30px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.question2 .question2-content .question2-title{
+.bt_wrap{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0; /*div사이의 여백 사라짐*/
+}
+.bt_wrap a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #887160;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.bt_wrap a:first-child{
+    margin-left: 0;
+}
+.bt_wrap a.on{
+    background: #887160;
+    color: #fff;
+}
+.board_list{
+    width: 100%;
+    border-top: 2px solid #887160;
+}
+.board_list > div{
+    border-bottom: #ddd;
+    font-size: 0;
+}
+.board_list > div.top{
+    border-bottom: 1px solid #baa693;
+}
+.board_list > div:last-child{
+    border-bottom: 1px solid #887160;
+}
+.board_list > div > div{
+    display: inline-block;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.board_list > div.top > div{
+    font-weight: 600;
+}
+.board_list .num{
+    width: 10%;
+}
+.board_list .title{
+    width: 60%;
+    text-align: left;
+}
+.board_list .top .title{
+    text-align: center;
+}
+.board_list .writer{
+    width: 10%;
+}
+.board_list .date{
+    width: 10%;
+}
+.board_list .count{
+    width: 10%;
+}
+.board_page{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+.board_page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    border-left: 0;
+    vertical-align: middle;
+    line-height: 100%;
+}
+.board_page a.bt{
+    padding-top: 10px;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+.board_page a.num{
+    padding-top: 9px;
+    font-size: 14px;
+}
+.board_page a.num.on{
+    border-color: #887160;
+    background: #887160;
+    color: #fff;
+}
+.board_page a:first-child{
+    border-left: 1px solid #ddd;
+}
+/* .question2 .question2-content .question2-title{
     display: flex;
 }
 .question2 .question2-content .question2-title li{
@@ -125,7 +219,7 @@
 }
 .question2 .notice-write:hover{
     background-color: #aa9786;
-}
+} */
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
