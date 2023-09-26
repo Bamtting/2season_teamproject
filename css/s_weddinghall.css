@@ -165,9 +165,10 @@
   width: 100%;
   max-width: 450px;
   height: 530px;
-  padding: 10px 50px;
+  padding: 10px;
   font-family: "notoSans";
-  margin: 10px auto;
+  margin: 10px;
+  border: 1px solid #887160;
 }
 .mix img {
   width: 100%;
