@@ -29,13 +29,13 @@
   cursor: pointer;
 }
 .hall-list button.active {
-  background-color: #b99664;
+  background-color: #baa693;
   color: #fff;
   font-weight: bold;
 }
 
 .s_weddinghall .text-area {
-  margin-top: 160px;
+  margin-top: 140px;
 }
 .text-area {
   position: relative;
@@ -72,7 +72,7 @@
   height: 40px;
   padding: 5px 25px;
   background-color: #fff;
-  border: 1px solid #b99664;
+  border: 1px solid #baa693;
   margin-right: 10px;
   font-size: 14px;
   font-weight: 500;
@@ -86,7 +86,7 @@
   line-height: 60px;
   margin: 5px;
   background-color: #fff;
-  border: 1px solid #b99664;
+  border: 1px solid #baa693;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
