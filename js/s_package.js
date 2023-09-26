@@ -660,14 +660,6 @@ $(document).ready(function () {
       id: "mainall studio weddinghall all snap-video pk200 0 simple",
     },
     {
-      imageSrc: "images/pk-search-all21.jpg fancy",
-      productName:
-        "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+오렌지TV(VDSLR 로맨틱)",
-      price: "1,405,000원",
-      dcPrice: "1,255,000원",
-      id: "mainall studio weddinghall all snap-video pk200 0",
-    },
-    {
       imageSrc: "images/pk-search-all22.jpg",
       productName:
         "[본식스냅+영상앨범] 비아쥬스냅(원판+스냅 40P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
