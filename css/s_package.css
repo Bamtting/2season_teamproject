@@ -194,7 +194,7 @@
   cursor: pointer;
 }
 .spk-list button.active {
-  background-color: #b99664;
+  background-color: #baa693;
   color: #fff;
   font-weight: bold;
 }
@@ -237,7 +237,7 @@
   height: 40px;
   padding: 5px 25px;
   background-color: #fff;
-  border: 1px solid #b99664;
+  border: 1px solid #baa693;
   margin-right: 10px;
   font-size: 14px;
   font-weight: 500;
@@ -251,7 +251,7 @@
   line-height: 60px;
   margin: 5px;
   background-color: #fff;
-  border: 1px solid #b99664;
+  border: 1px solid #baa693;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -344,7 +344,7 @@
   height: 530px;
   padding: 10px;
   font-family: "notoSans";
-  margin: 10px auto;
+  margin: 0 10px;
   border: 1px solid #887160;
 }
 .mix2 img {

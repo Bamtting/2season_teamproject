@@ -51,16 +51,14 @@ html.active {
   margin: 10px 10px;
 }
 .header-2 ul li:first-child {
-  background-image: url("../images/decoLine.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  /* background-color: red; */
   margin: 0;
   padding: 20px 10px 0;
 }
 .header-2 ul li a {
   font-family: "Noto Serif KR", "serif";
+}
+.header-1 ul li:nth-child(1)::after {
+  background: transparent !important;
 }
 .hamburger {
   position: absolute;
