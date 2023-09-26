@@ -29,7 +29,7 @@
   height: 100%;
 }
 #visual_back1 {
-  background: url("../images/real_back_02.jpg") no-repeat;
+  background: url("../images/real_back_15.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
 }
@@ -44,14 +44,16 @@
   background-position: top center;
 }
 #visual_back4 {
-  background: url("../images/real_back_06.jpg") no-repeat center;
+  background: url("../images/real_back_06.jpg") no-repeat;
   background-size: cover;
   background-position: bottom center;
 }
 .heading {
   overflow: hidden;
   height: 100px;
-  width: 80%;
+
+  width: 90%;
+
   z-index: 2;
   position: absolute;
   top: 50%;

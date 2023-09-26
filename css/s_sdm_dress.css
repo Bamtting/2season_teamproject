@@ -1,1 +1,62 @@
 /* 스드메 드레스 */
+.s_sdm_dress .inner {
+  max-width: 1920px;
+}
+.s_sdm_dress_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  width: 100%;
+  height: 100%;
+}
+.s_sdm_dress img {
+  width: 100%;
+  height: 100%;
+}
+.s_sdm_dress_back02 {
+  display: none;
+}
+.s_sdm_dress_back03 {
+  display: none;
+}
+@media all and (max-width: 1024px) {
+  .s_sdm_dress .inner {
+    max-width: 1024px;
+  }
+  .s_sdm_dress_back {
+    padding-top: 18%;
+  }
+  .s_sdm_dress_back {
+    display: none;
+  }
+  .s_sdm_dress_back02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .s_sdm_dress_back {
+    padding-top: 25%;
+  }
+}
+@media all and (max-width: 480px) {
+  .s_sdm_dress_back03 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20%;
+    width: 100%;
+    height: 100%;
+  }
+  .s_sdm_dress_back02 {
+    display: none;
+  }
+  .s_sdm_dress .inner {
+    max-width: 480px;
+  }
+}
