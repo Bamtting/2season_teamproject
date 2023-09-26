@@ -51,11 +51,6 @@ html.active {
   margin: 10px 10px;
 }
 .header-2 ul li:first-child {
-  background-image: url("../images/decoLine.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  /* background-color: red; */
   margin: 0;
   padding: 20px 10px 0;
 }
