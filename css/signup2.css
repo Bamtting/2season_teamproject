@@ -102,27 +102,6 @@
 .gender-box .gender-check-box label{
   cursor: pointer;
 }
-/* .gender-box .genderlist{
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.gender-box .genderlist .genderlistitem{
-  width: 33%;
-  text-align: center;
-  margin-top: -15px;
-}
-.gender-box .genderlist .genderlistitem input{
-  width: 0;
-}
-.gender-box .genderlist .genderlistitem label{
-  display: block;
-  cursor: pointer;
-  width: 100%;
-  padding: 18px 0;
-} */
 .formlist .phoneNum-box{
   display: flex;
   align-items: center;
@@ -134,7 +113,8 @@
   text-align: center;
 }
 .formlist .verification-code-box{
-  display: flex;
+  /* display: flex; */
+  display: none;
   /* justify-content: center; */
   padding-left: 30px;
   align-items: center;
@@ -167,11 +147,32 @@
   font-family: arial !important;
   /* display: none; */
 }
-#submit.active{
+/* #submit.active{
   background-color: #baa693;
   cursor: pointer;
 }
 #submit.active:hover{
+  background-color: #aa9786;
+  color: #ffffff;
+} */
+#realSubmit{
+  position: absolute;
+  bottom: 0;
+  width: 35vw;
+  height: 52px;
+  line-height: 52px;
+  border: none;
+  margin-bottom: 50px;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: #baa693;
+  color: #ffffff;
+  font-family: arial !important;
+  display: none;
+  cursor: pointer;
+  z-index: 999999;
+}
+#realSubmit:hover{
   background-color: #aa9786;
   color: #ffffff;
 }

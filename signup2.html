@@ -180,9 +180,9 @@
               </div>
               <div class="phoneNum-box" id="phoneNum">
                 <i class="fa-solid fa-mobile" style="color: #887160;"></i>
-                <input type="text" placeholder="휴대전화번호" id="phoneNumInput" onblur="validatePhoneNum()">
+                <input type="text" placeholder="휴대전화번호" id="phoneNumInput" onblur="">
               </div>
-              <div class="verification-code-box" id="">
+              <div class="verification-code-box" id="verificationCodeBox">
                 <input type="text" placeholder="인증번호" id="veriInput" onblur="validateVeri()">
                 <div class="timer">
                   <div id="timeLimit">03:00</div>
@@ -194,6 +194,7 @@
           </form>
 
           <button class="submit" id="submit" disabled>인증요청</button>
+          <button class="real-submit" id="realSubmit" disabled>인증요청</button>
           <button class="last-submit" id="lastSubmit" disabled>가입하기</button>
         </div>
       </div>
