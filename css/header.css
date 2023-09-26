@@ -57,6 +57,9 @@ html.active {
 .header-2 ul li a {
   font-family: "Noto Serif KR", "serif";
 }
+.header-1 ul li:nth-child(1)::after {
+  background: transparent !important;
+}
 .hamburger {
   position: absolute;
   display: none;

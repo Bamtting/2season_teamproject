@@ -7,16 +7,19 @@
   transition: all 0.5s;
 }
 #studio_box:hover {
-  background: url("../images/studio_hover2.png") no-repeat center;
+  background: url("../images/studio_hover2.png") no-repeat;
+  background-position: center center;
   background-size: cover;
   transition: all 0.5s;
 }
 #drees_box {
-  background: url("../images/dreehover.png");
+  background: url("../images/dreehover.png") no-repeat;
+  background-size: cover;
   transition: all 0.5s;
 }
 #drees_box:hover {
-  background: url("../images/dress_hover.png");
+  background: url("../images/dress_hover.png") no-repeat;
+  background-size: cover;
   transition: all 0.5s;
 }
 #makeup_box {
@@ -60,6 +63,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 5%;
+  padding: 5%;
   width: 100%;
 }
 .sdm_box {
@@ -341,6 +345,30 @@
     display: none;
   }
 }
+@media all and (max-width: 1320px) {
+  .sdm_box {
+    width: 360px;
+  }
+  .sdm_imgbox {
+    width: 360px;
+  }
+}
+@media all and (max-width: 1160px) {
+  .sdm_box {
+    width: 340px;
+  }
+  .sdm_imgbox {
+    width: 340px;
+  }
+}
+@media all and (max-width: 1130px) {
+  .sdm_box {
+    width: 300px;
+  }
+  .sdm_imgbox {
+    width: 300px;
+  }
+}
 @media all and (max-width: 1215px) {
   .sdm_box {
     width: 352px;
@@ -369,37 +397,32 @@
     position: relative;
   }
 }
-@media all and (max-width: 1010px) {
-  .sdm_box {
-    width: 318px;
-    height: 652px;
+@media all and (max-width: 1024px) {
+  .sdm_wrap {
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+  .sdm_box:nth-child(2),
+  .sdm_box:nth-child(3) {
+    padding-top: 5%;
   }
   .sdm_imgbox {
-    width: 318px;
-    height: 287px;
-    position: relative;
+    width: 500px;
+    height: 347px;
+  }
+  .sdm_box {
+    width: 500px;
+    height: 712px;
   }
 }
+@media all and (max-width: 1010px) {
+}
 @media all and (max-width: 945px) {
-  .sdm_box {
-    width: 308px;
-    height: 682px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .sdm_imgbox {
-    width: 308px;
-    height: 287px;
-    position: relative;
-  }
 }
 @media all and (max-width: 930px) {
   .sdm_box_reactive {
-    display: block;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -425,10 +448,26 @@
 }
 @media all and (max-width: 480px) {
   .sdm_title h2 {
-    font-size: 58px;
+    font-size: 38px;
   }
   .sdm_title h2 b {
-    font-size: 40px;
+    font-size: 30px;
+  }
+  .sdm_title {
+    padding-top: 40%;
+    padding-bottom: 20%;
+  }
+  .sdm_reactiove_1 {
+    padding: 5%;
+  }
+  .sdm_reactiove_1 .sdm_imgbox {
+    width: 330px;
+  }
+  .sdm_reactiove_2 .sdm_imgbox {
+    width: 330px;
+  }
+  .sdm_reactiove_3 .sdm_imgbox {
+    width: 330px;
   }
 }
 @media all and (max-width: 360px) {

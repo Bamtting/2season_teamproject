@@ -10,11 +10,11 @@ $(document).ready(function () {
       prevEl: ".pk-prev-btn",
       nextEl: ".pk-next-btn",
     },
-    // autoplay: {
-    //   delay: 4000,
+    autoplay: {
+      delay: 4000,
 
-    //   disableOnInteraction: true,
-    // },
+      disableOnInteraction: true,
+    },
     speed: 1500,
     breakpoints: {
       //반응형
@@ -505,7 +505,9 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 80P 2인촬영,대표)+인재스튜디오_영상(FHD 1인1캠)",
       price: "2,750,000원",
       dcPrice: "2,650,000원",
-      id: "all studio sdm pk300 0 dressUp fancy",
+
+      id: "all sdm pk300 0 dressUp fancy",
+
     },
     {
       imageSrc: "images/pk-search-all2.jpg",
@@ -513,7 +515,9 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 스바무(원판+스냅 70p 1인촬영)+인재스튜디오_영상(FHD)",
       price: "2,750,000원",
       dcPrice: "2,650,000원",
-      id: "mainall studio all snap-video pk300 0 dressUp ",
+
+      id: "mainall snap-video pk300 0 dressUp ",
+
     },
     {
       imageSrc: "images/pk-search-all3.jpg",
@@ -658,14 +662,6 @@ $(document).ready(function () {
       price: "1,550,000원",
       dcPrice: "1,270,000원",
       id: "mainall studio weddinghall all snap-video pk200 0 simple",
-    },
-    {
-      imageSrc: "images/pk-search-all21.jpg fancy",
-      productName:
-        "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+오렌지TV(VDSLR 로맨틱)",
-      price: "1,405,000원",
-      dcPrice: "1,255,000원",
-      id: "mainall studio weddinghall all snap-video pk200 0",
     },
     {
       imageSrc: "images/pk-search-all22.jpg",
