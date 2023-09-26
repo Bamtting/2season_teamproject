@@ -154,8 +154,16 @@
   cursor: pointer;
 }
 /* search box */
+<<<<<<< HEAD
 .pk-search .inner {
   padding: 0 10px;
+=======
+.pk-search {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+>>>>>>> 054c7cebb457753c2c7d9114adf338b67dc8ce52
 }
 .pk-search-text-wrap {
   text-align: center;
@@ -617,6 +625,7 @@
     width: 95%;
     margin: 0 auto;
   }
+<<<<<<< HEAD
 }
 /* search */
 @media all and (max-width: 865px) {
@@ -711,4 +720,6 @@
   .w-box-right {
     margin-bottom: 30px;
   }
+=======
+>>>>>>> 054c7cebb457753c2c7d9114adf338b67dc8ce52
 }
