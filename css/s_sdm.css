@@ -671,13 +671,16 @@
 /* makeup */
 .makeup_wrap_wrap {
   margin: auto;
-  height: 910px;
+  width: 100%;
+  /* height: 910px; */
   position: relative;
   max-width: 1920px;
   background: url("../images/makeupback_gra.png") no-repeat;
   background-position: center;
   background-size: cover;
   top: 21%;
+  display: flex;
+  align-items: center;
 }
 .makeup_wrap {
   position: relative;
@@ -687,12 +690,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 15%;
-  height: 700px;
+  margin-top: 10%;
+  /* height: 800px; */
 }
 .makeup_wrap_title {
   width: 100%;
   user-select: none;
+  position: relative;
+  padding-bottom: 8%;
 }
 .makeup_wrap_title h3 {
   font-size: 78px;
@@ -703,12 +708,12 @@
 }
 .makeup_wrap_box {
   width: 100%;
-  height: 500px;
-  position: absolute;
+  /* height: 500px; */
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 25%;
+  top: 15%;
 }
 .makeup_box01 {
   /* background-color: #cecece; */
@@ -716,6 +721,7 @@
   height: 500px;
   margin: 30px;
   text-align: center;
+  position: relative;
 }
 .makeup_box01_img {
   width: 100%;
@@ -785,7 +791,8 @@
 }
 .makeupbox_button {
   position: relative;
-  top: 80%;
+  top: 8%;
+  padding-bottom: 10%;
 }
 .makeupbox_button button {
   width: 160px;
@@ -1101,6 +1108,7 @@
     width: 70%;
   }
 }
+
 @media all and (max-width: 888px) {
   .makeup_box01 h4 {
     font-size: 14px;
@@ -1204,14 +1212,10 @@
     justify-content: center;
     align-items: center;
   }
-  .makeup_wrap_wrap {
-    height: 1500px;
-  }
-  .makeup_wrap {
-    margin-top: -25%;
-  }
+
   .makeupbox_button {
-    margin-top: 50%;
+    /* margin-top: 90%; */
+    position: relative;
   }
   .makeup_box01 h4 {
     font-size: 14px;
@@ -1230,14 +1234,14 @@
     height: 300px;
   }
   .makeup_wrap_box {
-    margin-top: 30%;
+    /* margin-top: 30%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .makeup_wrap {
-    height: 1020px;
+    /* height: 1020px; */
   }
   .stu_body p:nth-child(2) {
     display: none;
@@ -1266,10 +1270,14 @@
     font-size: 14px;
   }
 }
+@media all and (max-width: 680px) {
+}
 @media all and (max-width: 650px) {
   .sdmmain_07 {
     left: 56%;
   }
+}
+@media all and (max-width: 570px) {
 }
 @media all and (max-width: 524px) {
   #stu_header_wonkyu {
@@ -1360,13 +1368,15 @@
   }
   .makeup_wrap_title {
     width: 90%;
+    padding-top: 5%;
+  }
+  .makeup_wrap_title h3 {
+    font-size: 62px;
   }
   .makeup_wrap_wrap {
     width: 100%;
   }
-  .makeupbox_button {
-    top: 85%;
-  }
+
   .s_sdm {
     max-width: 480px;
   }
