@@ -9,20 +9,20 @@
   margin-top: 50px;
 }
 .gallery {
-  width: 100%;
-  height: 700px;
+  width: 100vw;
+  height: 35vw;
   padding: 50px 20px;
 }
 .gallery .slide {
-  width: 30%;
-  margin-right: 3%;
+  width: 30vw;
+  margin-right: 3vw;
   transform: translateX(30px);
   transition: transform 0.9s ease-in-out;
 }
 .gallery .slide img {
   display: block;
   max-width: 500px;
-  height: auto;
+  height: 25vw;
 }
 .gallery .slide.is-previous {
   transform: translateX(0);
