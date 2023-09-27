@@ -16,8 +16,8 @@
   flex-direction: column;
   /* justify-content: space-around; */
   align-items: center;
-  width: 40vw;
-  min-width: 400px;
+  width: 550px;
+  /* min-width: 400px; */
   height: 40vw;
   min-height: 750px;
   padding: 30px 20px;
@@ -32,6 +32,7 @@
 }
 #login-form{
   margin-top: 2vw;
+  width: 90%;
 }
 .snslogintext{
     display: flex;

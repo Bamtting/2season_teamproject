@@ -50,6 +50,9 @@ html.active {
 .s-menu ul li {
   margin: 10px 10px;
 }
+.s-menu .after-login{
+  display: none;
+}
 .header-2 ul li:first-child {
   margin: 0;
   padding: 20px 10px 0;

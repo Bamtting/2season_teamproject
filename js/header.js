@@ -72,6 +72,34 @@ window.addEventListener("load", function () {
     mainheader.addEventListener("mouseover", function(){
       header.classList.remove("active"); // header에서 클래스 제거
     });
+
+    // 페이지가 로드될 때 초기 대시보드 화면을 표시
+    window.onload = function(){
+      showInitialDashboard();
+  }
+
+  document.getElementById("logout-button").addEventListener("click", function(){
+      // 로그아웃 로직을 처리하고 다시 초기화면으로 표시합니다.
+      document.querySelector('.before-login').style.display = "block";
+      document.querySelector('.after-login').style.display = "none";
+  });
+
+  // 대시보드 화면 표시 함수
+  function showInitialDashboard(){
+      // 현재페이지의 YRL에서 쿼리 문자열을 가져와 URLSearchParams()객체를 생성합니다.
+      var params = new URLSearchParams(window.location.search);
+      var username = params.get("username");
+      if(username){
+          document.querySelector('.before-login').style.display = "none";
+          document.querySelector('.after-login').style.display = "block";
+          // logout button
+          document.getElementById("logout-button").style.display = "block";
+      }else{
+          document.querySelector('.before-login').style.display = "block";
+          document.querySelector('.after-login').style.display = "none";
+          document.getElementById("logout-button").style.display = "none";
+      }
+  }
   });
 
 $(document).ready(function(){

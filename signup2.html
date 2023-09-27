@@ -144,11 +144,11 @@
             <div class="formlist formlist-1">
               <div class="id-box formlist-box" id="id">
                 <i class="fa-solid fa-user" style="color: #887160;"></i>
-                <input type="text" placeholder="아이디" id="idInput" onblur="validateID()">
+                <input type="text" placeholder="아이디" id="idInput">
               </div>
               <div class="password-box formlist-box" id="password">
                 <i class="fa-solid fa-lock" style="color: #887160;"></i>
-                <input type="password" placeholder="비밀번호" id="passwordInput" onblur="validatePassword()">
+                <input type="password" placeholder="비밀번호" id="passwordInput">
               </div>
               <!-- <div class="email-box" id="email">
                 <i class="fa-solid fa-envelope" style="color: #887160;"></i>
@@ -158,11 +158,11 @@
             <div class="formlist">
               <div class="name-box" id="name">
                 <i class="fa-solid fa-user" style="color: #887160;"></i>
-                <input type="text" placeholder="이름" id="nameInput" onblur="validateName()">
+                <input type="text" placeholder="이름" id="nameInput">
               </div>
               <div class="birthday-box" id="birthday">
                 <i class="fa-solid fa-calendar" style="color: #887160;"></i>
-                <input type="text" placeholder="생년월일 8자리" id="birthInput" onblur="validateBirth()">
+                <input type="text" placeholder="생년월일 8자리(YYYYMMDD)" id="birthInput">
               </div>
               <div class="gender-box" id="gender">
                 <div class="gender-check-box">
@@ -180,22 +180,23 @@
               </div>
               <div class="phoneNum-box" id="phoneNum">
                 <i class="fa-solid fa-mobile" style="color: #887160;"></i>
-                <input type="text" placeholder="휴대전화번호" id="phoneNumInput" onblur="">
+                <input type="text" maxlength="13" placeholder="휴대전화번호" id="phoneNumInput">
               </div>
               <div class="verification-code-box" id="verificationCodeBox">
-                <input type="text" placeholder="인증번호" id="veriInput" onblur="validateVeri()">
+                <input type="text" placeholder="인증번호" id="veriInput">
                 <div class="timer">
                   <div id="timeLimit">03:00</div>
               </div>
-              <button disabled id="completion" onclick="checkCompletion()">인증확인</button>
+              <button disabled id="completion">인증확인</button>
               </div>
             </div>
-            <div class="formlist"></div>
+            <div class="signup-info"></div>
+            <button class="submit" id="submit">인증요청</button>
+          <button class="real-submit" id="realSubmit">인증요청</button>
+          <button class="last-submit" id="lastSubmit" type="submit">가입하기</button>
           </form>
-
-          <button class="submit" id="submit" disabled>인증요청</button>
-          <button class="real-submit" id="realSubmit" disabled>인증요청</button>
-          <button class="last-submit" id="lastSubmit" disabled>가입하기</button>
+          
+          
         </div>
       </div>
     </div>
