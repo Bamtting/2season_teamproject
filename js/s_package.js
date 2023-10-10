@@ -7,8 +7,8 @@ $(document).ready(function () {
     loop: true,
     navigation: {
       // 버튼 사용자 지정
-      prevEl: ".pk-prev-btn",
-      nextEl: ".pk-next-btn",
+      prevEl: ".spk-prev-btn",
+      nextEl: ".spk-next-btn",
     },
     autoplay: {
       delay: 4000,

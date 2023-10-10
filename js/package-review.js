@@ -140,11 +140,11 @@ $(document).ready(function () {
     spaceBetween: 10, // 슬라이드 사이 여백
     loop: true, // 슬라이드 반복 여부
     pagination: false, // pager 여부
-    // autoplay: {
-    //   // 자동 슬라이드 설정
-    //   // delay: 3000, // 시간 설정
-    //   disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-    // },
+    autoplay: {
+      // 자동 슬라이드 설정
+      delay: 4000, // 시간 설정
+      disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+    },
     navigation: {
       // 버튼 사용자 지정
       nextEl: ".swiper-button-next",
@@ -156,6 +156,10 @@ $(document).ready(function () {
       320: {
         slidesPerView: 1,
         spaceBetween: 100,
+      },
+      400: {
+        slidesPerView: 1,
+        spaceBetween: 0,
       },
       // 화면의 넓이가 640px 이상일 때
       640: {

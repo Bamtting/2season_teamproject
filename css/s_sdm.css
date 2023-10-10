@@ -23,7 +23,7 @@
   background-position: center;
 }
 .sdmmain_01 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 10%;
   top: 15%;
@@ -45,7 +45,7 @@
   }
 }
 .sdmmain_02 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   top: 19%;
   left: 40%;
@@ -66,7 +66,7 @@
   }
 }
 .sdmmain_03 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 63%;
   top: 15%;
@@ -87,7 +87,7 @@
   }
 }
 .sdmmain_04 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 10%;
   top: 75%;
@@ -109,7 +109,7 @@
   }
 }
 .sdmmain_05 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   top: 48%;
   left: 40%;
@@ -130,7 +130,7 @@
   }
 }
 .sdmmain_06 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 70%;
   bottom: 10%;
@@ -138,7 +138,7 @@
   animation: box-ani6 2s linear infinite forwards; /* 애니메이션 적용 */
 }
 .sdmmain_07 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 78%;
   bottom: 10%;
@@ -1412,4 +1412,5 @@
   #stu_h_2 {
     font-size: 36px;
   }
+
 }
