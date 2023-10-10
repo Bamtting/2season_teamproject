@@ -546,6 +546,133 @@
     font-size: 16px;
   }
 }
+@media all and (max-width: 400px) {
+  .package {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .package-wrap {
+    width: 100%;
+    height: auto;
+  }
+  .package-more-btn {
+    top: 1435px;
+  }
+  .package-text-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .package-title {
+    width: 200%;
+    font-size: 45px;
+  }
+  .package-text-wrap p {
+    width: 200%;
+    font-size: 16px;
+  }
+  .package-text-wrap p span {
+    font-size: 16px;
+  }
+  .pk-modal {
+    width: 380px;
+    height: 600px;
+  }
+  .pk-modal-wraper2 {
+    width: 350px;
+    height: 570px;
+  }
+  #pkModalTitle {
+    font-size: 22px;
+  }
+  .pk-modal-map img {
+    width: 150px;
+    height: 70px;
+  }
+  .hall-notice-modal {
+    padding: 0 20px;
+    margin: 0 0 10px;
+  }
+  .hall-notice-modal2 {
+    padding: 0 20px;
+  }
+  .pk-modal-list2 > .hall-notice-modal > .mo-notice-text-wrap > h2 {
+    font-size: 16px;
+  }
+  .pk-modal-list2 > .hall-notice-modal > .mo-notice-text-wrap > p {
+    font-size: 12px;
+  }
+  .pk-modal-list2 > .hall-notice-modal2 > .mo-notice-text-wrap > h2 {
+    font-size: 16px;
+  }
+  .pk-modal-list2 > .hall-notice-modal2 > .mo-notice-text-wrap > p {
+    font-size: 12px;
+  }
+  .make-title-wrap h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+  }
+  .make-img-list {
+    display: none;
+  }
+  .make-map-text h2 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .pk-modal-text h3 {
+    font-size: 20px;
+  }
+  .studio-img-list {
+    display: none;
+  }
+  .pk-studio-modal-list2 {
+    width: 137px;
+  }
+}
+@media all and (max-width: 360px) {
+  .package {
+    padding: 100px 0;
+  }
+  .package-text-wrap {
+    text-align: center;
+  }
+  .package-text-wrap h2 {
+    font-size: 30px;
+  }
+  .package-text-wrap p {
+    margin-top: 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .package-title {
+    width: 100%;
+  }
+  .package-text-wrap p span {
+    font-size: 14px;
+  }
+  .packimgwrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .packimgwrap li:first-child,
+  .packimgwrap li:nth-child(2),
+  .packimgwrap li:nth-child(3) {
+    width: 150px;
+    height: 220px;
+  }
+  .package-more-btn {
+    top: 1105px;
+    font-size: 14px;
+  }
+}
+
 @media all and (max-width: 320px) {
   .package {
     padding: 100px 0;
