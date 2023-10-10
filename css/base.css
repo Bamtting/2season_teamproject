@@ -34,7 +34,7 @@ body {
   letter-spacing: 0px;
   color: #191919;
   word-break: keep-all;
-
+  overflow-x: hidden;
   min-width: 320px;
 }
 ::-webkit-scrollbar {
@@ -87,6 +87,7 @@ input:-webkit-autofill {
 .top-button:hover {
   background-color: #887160;
 }
+
 @media all and (max-width: 1024px) {
   .top-button {
     right: 30px;
@@ -105,3 +106,4 @@ input:-webkit-autofill {
     bottom: 20px;
   }
 }
+
