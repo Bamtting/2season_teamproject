@@ -519,6 +519,9 @@
   .spk-list2 button {
     font-size: 14px;
   }
+  .mix2 {
+    height: 550px;
+  }
 }
 @media all and (max-width: 320px) {
   .spk-list2 button {
