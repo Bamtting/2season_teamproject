@@ -51,7 +51,9 @@
 .heading {
   overflow: hidden;
   height: 100px;
+
   width: 90%;
+
   z-index: 2;
   position: absolute;
   top: 50%;

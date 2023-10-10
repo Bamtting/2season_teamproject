@@ -23,11 +23,6 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: 0,
       },
-      // 화면의 넓이가 640px 이상일 때
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
     },
   });
 
@@ -38,7 +33,7 @@ $(document).ready(function () {
   var pkpriceFilter = "*"; //금액대에 대한 필터값
   var pkPakageMenuFilter = "*"; //상품구성에 대한 필터값
   var pkbenefitFilter = "*"; //혜택에 대한 필터값
-  var pksbmstyleFilter = "*"; //스타일에 대한 필터값
+  var pksdmstyleFilter = "*"; //스타일에 대한 필터값
   var pkbargainsaleFilter = "*"; //특가에 대한 필터값
   // 상세목록2
   var pkstpricemenuFilter = "*"; //상품 종류에 대한 필터값
@@ -63,8 +58,8 @@ $(document).ready(function () {
   var pkbargainsale = "*"; //메이크업 강점에 대한 필터값
 
   //메인 종류 클릭시 필터링
-  $(".main-list button").click(function () {
-    $(".main-list button").removeClass("active");
+  $(".spk-list button, .spk-list2 button").click(function () {
+    $(".spk-list button, .spk-list2 button").removeClass("active");
     $(this).addClass("active");
     var pkbtnSelector = $(this).attr("data-filter");
 
@@ -361,7 +356,7 @@ $(document).ready(function () {
       pkpriceFilter + //금액대에 대한 필터값
       pkPakageMenuFilter + //상품구성에 대한 필터값
       pkbenefitFilter + //혜택에 대한 필터값
-      pksbmstyleFilter + //스타일에 대한 필터값
+      pksdmstyleFilter + //스타일에 대한 필터값
       pkbargainsaleFilter + //특가에 대한 필터값
       // 상세목록2
       pkstpricemenuFilter + //상품 종류에 대한 필터값
@@ -510,7 +505,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 80P 2인촬영,대표)+인재스튜디오_영상(FHD 1인1캠)",
       price: "2,750,000원",
       dcPrice: "2,650,000원",
-      id: "all sdm",
+      id: "all sdm pk300 0 dressUp fancy",
     },
     {
       imageSrc: "images/pk-search-all2.jpg",
@@ -518,7 +513,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 스바무(원판+스냅 70p 1인촬영)+인재스튜디오_영상(FHD)",
       price: "2,750,000원",
       dcPrice: "2,650,000원",
-      id: "mainall all snap-video",
+      id: "mainall snap-video pk300 0 dressUp ",
     },
     {
       imageSrc: "images/pk-search-all3.jpg",
@@ -526,7 +521,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 비아쥬스냅(원판+스냅 40p 1인촬영)+인재스튜디오_영상(FHD)",
       price: "2,050,000원",
       dcPrice: "1,550,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0",
     },
     {
       imageSrc: "images/pk-search-all4.jpg",
@@ -534,7 +529,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 뮤즈프레임(원판+스냅 50p 1인촬영)+인재스튜디오_영상(FHD)",
       price: "1,950,000원",
       dcPrice: "1,600,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressupfree ",
     },
     {
       imageSrc: "images/pk-search-all5.jpg",
@@ -542,7 +537,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 모마스냅(원판+스냅 50p 1인촬영)+인재스튜디오_영상(FHD)",
       price: "2,050,000원",
       dcPrice: "1,600,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressUp ",
     },
     {
       imageSrc: "images/pk-search-all6.jpg",
@@ -550,7 +545,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 퍼스트모션(원판+스냅 40p 1인촬영)+인재스튜디오_영상(FHD)",
       price: "1,650,000원",
       dcPrice: "1,550,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressupfree simple ",
     },
     {
       imageSrc: "images/pk-search-all7.jpg",
@@ -558,7 +553,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 50P 1인촬영)+유니크스(FHD영상앨범 Y-3 )",
       price: "2,200,000원",
       dcPrice: "1,900,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressUp simple ",
     },
     {
       imageSrc: "images/pk-search-all8.jpg",
@@ -566,7 +561,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 50P 1인촬영)+홍필름(VDSLR H-1 일반형)",
       price: "1,870,000원",
       dcPrice: "1,550,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressUp simple ",
     },
     {
       imageSrc: "images/pk-search-all9.jpg",
@@ -574,7 +569,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 50P 1인촬영)+웨딩미(4K UHD)",
       price: "1,900,000원",
       dcPrice: "1,750,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressupfree lively",
     },
     {
       imageSrc: "images/pk-search-all10.jpg",
@@ -582,7 +577,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 50P 1인촬영)+오렌지TV(VDSLR 러블리)",
       price: "1,725,000원",
       dcPrice: "1,525,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0 dressUp lively",
     },
     {
       imageSrc: "images/pk-search-all11.jpg",
@@ -590,7 +585,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 인재스튜디오_스냅(원판+스냅 50P 1인촬영)+인재스튜디오_영상(FHD 1인1캠)",
       price: "2,050,000원",
       dcPrice: "1,950,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video pk200 0",
     },
     {
       imageSrc: "images/pk-search-all12.jpg",
@@ -598,7 +593,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 스바무(원판+스냅 70p)+사계절스튜디오_영상(FHD)",
       price: "1,700,000원",
       dcPrice: "1,500,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all snap-video dm pk200 0 dressUp simple",
     },
     {
       imageSrc: "images/pk-search-all13.jpg",
@@ -606,7 +601,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 비아쥬스냅(원판+스냅 40p)+사계절스튜디오_영상(FHD)",
       price: "1,600,000원",
       dcPrice: "1,050,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio all weddinghall snap-video dm pk200 0",
     },
     {
       imageSrc: "images/pk-search-all14.jpg",
@@ -614,7 +609,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 비아쥬스냅(원판+스냅 40p)+사계절스튜디오_영상(FHD)",
       price: "1,600,000원",
       dcPrice: "1,050,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video dm pk200 0 dressUp simple",
     },
     {
       imageSrc: "images/pk-search-all15.jpg",
@@ -622,7 +617,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 뮤즈프레임(원판+스냅 50p)+사계절스튜디오_영상(FHD)",
       price: "1,500,000원",
       dcPrice: "1,150,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 lively",
     },
     {
       imageSrc: "images/pk-search-all16.jpg",
@@ -630,7 +625,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 퍼스트모션(원판+스냅 40p)+사계절스튜디오_영상(FHD)",
       price: "1,200,000원",
       dcPrice: "1,100,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 dressUp simple",
     },
     {
       imageSrc: "images/pk-search-all17.jpg",
@@ -638,7 +633,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 사계절스튜디오(원판+스냅 40p)+사계절스튜디오_영상(FHD)",
       price: "1,270,000원",
       dcPrice: "1,050,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 simple",
     },
     {
       imageSrc: "images/pk-search-all18.jpg",
@@ -646,7 +641,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+유니크스(FHD영상앨범 Y-3 )",
       price: "1,880,000원",
       dcPrice: "1,620,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 fancy",
     },
     {
       imageSrc: "images/pk-search-all19.jpg",
@@ -654,7 +649,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+웨딩미(4K UHD)",
       price: "1,580,000원",
       dcPrice: "1,470,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 simple",
     },
     {
       imageSrc: "images/pk-search-all20.jpg",
@@ -662,15 +657,15 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+홍필름(VDSLR H-1 일반형)",
       price: "1,550,000원",
       dcPrice: "1,270,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 simple",
     },
     {
-      imageSrc: "images/pk-search-all21.jpg",
+      imageSrc: "images/pk-search-all21.jpg fancy",
       productName:
         "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+오렌지TV(VDSLR 로맨틱)",
       price: "1,405,000원",
       dcPrice: "1,255,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0",
     },
     {
       imageSrc: "images/pk-search-all22.jpg",
@@ -678,7 +673,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 비아쥬스냅(원판+스냅 40P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
       price: "1,980,000원",
       dcPrice: "1,450,000원",
-      id: "mainall all snap-video",
+      id: "mainall studio weddinghall all snap-video pk200 0 lively",
     },
     {
       imageSrc: "images/pk-search-all23.jpg",
@@ -686,7 +681,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 뮤즈프레임(원판+스냅 50P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
       price: "1,880,000원",
       dcPrice: "1,500,000원",
-      id: "mainall all snap-video",
+      id: "mainall all studio makeup snap-video pk200 0 dressUp ",
     },
     {
       imageSrc: "images/pk-search-all24.jpg",
@@ -694,7 +689,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 모마스냅(원판+스냅 50P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
       price: "1,980,000원",
       dcPrice: "1,500,000원",
-      id: "mainall all snap-video",
+      id: "mainall all studio makeup snap-video pk200 0 positionUp fancy",
     },
     {
       imageSrc: "images/pk-search-all25.jpg",
@@ -702,7 +697,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 스바무(원판+스냅 70P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
       price: "2,080,000원",
       dcPrice: "1,850,000원",
-      id: "mainall all snap-video",
+      id: "mainall all studio makeup snap-video pk200 0 positionUp",
     },
     {
       imageSrc: "images/pk-search-all26.jpg",
@@ -710,7 +705,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 퍼스트모션(원판+스냅 40P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
       price: "1,580,000원",
       dcPrice: "1,450,000원",
-      id: "mainall all snap-video",
+      id: "mainall all studio makeup snap-video pk200 0 positionUp",
     },
     {
       imageSrc: "images/pk-search-all27.jpg",
@@ -718,7 +713,7 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 디어웨딩_스냅(원판+스냅 50P 1인촬영)+디어웨딩_영상(FHD 1인1캠)",
       price: "1,660,000원",
       dcPrice: "1,580,000원",
-      id: "mainall all snap-video",
+      id: "mainall all studio makeup snap-video pk200 0 positionUp",
     },
     {
       imageSrc: "images/pk-search-all28.jpg",
@@ -726,56 +721,56 @@ $(document).ready(function () {
         "[본식스냅+영상앨범] 퍼스트모션(원판+스냅 40P)+오렌지TV(VDSLR 로맨틱)",
       price: "1,325,000원",
       dcPrice: "1,125,000원",
-      id: "mainall all snap-video",
+      id: "mainall all studio makeup snap-video pk200 0 positionUp",
     },
     {
       imageSrc: "images/pk-search-all29.jpg",
       productName: "[촬영+본식] 섬스튜디오+레이첼웨딩+프리빗",
       price: "3,620,000원",
       dcPrice: "2,110,000원",
-      id: "mainall all sdm",
+      id: "mainall all studio makeup sdm pk300 0 sceneFree simple",
     },
     {
       imageSrc: "images/pk-search-all30.jpg",
       productName: "[촬영+본식] 글랑디스튜디오+브라이덜수지+겐그레아",
       price: "3,740,000원",
       dcPrice: "1,955,000원",
-      id: "mainall all sdm",
+      id: "mainall all studio dress sdm pk200 0 sceneFree",
     },
     {
       imageSrc: "images/pk-search-all31.jpg",
       productName: "[촬영+본식] 글랑디스튜디오+메이제인+설영",
       price: "4,920,000원",
       dcPrice: "2,380,000원",
-      id: "mainall all sdm",
+      id: "mainall all studio dress sdm pk300 0 sceneFree ",
     },
     {
       imageSrc: "images/pk-search-all32.jpg",
       productName: "⏱타임특가✨ 글랑디스튜디오+아르비체바이라리앨리스+히엘",
       price: "4,025,000원",
       dcPrice: "2,035,000원",
-      id: "mainall all sdm ts",
+      id: "mainall all studio sdm timesale pk300 0",
     },
     {
       imageSrc: "images/pk-search-all33.jpg",
       productName: "⌛한정수량✨ 글랑디스튜디오+펠리스노비아+제이바이로이스타",
       price: "3,880,000원",
       dcPrice: "2,020,000원",
-      id: "mainall all sdm ts sale",
+      id: "mainall all studio sdm ts sale pk300 0",
     },
     {
       imageSrc: "images/pk-search-all34.jpg",
       productName: "[촬영+본식] 지엥마지+하우스오브에이미+요닝",
       price: "5,330,000원",
       dcPrice: "3,730,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio sdm pk400 0 sceneFree",
     },
     {
       imageSrc: "images/pk-search-all35.jpg",
       productName: "[촬영+본식] 지엥마지+클라라웨딩+애브뉴준오",
       price: "6,010,000원",
       dcPrice: "4,050,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio sdm pk400 0 sceneFree",
     },
     {
       imageSrc: "images/pk-search-all36.jpg",
@@ -783,28 +778,28 @@ $(document).ready(function () {
         "[촬영+본식] 아우어스튜디오(세미)+제이바이루시+제이바이로이스타",
       price: "2,410,000원",
       dcPrice: "1,430,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio sdm pk200 0",
     },
     {
       imageSrc: "images/pk-search-all37.jpg",
       productName: "[촬영+본식] 비포원스튜디오+레이나모라+김활란뮤제네프",
       price: "4,490,000원",
       dcPrice: "2,830,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dress sdm pk300 0 sceneFree",
     },
     {
       imageSrc: "images/pk-search-all38.jpg",
       productName: "[촬영+본식] 아우어스튜디오(세미)+컬렉트비+고센&끌림뷰티",
       price: "3,230,000원",
       dcPrice: "1,625,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio sdm pk200 0 sceneFree",
     },
     {
       imageSrc: "images/pk-search-all39.jpg",
       productName: "[촬영+본식] 비포원스튜디오+에델린+겐그레아",
       price: "3,920,000원",
       dcPrice: "2,055,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio sdm pk300 0",
     },
     {
       imageSrc: "images/pk-search-all40.jpg",
@@ -812,49 +807,49 @@ $(document).ready(function () {
         "[촬영+본식] 원세컨드스튜디오(세미)+제이바이루시+김활란뮤제네프",
       price: "3,145,000원",
       dcPrice: "1,870,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio sdm pk200 0",
     },
     {
       imageSrc: "images/pk-search-all42.jpg",
       productName: "[촬영+본식] 피아스튜디오+시작by이명순+애브뉴준오",
       price: "5,270,000원",
       dcPrice: "3,920,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dress sdm pk400 0",
     },
     {
       imageSrc: "images/pk-search-all43.jpg",
       productName: "[촬영+본식] 바로오늘이그날+브라이덜수지+에포트",
       price: "3,740,000원",
       dcPrice: "2,655,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dress sdm pk300 0",
     },
     {
       imageSrc: "images/pk-search-all44.jpg",
       productName: "[촬영+본식] 스투디오사이+보네르+헤움",
       price: "6,110,000원",
       dcPrice: "2,820,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dresss dm pk300 0",
     },
     {
       imageSrc: "images/pk-search-all45.jpg",
       productName: "[촬영+본식] 클로드 원스(세미)+시작by이명순+에포트(원장)",
       price: "5,170,000원",
       dcPrice: "4,045,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dress sdm pk500 0 sceneFree",
     },
     {
       imageSrc: "images/pk-search-all46.jpg",
       productName: "[촬영+본식] 라앤디+시그니처엘리자베스+위위아뜰리에by서옥",
       price: "6,270,000원",
       dcPrice: "4,680,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dress sdm pk500 0 dressupfree",
     },
     {
       imageSrc: "images/pk-search-all47.jpg",
       productName: "[촬영+본식] 어반스튜디오+클라라웨딩+KJ스타일",
       price: "4,670,000원",
       dcPrice: "2,550,000원",
-      id: "mainall all sdm ",
+      id: "mainall all studio dress sdm pk300 0 dressupfree",
     },
 
     // 다른 웨딩홀 데이터를 추가할 수 있습니다.
@@ -865,7 +860,7 @@ $(document).ready(function () {
     const pkMenuList = $("#pkMenuList");
 
     data.forEach((pk) => {
-      const pkContainer = $("<div>").addClass(`mix ${pk.id}`);
+      const pkContainer = $("<div>").addClass(`mix2 ${pk.id}`);
 
       // 이미지 추가
       const image = $("<img>")
@@ -873,20 +868,35 @@ $(document).ready(function () {
         .attr("alt", "패키지 이미지");
       pkContainer.append(image);
 
-      const leftContainer = $("<div>").addClass("w-box-left");
+      const leftContainer = $("<div>").addClass("pk-box-left");
       // 위치 정보 추가
-      const productName = $("<h2>").text(pk.productName);
+      const productName = $("<h3>").text(pk.productName);
       leftContainer.append(productName);
-
-      const price = $("<h4>").text(pk.price);
-      leftContainer.append(price);
-
-      const dcPrice = $("<h4>").text(pk.dcPrice);
-      leftContainer.append(dcPrice);
 
       pkContainer.append(leftContainer);
 
-      const rightContainer = $("<div>").addClass("w-box-right");
+      const rightContainer = $("<div>").addClass("pk-box-right");
+
+      // 원래 가격 추가
+      const price = $("<p>").html(`<span>원래 가격: </span>${pk.price}`);
+      rightContainer.append(price);
+
+      // 할인된 가격 추가
+      const dcPrice = $(`<p class = "sale">`).html(
+        `<span>할인가: </span>${pk.dcPrice}`
+      );
+      rightContainer.append(dcPrice);
+
+      pkContainer.append(rightContainer);
+
+      // 상품 문의 버튼을 포함할 <a> 태그를 생성합니다.
+      const inquiryButton = $("<a>")
+        .addClass("inquiry-button2")
+        .attr("href", "https://weddingforyou.vercel.app/") // 이동할 페이지의 URL을 지정합니다.
+        .text("상품 문의");
+
+      // <a> 태그를 hallContainer에 추가합니다.
+      pkContainer.append(inquiryButton);
 
       // 페이지에 추가
       pkMenuList.append(pkContainer);
