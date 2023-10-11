@@ -900,5 +900,7 @@ $(document).ready(function () {
   // 페이지 로드 시 전체패키지 정보 생성
   createPkMenuElements(pkMainMenuAllData);
 
-  //스튜디오
+  $(".inquiry-button2").click(function () {
+    alert("예약이 완료되었습니다.");
+  });
 });

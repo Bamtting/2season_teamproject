@@ -361,11 +361,7 @@
   cursor: pointer;
   font-weight: bold;
 }
-.inquiry-button2:hover {
-  background-color: #fff;
-  border: 2px solid #887160;
-  color: #887160;
-}
+
 
 .pk-results {
   display: block;
