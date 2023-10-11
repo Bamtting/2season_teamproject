@@ -1,60 +1,88 @@
-/* 고객문의 */
-.gallery-title {
-  font-family: "Noto Serif KR", "serif";
-  text-align: center;
-  color: #887160;
-  font-size: 56px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 50px;
-}
-.gallery {
-  width: 100vw;
-  height: 35vw;
-  padding: 50px 20px;
-}
-.gallery .slide {
-  width: 30vw;
-  margin-right: 3vw;
-  transform: translateX(30px);
-  transition: transform 0.9s ease-in-out;
-}
-.gallery .slide img {
-  display: block;
-  max-width: 500px;
-  height: 25vw;
-}
-.gallery .slide.is-previous {
-  transform: translateX(0);
-}
-.gallery .slide.is-selected {
-  transform: translateX(0);
-}
-.gallery .slide.is-next {
-  /* transform: translateX(120px); */
-}
-.gallery .slide.slide-1 {
-  margin-top: 80px;
-  /* width: 20%; */
-  /* margin-right: 10%; */
-  margin-left: 20px;
-}
-.gallery .slide.slide-2 {
-  margin-top: 40px;
-  margin-left: 20px;
-}
-.gallery .slide.slide-3 {
-  margin-top: 60px;
-  margin-left: 20px;
-}
-.gallery .slide.slide-4 {
-  transform: translateX(-10%);
-  margin-top: 20px;
-  margin-left: 150px;
-}
-.gallery button {
-  display: none;
-}
+/* gallery */
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery h2{
+      font-family: "Noto Serif KR", "serif";
+      font-weight: bold;
+      font-size: 68px;
+      text-transform: uppercase;
+      color: #282828;
+      margin-bottom: 50px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .gallwrap{
+      position: relative;
+      padding: 20px;
+    }
+
+    .gallery .swiper {
+      width: 100vw;
+      /* height: 100%; */
+    }
+
+    .gallery .swiper-slide {
+      width: 30%;
+      height: 50vw;
+      text-align: center;
+      font-size: 18px;
+      /* background: #fff; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery .swiper-slide img {
+      display: block;
+       width: 100%;
+      /*height: 100%; */
+      /* object-fit: cover; */
+    }
+
+    .gallhover{
+      width: 100vw;
+      height: calc(50vw + 40px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #0e0e0ea2;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 180px;
+    }
+    .gallhover i{
+      color: #ffffffb2;
+    }
+    .gallhover p{
+      font-size: 35px;
+      color: #ffffffb2;
+      margin-top: 20px;
+    }
+    .gallery:hover .gallhover{
+      background-color: #ffffff00;
+      z-index: -1;
+    }
+    .gallery:hover .gallhover i,
+    .gallery:hover .gallhover p{
+      color: #00000000;
+    }
 @media all and (max-width: 1024px) {
 }
 @media all and (max-width: 768px) {
