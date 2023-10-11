@@ -904,6 +904,7 @@
   position: fixed;
   left: 0;
   text-align: left;
+  z-index: 999;
 }
 .stu_header {
   text-align: center;
