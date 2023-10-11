@@ -265,6 +265,11 @@
     font-size: 14px;
   }
 }
+@media all and (max-width: 768px) {
+  .mix {
+    margin-left: 150px;
+  }
+}
 @media all and (max-width: 710px) {
   .hall-btn,
   .hall-btn-1,
@@ -300,6 +305,11 @@
     font-weight: bold;
   }
 }
+@media all and (max-width: 614px) {
+  .mix {
+    margin-left: 75px;
+  }
+}
 @media all and (max-width: 573px) {
   .text-area-sub {
     font-size: 14px;
@@ -318,6 +328,11 @@
 @media all and (max-width: 550px) {
   .s_weddinghall .text-area {
     margin-top: 80px;
+  }
+}
+@media all and (max-width: 534px) {
+  .mix {
+    margin-left: 0px;
   }
 }
 

@@ -7,9 +7,11 @@
 .s_sdm {
   display: flex;
   justify-content: center;
+  z-index: 999;
 }
 .s_sdm .inner {
   max-width: 1920px;
+  height: 100%;
 }
 .s_sdm_wrap {
   position: relative;
@@ -23,7 +25,7 @@
   background-position: center;
 }
 .sdmmain_01 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 10%;
   top: 15%;
@@ -45,7 +47,7 @@
   }
 }
 .sdmmain_02 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   top: 19%;
   left: 40%;
@@ -66,7 +68,7 @@
   }
 }
 .sdmmain_03 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 63%;
   top: 15%;
@@ -87,7 +89,7 @@
   }
 }
 .sdmmain_04 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 10%;
   top: 75%;
@@ -109,7 +111,7 @@
   }
 }
 .sdmmain_05 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   top: 48%;
   left: 40%;
@@ -130,7 +132,7 @@
   }
 }
 .sdmmain_06 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 70%;
   bottom: 10%;
@@ -138,7 +140,7 @@
   animation: box-ani6 2s linear infinite forwards; /* 애니메이션 적용 */
 }
 .sdmmain_07 {
-  width: 100%;
+  /* width: 100%; */
   position: absolute;
   left: 78%;
   bottom: 10%;
@@ -397,7 +399,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 5%;
+  margin-top: 15%;
   width: 100%;
   height: 250px;
   background-color: #ece8e4;
@@ -432,6 +434,12 @@
   height: 40px;
   border-radius: 50px;
 }
+.sdm_reservation button a {
+  color: #fff;
+}
+.sdm_reservation button:hover a {
+  color: #887160;
+}
 .sdm_reservation button p {
   font-weight: 600;
   font-size: 14px;
@@ -455,7 +463,7 @@
   height: 800px;
   position: relative;
   display: block;
-  top: 10%;
+  top: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -511,7 +519,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 17%;
+  top: 100px;
 }
 .dl_01 {
   width: 300px;
@@ -678,7 +686,7 @@
   background: url("../images/makeupback_gra.png") no-repeat;
   background-position: center;
   background-size: cover;
-  top: 21%;
+  top: 10%;
   display: flex;
   align-items: center;
 }
@@ -784,8 +792,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 500;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -934,12 +942,12 @@
 .stu_body_first {
   position: relative;
   text-align: center;
-  font-weight: 700;
-  line-height: 22px;
-  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 17px;
   margin-top: -10%;
   padding-bottom: 10%;
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .stu_block b {
   font-size: 16px;
@@ -1060,6 +1068,9 @@
 #stu_header_wonkyu01 {
   font-family: "Jeju Myeongjo", serif;
   font-weight: 700;
+}
+#sdm_footer {
+  padding-top: 27%;
 }
 /* ------------------------------- */
 /* ----------반응형----------- */
@@ -1212,7 +1223,6 @@
     justify-content: center;
     align-items: center;
   }
-
   .makeupbox_button {
     /* margin-top: 90%; */
     position: relative;
@@ -1239,9 +1249,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .makeup_wrap {
-    /* height: 1020px; */
   }
   .stu_body p:nth-child(2) {
     display: none;
@@ -1270,14 +1277,10 @@
     font-size: 14px;
   }
 }
-@media all and (max-width: 680px) {
-}
 @media all and (max-width: 650px) {
   .sdmmain_07 {
     left: 56%;
   }
-}
-@media all and (max-width: 570px) {
 }
 @media all and (max-width: 524px) {
   #stu_header_wonkyu {
@@ -1288,18 +1291,32 @@
   }
 }
 @media all and (max-width: 480px) {
+  #sdm_footer {
+    padding-top: 20%;
+  }
   .s_sdm .inner {
     max-width: 480px;
+    height: 100%;
   }
   .sdmmain_01 {
     left: 0;
+    width: 350px;
+  }
+  .sdmmain_01 img {
+    width: 100%;
   }
   .sdmmain_04 {
     left: 0;
+    margin-top: -100px;
     width: 240px;
   }
   .sdmmain_07 {
-    left: 45%;
+    right: 0;
+    width: 150px;
+    top: 60%;
+  }
+  .sdmmain_07 img {
+    width: 100%;
   }
   .sdm_studio_wrap h3 {
     font-size: 20px;
@@ -1323,21 +1340,23 @@
   .sdm_studio_wrap button p {
     font-size: 11px;
   }
-  .sdm_reservation p {
-    width: 90%;
+  .sdmres_bu {
+    width: 98%;
+    line-height: 22px;
   }
-  /* .eight_2 {
-    display: none;
-  } */
+  .eight_first {
+    overflow: hidden;
+  }
+  .eight_two {
+    overflow: hidden;
+  }
   .eight_3 {
     display: none;
   }
   .eight_4 {
     display: none;
   }
-  /* .eight_6 {
-    display: none;
-  } */
+
   .eight_7 {
     display: none;
   }
@@ -1357,6 +1376,9 @@
   #lafore {
     display: none;
   }
+  .sdm_reservation p {
+    width: 80%;
+  }
   .dlo01_box {
     margin-top: -12%;
   }
@@ -1364,7 +1386,13 @@
     width: 320px;
   }
   .dress_wrap {
+    margin-top: 3%;
+  }
+  .dress_logo {
     margin-top: -15%;
+  }
+  .dress_img {
+    margin-top: -30%;
   }
   .makeup_wrap_title {
     width: 90%;
@@ -1375,9 +1403,9 @@
   }
   .makeup_wrap_wrap {
     width: 100%;
+    margin-top: 120%;
   }
-
-  .s_sdm {
+  .s_sdm .inner {
     max-width: 480px;
   }
   .s_b_f_f {
@@ -1406,8 +1434,16 @@
   .stu_body p:nth-child(5) {
     font-size: 12px;
   }
+  .sdm_studio_title h3 {
+    font-size: 54px;
+  }
+  .dress_title h3 {
+    font-size: 54px;
+  }
+  .makeup_wrap_title h3 {
+    font-size: 54px;
+  }
 }
-
 @media all and (max-width: 360px) {
   #stu_h_2 {
     font-size: 36px;

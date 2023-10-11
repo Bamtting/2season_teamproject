@@ -232,6 +232,34 @@
     font-size: 20px;
   }
 }
+@media all and (max-width: 400px) {
+  .package-review-wrapper {
+    padding: 0 10px;
+    padding-left: 30px;
+  }
+  .package-review-text-wrap {
+    text-align: center;
+  }
+  .package-review-title {
+    font-size: 30px;
+  }
+  .package-review-text-wrap p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .pk-review-more {
+    top: 438px;
+    font-size: 10px;
+    color: #000;
+    padding: 2px 10px;
+  }
+  .package-close {
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+  }
+}
 @media all and (max-width: 320px) {
   .package-review-wrapper {
     padding: 0 10px;

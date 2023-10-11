@@ -7,8 +7,8 @@ $(document).ready(function () {
     loop: true,
     navigation: {
       // 버튼 사용자 지정
-      prevEl: ".pk-prev-btn",
-      nextEl: ".pk-next-btn",
+      prevEl: ".spk-prev-btn",
+      nextEl: ".spk-next-btn",
     },
     autoplay: {
       delay: 4000,
@@ -507,7 +507,6 @@ $(document).ready(function () {
       dcPrice: "2,650,000원",
 
       id: "all sdm pk300 0 dressUp fancy",
-
     },
     {
       imageSrc: "images/pk-search-all2.jpg",
@@ -517,7 +516,6 @@ $(document).ready(function () {
       dcPrice: "2,650,000원",
 
       id: "mainall snap-video pk300 0 dressUp ",
-
     },
     {
       imageSrc: "images/pk-search-all3.jpg",
