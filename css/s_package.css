@@ -16,7 +16,6 @@
 }
 .mySlide img {
   width: 1920px;
-  height: auto;
 }
 .spk-nepr-btn-wrap {
   position: absolute;
@@ -482,6 +481,11 @@
     height: 10px;
   }
 }
+@media all and (max-width: 768px) {
+  .mix2 {
+    margin-left: 150px;
+  }
+}
 @media all and (max-width: 710px) {
   .spk-btn,
   .spk-btn-1,
@@ -505,6 +509,11 @@
     font-weight: bold;
   }
 }
+@media all and (max-width: 614px) {
+  .mix2 {
+    margin-left: 75px;
+  }
+}
 @media all and (max-width: 555px) {
   .spk-btn,
   .spk-btn-1,
@@ -513,6 +522,11 @@
   .spk-btn-4,
   .spk-btn-5 {
     font-size: 12px;
+  }
+}
+@media all and (max-width: 534px) {
+  .mix2 {
+    margin-left: 0px;
   }
 }
 @media all and (max-width: 360px) {

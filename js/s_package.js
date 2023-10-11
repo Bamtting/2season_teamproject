@@ -507,7 +507,6 @@ $(document).ready(function () {
       dcPrice: "2,650,000원",
 
       id: "all sdm pk300 0 dressUp fancy",
-
     },
     {
       imageSrc: "images/pk-search-all2.jpg",
@@ -517,7 +516,6 @@ $(document).ready(function () {
       dcPrice: "2,650,000원",
 
       id: "mainall snap-video pk300 0 dressUp ",
-
     },
     {
       imageSrc: "images/pk-search-all3.jpg",
