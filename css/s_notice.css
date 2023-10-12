@@ -220,16 +220,15 @@
 .question2 .notice-write:hover{
     background-color: #aa9786;
 } */
-@media all and (max-width: 1024px) {
-}
-@media all and (max-width: 768px) {
-}
-@media all and (max-width: 548) {
+@media all and (max-width: 548px) {
   .board_list .title {
-    width: 50%;
+    width: 60%;
   }
-}
-@media all and (max-width: 480px) {
-}
-@media all and (max-width: 360px) {
+  .board_list .writer,
+  .board_list .count {
+    width: 15%;
+  }
+  .board_list .date{
+    display: none;
+  }
 }
