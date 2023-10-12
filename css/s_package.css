@@ -477,6 +477,33 @@
     height: 10px;
   }
 }
+@media all and (max-width: 360px) {
+  .mySlide img {
+    width: 360px;
+    height: auto;
+  }
+  .spk-nepr-btn-wrap {
+    position: absolute;
+    top: 95px;
+    right: 20px;
+  }
+  .spk-prev-btn {
+    width: 8px;
+    height: 8px;
+  }
+  .spk-next-btn {
+    width: 8px;
+    height: 8px;
+  }
+  .spk-prev-btn:hover {
+    width: 8px;
+    height: 8px;
+  }
+  .spk-next-btn:hover {
+    width: 8px;
+    height: 8px;
+  }
+}
 @media all and (max-width: 768px) {
   .mix2 {
     margin-left: 150px;
