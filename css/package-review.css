@@ -180,6 +180,9 @@
   .modal-wraper {
     padding: 0 10px;
   }
+  .package-review {
+    padding: 0px;
+  }
 }
 @media all and (max-width: 480px) {
   .package {
