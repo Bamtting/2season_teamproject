@@ -131,7 +131,7 @@ $(document).ready(function () {
 
   //페이지 이동
   $("#PackageMoreBtn").click(function () {
-    location.href = "s_review.html";
+    location.href = "s_package.html";
   });
 
   //스와이퍼 슬라이드
@@ -175,7 +175,7 @@ $(document).ready(function () {
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 40,
       },
       1440: {
