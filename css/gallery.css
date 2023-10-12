@@ -1,16 +1,25 @@
 /* gallery */
 
+.gallery{
+  overflow: hidden;
+}
+
     .gallery h2{
       font-family: "Noto Serif KR", "serif";
       font-weight: bold;
       font-size: 68px;
       text-transform: uppercase;
       color: #282828;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       text-align: center;
       margin-top: 50px;
     }
 
+    .gallery p{
+      text-align: center;
+      font-size: 20px;
+      /* margin-bottom: 30px; */
+    }
     .gallwrap{
       position: relative;
       padding: 20px;
