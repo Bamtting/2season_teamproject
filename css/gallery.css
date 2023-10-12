@@ -1,7 +1,9 @@
 /* gallery */
+
 .gallery{
   overflow: hidden;
 }
+
     .gallery h2{
       font-family: "Noto Serif KR", "serif";
       font-weight: bold;

@@ -20,7 +20,7 @@
   font-family: "Noto Sans", "serif";
   font-size: 22px;
   color: #887160;
-  margin-top: 30px;
+  margin-top: 50px;
   line-height: 30px;
 }
 .package-review-text-wrap p span {
@@ -166,6 +166,9 @@
   .pk-review-more {
     top: 590px;
   }
+  .package-review {
+    padding: 100px;
+  }
 }
 @media all and (max-width: 768px) {
   .package-review-text-wrap {
@@ -176,6 +179,9 @@
   }
   .modal-wraper {
     padding: 0 10px;
+  }
+  .package-review {
+    padding: 0px;
   }
 }
 @media all and (max-width: 480px) {
