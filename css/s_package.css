@@ -3,7 +3,6 @@
   position: relative;
   display: block;
   width: 100%;
-  /* height: 900px; */
   margin-top: 100px;
 }
 .pk-visual-mySwiper {
@@ -294,9 +293,6 @@
   height: 530px;
   padding: 10px;
   font-family: "notoSans";
-
-  margin: 10px;
-
   border: 1px solid #887160;
 }
 .mix2 img {
@@ -451,6 +447,9 @@
   }
 }
 @media all and (max-width: 400px) {
+  .pk-visual-mySwiper{
+    width: 100%;
+  }
   .mySlide img {
     width: 400px;
     height: auto;
@@ -484,8 +483,8 @@
   }
   .spk-nepr-btn-wrap {
     position: absolute;
-    top: 95px;
-    right: 20px;
+    top: 80px;
+    right: 55px;
   }
   .spk-prev-btn {
     width: 8px;
