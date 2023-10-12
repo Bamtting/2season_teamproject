@@ -61,8 +61,8 @@
   cursor: pointer;
 }
 .w-tbox img:hover {
-  transform: scale(1.03);
-  transition: all 2s;
+  transform: scale(1.1);
+  transition: all 1s;
 }
 .w-tbox p {
   margin: 10px;
