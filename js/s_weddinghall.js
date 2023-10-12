@@ -1805,6 +1805,6 @@ $(document).ready(function () {
   createWeddingHallElements(weddingHallData);
   // 검색 버튼 클릭 이벤트 핸들러
   $(".inquiry-link").click(function () {
-    alert("예약이 완료되었습니다.");
+    alert("문의 신청이 되었습니다.");
   });
 });
