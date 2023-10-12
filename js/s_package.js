@@ -7,8 +7,8 @@ $(document).ready(function () {
     loop: true,
     navigation: {
       // 버튼 사용자 지정
-      prevEl: ".pk-prev-btn",
-      nextEl: ".pk-next-btn",
+      prevEl: ".spk-prev-btn",
+      nextEl: ".spk-next-btn",
     },
     autoplay: {
       delay: 4000,
@@ -507,7 +507,6 @@ $(document).ready(function () {
       dcPrice: "2,650,000원",
 
       id: "all sdm pk300 0 dressUp fancy",
-
     },
     {
       imageSrc: "images/pk-search-all2.jpg",
@@ -517,7 +516,6 @@ $(document).ready(function () {
       dcPrice: "2,650,000원",
 
       id: "mainall snap-video pk300 0 dressUp ",
-
     },
     {
       imageSrc: "images/pk-search-all3.jpg",
@@ -888,7 +886,7 @@ $(document).ready(function () {
       // 상품 문의 버튼을 포함할 <a> 태그를 생성합니다.
       const inquiryButton = $("<a>")
         .addClass("inquiry-button2")
-        .attr("href", "https://weddingforyou.vercel.app/") // 이동할 페이지의 URL을 지정합니다.
+        .attr("href", "index.html") // 이동할 페이지의 URL을 지정합니다.
         .text("상품 문의");
 
       // <a> 태그를 hallContainer에 추가합니다.
