@@ -155,7 +155,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrap">
       <!-- header -->
-      <header class="header clearfix">
+      <header class="header clearfix" id="header">
         <div class="inner">
           <div class="header-1">
             <div class="logo">
@@ -165,8 +165,12 @@
             </div>
             <div class="s-menu">
               <ul>
-                <li><a href="login.html">login</a></li>
-                <li><a href="#">my page</a></li>
+                <li class="before-login"><a href="login.html">login</a></li>
+                <li class="before-login"><a href="signup.html">sign up</a></li>
+                <li class="after-login" id="logout-button">
+                  <a href="#">logout</a>
+                </li>
+                <li class="after-login"><a href="#">my page</a></li>
               </ul>
             </div>
             <button class="hamburger">
@@ -196,7 +200,6 @@
           </nav>
         </div>
       </header>
-      <!-- 헤더 반응형 햄버거 바 -->
       <div class="hamburger-menu">
         <ul class="hamburger-menu-contents">
           <li><a href="s_package.html">PACKAGE</a></li>
