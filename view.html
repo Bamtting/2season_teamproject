@@ -151,7 +151,7 @@
   <!-- End Google Tag Manager (noscript) -->
     <div class="wrap">
       <!-- header -->
-      <header class="header clearfix">
+      <header class="header clearfix" id="header">
         <div class="inner">
           <div class="header-1">
             <div class="logo">
@@ -161,15 +161,19 @@
             </div>
             <div class="s-menu">
               <ul>
-                <li><a href="login.html">login</a></li>
-                <li><a href="#">my page</a></li>
+                <li class="before-login"><a href="login.html">login</a></li>
+                <li class="before-login"><a href="signup.html">sign up</a></li>
+                <li class="after-login" id="logout-button">
+                  <a href="#">logout</a>
+                </li>
+                <li class="after-login"><a href="#">my page</a></li>
               </ul>
             </div>
             <button class="hamburger">
               <span></span>
               <span></span>
               <span></span>
-          </button>
+            </button>
           </div>
           <nav class="header-2">
             <ul>
@@ -188,18 +192,17 @@
               <li>
                 <a href="#">review</a>
               </li>
-              
             </ul>
           </nav>
         </div>
       </header>
       <div class="hamburger-menu">
         <ul class="hamburger-menu-contents">
-            <li><a href="s_package.html">PACKAGE</a></li>
-            <li><a href="s_weddinghall.html">WEDDING HALL</a></li>
-            <li><a href="s_sdm.html">S.D.M</a></li>
-            <li><a href="s_notice.html">Q&A</a></li>
-            <li><a href="s_review.html">REVIEW</a></li>
+          <li><a href="s_package.html">PACKAGE</a></li>
+          <li><a href="s_weddinghall.html">WEDDING HALL</a></li>
+          <li><a href="s_sdm.html">S.D.M</a></li>
+          <li><a href="s_notice.html">Q&A</a></li>
+          <li><a href="s_review.html">REVIEW</a></li>
         </ul>
       </div>
       <div class="view-wrap">
