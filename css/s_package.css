@@ -292,6 +292,7 @@
   max-width: 450px;
   height: 530px;
   padding: 10px;
+  margin: 10px;
   font-family: "notoSans";
   border: 1px solid #887160;
 }
@@ -326,7 +327,6 @@
   height: 60px;
   line-height: 30px;
   text-align: center;
-  /* margin: 0 auto; */
   margin-top: 18px;
 }
 .pk-box-right p {
@@ -357,7 +357,6 @@
   cursor: pointer;
   font-weight: bold;
 }
-
 
 .pk-results {
   display: block;
@@ -447,7 +446,7 @@
   }
 }
 @media all and (max-width: 400px) {
-  .pk-visual-mySwiper{
+  .pk-visual-mySwiper {
     width: 100%;
   }
   .mySlide img {
